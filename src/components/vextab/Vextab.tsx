@@ -1,4 +1,9 @@
+/*
+source: https://github.com/0xfe/vextab
+*/
+
 'use client';
+
 import { useEffect, useRef } from 'react';
 import styles from './vextab.module.css';
 
@@ -12,10 +17,11 @@ export default function Vextab({data}:VextabProps) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    el.innerHTML = '';
-
+    let cancelled = false;
     import('vextab').then(({ VexTab, Artist, Vex }) => {
-      const Renderer = (Vex as any).Flow.Renderer;
+      if (cancelled) return;  
+      el.innerHTML = '';  
+      const Renderer = Vex.Flow.Renderer;
       const renderer = new Renderer(el, Renderer.Backends.SVG);
       const artist = new Artist(10, 10, 600, { scale: 0.8 });
       const tab = new VexTab(artist);
@@ -26,6 +32,9 @@ export default function Vextab({data}:VextabProps) {
         console.error(e);
       }
     });
+
+    //cleanup
+    return () => { cancelled = true;  };  
   }, []);
 
   return (
