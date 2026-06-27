@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SideMenu from "@/components/side-menu/side-menu";
 
 export const metadata: Metadata = {
   title: "Jafar Touzeau",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <SideMenu/>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

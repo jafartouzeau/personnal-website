@@ -1,5 +1,4 @@
-import styles from "./page.module.css";
-import Vextab from '@/components/vextab/Vextab';
+import Vextab from '@/components/vextab/vextab';
 
 const data = `
   tabstave notation=true key=A time=4/4
@@ -9,13 +8,8 @@ const data = `
 
 export default function Musique() {
     return (
-        <div className={styles.page}>
-            <main>
-                <p>
-                    Vive la musique
-                </p>
-                <Vextab data={data} scale={0.8}/>
-            </main>
-        </div>
+        <>
+            <Vextab data={data} scale={0.8}/>
+        </>
     )
 }
