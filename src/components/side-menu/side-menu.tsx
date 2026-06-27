@@ -10,8 +10,8 @@ export default function SideMenu() {
                 </Link>
             </ol>
             <ol className={styles.li}>
-                <Link href={"/musique"}>
-                    Musique
+                <Link href={"/photos"}>
+                    Photos
                 </Link>
             </ol>
         </nav>
