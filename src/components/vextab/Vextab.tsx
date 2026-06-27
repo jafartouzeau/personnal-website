@@ -9,9 +9,10 @@ import styles from './vextab.module.css';
 
 type VextabProps = {
   data: string;
+  scale: number;
 }
 
-export default function Vextab({data}:VextabProps) {
+export default function Vextab({data, scale}:VextabProps) {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -23,7 +24,7 @@ export default function Vextab({data}:VextabProps) {
       el.innerHTML = '';  
       const Renderer = Vex.Flow.Renderer;
       const renderer = new Renderer(el, Renderer.Backends.SVG);
-      const artist = new Artist(10, 10, 600, { scale: 0.8 });
+      const artist = new Artist(10, 10, 600, { scale: scale });
       const tab = new VexTab(artist);
       try {
         tab.parse(data);

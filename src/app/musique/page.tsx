@@ -14,7 +14,7 @@ export default function Musique() {
                 <p>
                     Vive la musique
                 </p>
-                <Vextab data={data}/>
+                <Vextab data={data} scale={0.8}/>
             </main>
         </div>
     )
