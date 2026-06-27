@@ -1,8 +1,8 @@
-import styles from "./page.module.css";
-
 export default function Home() {
   return (<>
-        <p>Hello</p>
+          <p>
+              <strong>Basse </strong><i>n.f. </i>Si tu veux que ça groove, il faut une basse.
+          </p>
         </>
   );
 }
