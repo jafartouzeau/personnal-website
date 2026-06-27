@@ -15,7 +15,7 @@ export default function Vextab({data}:VextabProps) {
     el.innerHTML = '';
 
     import('vextab').then(({ VexTab, Artist, Vex }) => {
-      const Renderer = Vex.Flow.Renderer;
+      const Renderer = (Vex as any).Flow.Renderer;
       const renderer = new Renderer(el, Renderer.Backends.SVG);
       const artist = new Artist(10, 10, 600, { scale: 0.8 });
       const tab = new VexTab(artist);
