@@ -3,6 +3,7 @@ type StrudelMusic = {
     artist: string;
     title: string;
     type: string; //remix or original
+    description: string;
 }
 
 export const strudelData: Record<string, StrudelMusic> = {
@@ -72,6 +73,7 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
             `,
         artist: "Daft Punk",
         title: "Veridis Quo",
-        type: "Remix"
+        type: "Remix",
+        description: ""
     }
 }

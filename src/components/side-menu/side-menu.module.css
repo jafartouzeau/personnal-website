@@ -5,6 +5,9 @@
     height: 100vh;
     padding: var(--main-padding);
 }
+.subol {
+    padding-left:  var(--main-padding);
+}
 
 @media (max-width: 768px) {
     .nav {
