@@ -74,7 +74,7 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
         type: "Remix",
         description: ""
     }, 
-    "lavieestbelle":{
+    "track1":{
         code:
 `setCpm(115/4)
 
@@ -123,9 +123,9 @@ $: //n("<b>")
   .room(.6)
   .pan(sine.range(0.45, 0.55).slow(2))`
   ,
-    artist: "Indochine",
-    title: "La vie est belle",
-    type: "Remix",
+    artist: "",
+    title: "Track #1",
+    type: "Original",
     description: ""      
     }
 }
