@@ -1,4 +1,6 @@
 import StrudelRepl from "@/components/strudel/strudel";
+import PageTemplate from "@/components/page-template/page-template";
+
 import { strudelData } from '../data';
 import { notFound } from "next/navigation";
 
@@ -10,5 +12,11 @@ export default async function StrudelReplPage({ params }: { params: Promise<{ st
   const { strudelmusic } = await params;
   const music = strudelData[strudelmusic];
   if (!music) return notFound();
-  return <StrudelRepl code={music.code} />;
+
+  const content = <StrudelRepl code={music.code} />;
+
+  return (
+            <PageTemplate content={content} sideMenuData={strudelData}/>
+
+          );
 }

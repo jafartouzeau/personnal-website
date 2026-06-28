@@ -1,4 +1,4 @@
-type StrudelMusic = {
+export type StrudelMusicType = {
     code: string;
     artist: string;
     title: string;
@@ -6,7 +6,7 @@ type StrudelMusic = {
     description: string;
 }
 
-export const strudelData: Record<string, StrudelMusic> = {
+export const strudelData: Record<string, StrudelMusicType> = {
     "veridisquo" : {
         code: 
             `

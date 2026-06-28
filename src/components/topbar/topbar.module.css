@@ -1,0 +1,10 @@
+.topbar {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: fit-content;
+    padding: var(--main-padding);
+}
+.ol {
+    padding-right:  calc(2 * var(--main-padding));
+}

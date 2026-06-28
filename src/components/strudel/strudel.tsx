@@ -33,7 +33,7 @@ export default function StrudelRepl({code}:{code:string}) {
     return () => { cancelled = true; };
   }, []);
 
-  return <div ref={ref}/>;
+  return <div style={{width:"100%"}} ref={ref}/>;
 }
 
 //export default dynamic(() => Promise.resolve(StrudelRepl), { ssr: false });
