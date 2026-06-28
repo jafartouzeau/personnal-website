@@ -1,5 +1,5 @@
 :root {
-  --ff : ABCSimonMono,ABCSimonMono fallback,ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace,;
+  --ff : ui-monospace,monospace;
   
   --background: #fff;
   --foreground: #fff;
@@ -46,7 +46,7 @@ main {
 
 a {
   background: var(--text-primary);
-  text-decoration: none;
+  /*text-decoration: none;*/
   color: var(--text);
 }
 
@@ -54,6 +54,7 @@ a {
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     color: var(--accent);
+    font-weight: 800;
   }
 }
 

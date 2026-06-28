@@ -9,6 +9,8 @@ export default function PageTemplate({
 }>) {
     return (<>
         <SideMenu data={sideMenuData}/>
-        {content}
+        <div style={{display:"flex", flexDirection:"column", width:"100%"}}>
+          {content}
+        </div>
     </>)
 }

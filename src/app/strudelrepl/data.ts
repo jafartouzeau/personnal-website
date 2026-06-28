@@ -9,8 +9,7 @@ export type StrudelMusicType = {
 export const strudelData: Record<string, StrudelMusicType> = {
     "veridisquo" : {
         code: 
-            `
-setCpm(105/4)
+`setCpm(105/4)
 
 const currentScale = "a:minor"
 
@@ -69,11 +68,64 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .postgain(.2)
 .off(1/4, add(note(12)))
 .vib("4:.5")
-.o(3)
-            `,
+.o(3)`,
         artist: "Daft Punk",
         title: "Veridis Quo",
         type: "Remix",
         description: ""
+    }, 
+    "lavieestbelle":{
+        code:
+`setCpm(115/4)
+
+const chords = "<g:major e:minor b:minor!2>"
+
+$sub_bass: n("<0 0 0 0 0 0 0 -3>".sub(14))
+  .scale(chords)
+  .s("supersaw")
+  .lpf(500)
+  .distort(1)
+  .postgain(.8)
+
+$bass: 
+  n("<0 0 7 0 ~ 0 7 0>*8".sub(7))
+  .s("supersaw")
+  .scale(chords)
+  .lpf(400)
+  .pan(sine.range(0.35,.65).slow(2))
+  .lpenv(2)
+  .echo(8, 1/16, .8)
+  .postgain(1)
+
+$drums: 
+stack(
+  s("bd:4").struct("<x x x [x ~ x? x?]>*4")
+ .duck("2").duckattack(.2).duckdepth(.8),
+  //s("[~ sd:4]!2").room(.2).postgain(.4),
+  s("shaker_small:0!16").gain(1.6).room(0.1).attack(rand.range(0.1, 0.3))
+)
+
+$pads: 
+  s("gm_rock_organ")
+  .n("0,2,4".sub(7))
+  .scale(chords)
+  .lpf(2000)
+  .detune(.3)
+  .room(1.2)
+  .penv(.8)
+  .postgain(1.4)
+  .o(2)
+
+
+$: //n("<b>")
+  s("<numbers:8 numbers:7 numbers:6 numbers:5 numbers:4 numbers:3 numbers:2 numbers:1 numbers:0>")
+  .o(2)
+  .room(.6)
+  .pan(sine.range(0.45, 0.55).slow(2))`
+  ,
+    artist: "Indochine",
+    title: "La vie est belle",
+    type: "Remix",
+    description: ""      
     }
 }
