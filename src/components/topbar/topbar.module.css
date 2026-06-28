@@ -8,3 +8,14 @@
 .ol {
     padding-right:  calc(2 * var(--main-padding));
 }
+
+.container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+.w {
+  position: absolute;
+  font-weight: 800;
+  white-space: nowrap;
+}
