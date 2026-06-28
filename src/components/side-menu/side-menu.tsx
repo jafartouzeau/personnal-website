@@ -14,6 +14,11 @@ export default function SideMenu() {
                     Photos
                 </Link>
             </ol>
+            <ol className={styles.li}>
+                <Link href={"/strudelrepl"}>
+                    Strudel Repl
+                </Link>
+            </ol>
         </nav>
     )
 }
