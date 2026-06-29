@@ -1,9 +1,10 @@
 export type StrudelMusicType = {
     code: string;
     artist: string;
-    title: string;
     type: string; //remix or original
     description: string;
+    url: string,
+    title: string,
 }
 
 export const strudelData: Record<string, StrudelMusicType> = {
@@ -70,9 +71,10 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .vib("4:.5")
 .o(3)`,
         artist: "Daft Punk",
-        title: "Veridis Quo",
         type: "Remix",
-        description: ""
+        description: "",
+        url: "/strudelrepl/veridisquo",
+        title: "Veridis Quo"
     }, 
     "track1":{
         code:
@@ -124,8 +126,10 @@ $: //n("<b>")
   .pan(sine.range(0.45, 0.55).slow(2))`
   ,
     artist: "",
-    title: "Track #1",
     type: "Original",
-    description: ""      
+    description: "",
+    url: "/strudelrepl/track1",
+    title: "Track #1"
+ 
     }
 }

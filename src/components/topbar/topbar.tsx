@@ -47,6 +47,11 @@ export default function TopBar() {
           Strudel REPL
         </Link>
       </ol>
+      <ol className={styles.ol}>
+        <Link href={"/kiwis"}>
+          Kiwis
+        </Link>
+      </ol>
     </nav>
   );
 }

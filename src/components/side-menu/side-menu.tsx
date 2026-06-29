@@ -6,7 +6,7 @@ export default function SideMenu({data}:{data:Record<string, any>}) {
         <menu className={styles.menu}>
             {Object.entries(data).map(([name, sideMenuData]) => (
                 <ol key={name} className={styles.ol}>
-                    <Link href={`/strudelrepl/${name}`}>
+                    <Link href={sideMenuData.url}>
                         {sideMenuData.title}
                     </Link>
                 </ol>
