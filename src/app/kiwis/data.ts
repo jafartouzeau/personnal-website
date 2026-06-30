@@ -23,6 +23,14 @@ export const kiwisData: Record<string, kiwiDrawing> = {
         description: "",
         width: 1752,
         height: 2800
+    },
+    "glace" :{
+    url:"/kiwis/glace",
+    title: "Glace",
+    image:"/static/kiwis/Glace.png",
+    description: "",
+    width: 1752,
+    height: 2800
     }
 
 }
