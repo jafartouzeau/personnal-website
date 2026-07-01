@@ -10,7 +10,7 @@ export default function Kiwis() {
         <p>"Comment es-tu arrivé là haut ?"</p>
         <p>Ce à quoi l'oiseau lui répond :</p>
         <p>"En volant bien sûr !"</p>
-        <p>Et c'est alors que le petit kiwi réalisa qu'il ne savait pas voler.</p>
+        <p>Et c'est alors que le petit kiwi réalise qu'il ne sait pas voler.</p>
         <p>Depuis ce jour, rien ne va bien, tout va mal.</p>
     </>
   
