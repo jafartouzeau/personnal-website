@@ -1,5 +1,4 @@
 import PageTemplate from "@/components/page-template/page-template";
-//import Image from "next/image";
 import { kiwisData } from '../data';
 import { notFound } from "next/navigation";
 import Gallery from "@/components/gallery/gallery";
@@ -12,20 +11,6 @@ export default async function KiwiPage({ params }: { params: Promise<{ kiwislug:
   const { kiwislug } = await params;
   const folder = kiwisData[kiwislug];
   if (!folder) return notFound();
-
-  const content = 
-
-  /*
-  <div style={{position:"relative", aspectRatio:`${kiwi.whration}`, width:"100%", maxWidth:"600px"}}>
-      <Image alt={kiwi.description} fill src={kiwi.image}/>;
-
-  </div>
-*/
-
-  <Gallery artworks={folder}/>
-
-  return (
-            <PageTemplate content={content} sideMenuData={kiwisData}/>
-
-          );
+  const content = <Gallery artworks={folder}/>
+  return <PageTemplate content={content} sideMenuData={kiwisData}/>;
 }

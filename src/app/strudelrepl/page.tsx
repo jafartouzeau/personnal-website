@@ -11,7 +11,5 @@ export default function StrudelRepl() {
       <p>J'essaie d'explorer les possibilités musicales de cette plateforme, en commançant par rechercher des sonorités intéressantes, et en m'appuyant sur la nature collaborative du projet.</p>
     </>
   
-  return (  
-            <PageTemplate content={content} sideMenuData={strudelData}/>
-  );
+  return <PageTemplate content={content} sideMenuData={strudelData}/>;
 }

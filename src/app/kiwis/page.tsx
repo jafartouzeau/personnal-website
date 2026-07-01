@@ -14,7 +14,5 @@ export default function Kiwis() {
         <p>Depuis ce jour, rien ne va bien, tout va mal.</p>
     </>
   
-  return (  
-            <PageTemplate content={content} sideMenuData={kiwisData}/>
-  );
+  return <PageTemplate content={content} sideMenuData={kiwisData}/>;
 }
