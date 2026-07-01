@@ -1,14 +1,15 @@
 import SideMenu from "@/components/side-menu/side-menu";
+import type { sideMenuLink } from "@/components/side-menu/side-menu";
 
 export default function PageTemplate({
   content,
-  sideMenuData,
+  sideMenuLinks,
 }: Readonly<{
   content: React.ReactNode;
-  sideMenuData: Record<string, any>;
+  sideMenuLinks: sideMenuLink[];
 }>) {
     return (<>
-        <SideMenu data={sideMenuData}/>
+        <SideMenu links={sideMenuLinks}/>
         <div style={{display:"flex", flexDirection:"column", width:"100%"}}>
           {content}
         </div>
