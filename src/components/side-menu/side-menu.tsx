@@ -1,14 +1,18 @@
 import styles from './side-menu.module.css';
 import Link from "next/link";
-import { ArtworkType } from "artwork"
 
-export default function SideMenu({data}:{data:Record<string, ArtworkType[]>}) {
+type link = {
+    url:string,
+    name:string
+}
+
+export default function SideMenu({links}:{links:link[]}) {
     return (
         <menu className={styles.menu}>
-            {Object.entries(data).map(([folder, imagesArray]) => (
-                <ol key={folder} className={styles.ol}>
-                    <Link href={`/kiwis/${folder}`.toLowerCase()}>
-                        {folder.charAt(0).toUpperCase() + folder.slice(1)}
+            {links.map((link) => (
+                <ol key={link.name} className={styles.ol}>
+                    <Link href={link.url}>
+                        {link.url}
                     </Link>
                 </ol>
             ))}
