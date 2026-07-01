@@ -1,36 +1,25 @@
-type kiwiDrawing  = {
-    url: string,
-    image: string,
-    title: string,
-    description: string,
-    width: number,
-    height: number,
-}
+import type { ArtworkType } from "artwork"
 
-export const kiwisData: Record<string, kiwiDrawing> = {
-    "kiwishorrortales" :{
-        url:"/kiwis/kiwishorrortales",
-        title: "Kiwis Horror Tales",
-        image:"/static/kiwis/KiwisHorrorTales.png",
-        description: "",
-        width: 1752,
-        height: 2800
-    },
-    "relativity" :{
-        url:"/kiwis/relativity",
-        title: "Relativity",
-        image:"/static/kiwis/Relativity.png",
-        description: "",
-        width: 1752,
-        height: 2800
-    },
-    "glace" :{
-    url:"/kiwis/glace",
-    title: "Glace",
-    image:"/static/kiwis/Glace.png",
-    description: "",
-    width: 1752,
-    height: 2800
-    }
+export const kiwisData: Record<string, ArtworkType[]> = {
 
+    "posters": [
+       {
+            imageTitle: "Kiwis Horror Tales",
+            imageSrc:"/static/kiwis/KiwisHorrorTales.png",
+            imageAlt: "Des contes qui ne verront jamais le jour.",
+            imageRatio: 1752/2800
+        },
+       {
+            imageTitle: "Relativity",
+            imageSrc:"/static/kiwis/Relativity.png",
+            imageAlt: "Inspiré d'un certain Escher.",
+            imageRatio: 1752/2800
+        },
+       {
+            imageTitle: "Glace",
+            imageSrc:"/static/kiwis/Glace.png",
+            imageAlt: "Une glace goût kiwi.",
+            imageRatio: 1752/2800
+        }
+    ]
 }
