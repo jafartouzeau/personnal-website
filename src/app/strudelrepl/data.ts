@@ -74,8 +74,75 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .postgain(.2)
 .off(1/4, add(note(12)))
 .vib("4:.5")
-.o(3)`
+.o(3)
+`
     }, 
+    "anewerror":{
+      artist:"Moderat",
+      type:"Remix",
+      description:"",
+      url:"",
+      title:"A new error",
+      code: 
+`setCpm(112/4)
+const chords = "<f:major a:major d:minor e:minor>/2"
+
+$pad: note("<[c, f, a]@0.75 [c, f, b]@0.25 [c, f, c4] [c, f, a] [c, e, a] >/2")
+.sound("sawtooth")
+.struct("<x>*3")
+.lpf(2000)
+.room(1)
+.postgain(.4)
+.penv(2)
+.decay(2)
+.attack(.2)
+.crush("<16>")
+.o(6)
+
+_$lead1: note("<[f a c]!6 [f b c]!2 [f c4 c]!8 [f a c]!8 [e a c]!8>*4")
+.sound("pulse")
+.lpf(sine.range(4000,800).slow(8))
+.pan(sine.range(.2,.8).slow(8))
+.penv(.4)
+.room(.5)
+.lpenv(2)
+.postgain(1.2)
+.decay(.3)
+.add(note(12))
+.o(6)
+
+$drum: stack(
+s("sbd!4").duck("4:3").duckattack(.5).duckdepth(.9),
+s("[~ sd:4]!2")
+).gain(.7)
+
+$bass: note("<f a d e>/2".sub(24))
+.struct("x*12")
+.s("supersaw")
+.lpf(800)
+.lpenv(2)
+.gain(.9)
+.distort(2)
+.decay(.2)
+.o(6)
+
+_$lead2: note("<[c a2]!8 [f2 c]!4 [e2 a2]!4>*2".add(12))
+.struct("x*12")
+.sound("saw")
+.lpenv(8)
+.penv(.1)
+.add(note("<0!8 12!2 0 -12 12 24 24 12>*2"))
+.postgain(3)
+.lpf(1000)
+.decay(.5)
+.o(4,6)
+
+_$: s("circuitsdrumtracks_sd")
+.struct("<-!3 x>*4")
+.duck("6").duckattack(.5).duckdepth(1)
+
+`
+    },
     "track1":{
         artist: "",
         type: "Original",
@@ -128,7 +195,30 @@ $: //n("<b>")
   s("<numbers:8 numbers:7 numbers:6 numbers:5 numbers:4 numbers:3 numbers:2 numbers:1 numbers:0>")
   .o(2)
   .room(.6)
-  .pan(sine.range(0.45, 0.55).slow(2))`
-  ,
+  .pan(sine.range(0.45, 0.55).slow(2))
+`
+    },
+    "track2":{
+        artist: "",
+        type: "Original",
+        description: "https://www.youtube.com/watch?v=2-EzQylIMvk&list=RD2-EzQylIMvk&start_radio=1",
+        url: "",
+        title: "Track #2",
+        code:
+`setCpm(120/4)
+
+$bass: 
+   n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@2.5>*8".sub(14))
+  .scale("g:minor")
+  .s("supersaw")
+  .lpf(500)
+  .distort(2)
+  .lpenv(1)
+  .room(.5)
+
+$drum: stack(
+  s("sbd!4").duck("2").duckattack(.2).duckdepth(.8)
+)
+`
     }
 }
