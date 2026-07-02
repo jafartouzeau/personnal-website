@@ -1,5 +1,16 @@
+@font-face {
+    font-family: courier-prime;
+    src: url("/static/fonts/Courier_Prime/CourierPrime-Regular.ttf");
+}
+
+@font-face {
+    font-family: iosevka-charon-mono;
+    src: url("/static/fonts/Iosevka_Charon_Mono/IosevkaCharonMono-Medium.ttf");
+}
+
 :root {
-  --ff : ui-monospace,monospace;
+  --ff : courier-prime, ui-monospace, monospace;
+  --ff-logo: iosevka-charon-mono, monospace;
   
   --background: #fff;
   --foreground: #fff;
@@ -7,6 +18,12 @@
   --text: #000;
 
   --main-padding: 13px;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+  text-shadow: none;
 }
 
 * {
@@ -55,7 +72,6 @@ a {
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     color: var(--accent);
-    font-weight: 800;
   }
 }
 

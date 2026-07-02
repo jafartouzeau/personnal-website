@@ -16,6 +16,7 @@
 }
 .w {
   position: absolute;
+  font-family: var(--ff-logo);
   font-weight: 800;
   white-space: nowrap;
 }
