@@ -1,3 +1,7 @@
+import Image from "next/image";
+
 export default function Home() {
-  return <p><strong>Basse </strong><i>n.f. </i>La petite soeur de la grande cousine du violoncelle.</p>;
+  return <div style={{position:"relative",  aspectRatio:"1", maxWidth:"400px", maxHeight:"400px"}}> 
+              <Image alt="Abstraction" src={'/static/b&w.jpg'} fill/>
+        </div>;
 }
