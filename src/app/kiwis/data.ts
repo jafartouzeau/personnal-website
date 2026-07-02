@@ -1,7 +1,6 @@
 import type { ArtworkType } from "artwork"
 
 export const kiwisData: Record<string, ArtworkType[]> = {
-
     "posters": [
        {
             imageTitle: "Kiwis Horror Tales",
@@ -22,7 +21,7 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1752/2800
         }
     ],
-    "square": [
+    "formatcarre": [
        {
             imageTitle: "Compte sur ses doigts",
             imageSrc:"/static/kiwis/Compter.png",

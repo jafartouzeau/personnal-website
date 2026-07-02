@@ -1,14 +1,19 @@
-export type StrudelMusicType = {
-    code: string;
+export type StrudelMusicType = {    
     artist: string;
     type: string; //remix or original
     description: string;
     url: string,
     title: string,
+    code: string;
 }
 
 export const strudelData: Record<string, StrudelMusicType> = {
     "veridisquo" : {
+        artist: "Daft Punk",
+        type: "Remix",
+        description: "",
+        url: "/strudelrepl/veridisquo",
+        title: "Veridis Quo",
         code: 
 `setCpm(105/4)
 
@@ -69,14 +74,14 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .postgain(.2)
 .off(1/4, add(note(12)))
 .vib("4:.5")
-.o(3)`,
-        artist: "Daft Punk",
-        type: "Remix",
-        description: "",
-        url: "/strudelrepl/veridisquo",
-        title: "Veridis Quo"
+.o(3)`
     }, 
     "track1":{
+        artist: "",
+        type: "Original",
+        description: "",
+        url: "/strudelrepl/track1",
+        title: "Track #1",
         code:
 `setCpm(115/4)
 
@@ -125,11 +130,5 @@ $: //n("<b>")
   .room(.6)
   .pan(sine.range(0.45, 0.55).slow(2))`
   ,
-    artist: "",
-    type: "Original",
-    description: "",
-    url: "/strudelrepl/track1",
-    title: "Track #1"
- 
     }
 }

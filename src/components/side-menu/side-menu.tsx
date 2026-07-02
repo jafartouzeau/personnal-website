@@ -1,18 +1,13 @@
 import styles from './side-menu.module.css';
 import Link from "next/link";
 
-export type sideMenuLink = {
-    url:string,
-    name:string
-}
-
-export default function SideMenu({links}:{links:sideMenuLink[]}) {
+export default function SideMenu({page, links}:{page:string, links:string[]}) {
     return (
         <menu className={styles.menu}>
             {links.map((link) => (
-                <ol key={link.name} className={styles.ol}>
-                    <Link href={link.url}>
-                        {link.url}
+                <ol key={link} className={styles.ol}>
+                    <Link href={`/${page}/${link}`}>
+                        {link}
                     </Link>
                 </ol>
             ))}

@@ -12,5 +12,5 @@ export default async function StrudelReplPage({ params }: { params: Promise<{ st
   const music = strudelData[strudelslug];
   if (!music) return notFound();
   const content = <StrudelRepl code={music.code} />;
-  return <PageTemplate content={content} sideMenuData={strudelData}/>;
+  return <PageTemplate content={content} sideMenuLinks={Object.keys(strudelData)} sideMenuPage='strudelrepl'/>;
 }

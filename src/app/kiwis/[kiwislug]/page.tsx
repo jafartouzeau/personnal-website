@@ -12,5 +12,5 @@ export default async function KiwiPage({ params }: { params: Promise<{ kiwislug:
   const folder = kiwisData[kiwislug];
   if (!folder) return notFound();
   const content = <Gallery artworks={folder}/>
-  return <PageTemplate content={content} sideMenuData={kiwisData}/>;
+  return <PageTemplate content={content}  sideMenuLinks={Object.keys(kiwisData)} sideMenuPage='kiwis'/>;
 }
