@@ -24,20 +24,32 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     "formatcarre": [
        {
             imageTitle: "Compte sur ses doigts",
-            imageSrc:"/static/kiwis/Compter.png",
+            imageSrc:"/static/kiwis/ennui.jpg",
             imageAlt: "Il s'ennuie très vite à nouveau.",
             imageRatio: 1
         },
        {
             imageTitle: "Flûte à bec",
-            imageSrc:"/static/kiwis/Flûteàbec.png",
+            imageSrc:"/static/kiwis/fluteabec.jpg",
             imageAlt: "Dresseur de serpents.",
             imageRatio: 1
         },
        {
-            imageTitle: "Lejourj",
-            imageSrc:"/static/kiwis/Lejourj.png",
+            imageTitle: "Quel genre d'oiseau es-tu ?",
+            imageSrc:"/static/kiwis/quelgenredoiseau.jpg",
             imageAlt: "Hommage à un certain Prokofiev.",
+            imageRatio: 1
+        },
+       {
+            imageTitle: "Fessu",
+            imageSrc:"/static/kiwis/fessu.jpg",
+            imageAlt: "Tout le monde en a non ?",
+            imageRatio: 1
+        },
+       {
+            imageTitle: "Ballons de bauderuche",
+            imageSrc:"/static/kiwis/baudruche.jpg",
+            imageAlt: "Il vole enfin. Ce n'est peut être qu'un rêve.",
             imageRatio: 1
         }
     ]

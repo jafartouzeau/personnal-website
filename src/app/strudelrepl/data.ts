@@ -213,11 +213,10 @@ $bass:
    n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@2.5>*8".sub(14))
   .scale(currentScale)
   .s("<supersaw [supersaw, triangle]>")
-  .lpf(400)
-  .seg(32)//16
-  /*
+  //.lpf(400)
+  .seg(24)//16
   .lpf(tri.range(100,800))
-  .lpenv(tri.range(0,2))*/
+  .lpenv(tri.range(0,2))
   .distort(2)
   .room(.1)
   .scope()
