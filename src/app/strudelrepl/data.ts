@@ -226,5 +226,46 @@ $drum: stack(
   s("[- hh:1]!4").decay(.25)
 )
 `
+    },
+"track3":{
+        artist: "",
+        type: "Original",
+        description: "",
+        url: "",
+        title: "Track #3",
+        code:
+`setCpm(122/4)
+
+samples({
+bemylady: ['samples/bemylady-sample1.mp3', 'samples/bemylady-sample2.mp3'],
+heehaa: 'samples/heehaa.mp3',
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+
+$: stack(
+      s("bemylady:1")
+  .begin(".02")
+  .end("1")
+  .struct("<x!3 ~>*2"),
+  
+  s("bemylady:0")
+  .begin(".02")
+  .end(".3")
+   .struct("<~!3 x>*2"),
+
+  s("heehaa").struct("<~!7 x>*2").room(1.2)
+
+  )
+  .gain(1.25)
+  .lpf(slider(8000.4, 100, 10000))
+  ._punchcard()
+
+$drum: stack(
+  s("<sbd, rolandtr505_bd>*4"),
+  //s("cp!2"),
+  s("[- rolandtr909_oh]!4"),
+  s("hh!16")
+)
+`
     }
 }
