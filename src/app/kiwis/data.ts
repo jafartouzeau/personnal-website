@@ -28,6 +28,36 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageAlt: "Hommage à un certain Prokofiev.",
             imageRatio: 1
         },
+        {
+            imageTitle: "Demi Kiwi.",
+            imageSrc:"/static/kiwis/demikiwi.jpg",
+            imageAlt: "Un ki ou un wi ?",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Kiwi goût cerise",
+            imageSrc:"/static/kiwis/cerise.jpg",
+            imageAlt: "À croquer.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Kiwi goût prune",
+            imageSrc:"/static/kiwis/prune.jpg",
+            imageAlt: "Délicieux.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Il sait compter.",
+            imageSrc:"/static/kiwis/de1a9.jpg",
+            imageAlt: "Un intrus parmi les nombres.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Triwi",
+            imageSrc:"/static/kiwis/triwi.jpg",
+            imageAlt: "Trois petits kiwis.",
+            imageRatio: 1
+        },
        {
             imageTitle: "Compte sur ses doigts",
             imageSrc:"/static/kiwis/ennui.jpg",
