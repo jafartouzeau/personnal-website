@@ -22,6 +22,30 @@ export const kiwisData: Record<string, ArtworkType[]> = {
         }
     ],
     "formatcarre": [
+        {
+            imageTitle: "Toujours jamais à l'heure.",
+            imageSrc:"/static/kiwis/heure.jpg",
+            imageAlt: "Quelle heure ?",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "La deconstruction.",
+            imageSrc:"/static/kiwis/deconstruction.jpg",
+            imageAlt: "Très simple en fait",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Une CheniiIIiiille.",
+            imageSrc:"/static/kiwis/chenille.jpg",
+            imageAlt: "La chenille",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le perchoir.",
+            imageSrc:"/static/kiwis/perchoir.jpg",
+            imageAlt: "Un oiseau perché.",
+            imageRatio: 1
+        },
        {
             imageTitle: "Quel genre d'oiseau es-tu ?",
             imageSrc:"/static/kiwis/quelgenredoiseau.jpg",
@@ -32,6 +56,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageTitle: "Demi Kiwi.",
             imageSrc:"/static/kiwis/demikiwi.jpg",
             imageAlt: "Un ki ou un wi ?",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Kiwi goût banane.",
+            imageSrc:"/static/kiwis/banane.jpg",
+            imageAlt: "Miam",
             imageRatio: 1
         },
         {

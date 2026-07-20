@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import styles from './topbar.module.css';
 import Link from "next/link";
 
@@ -9,7 +9,7 @@ export default function TopBar() {
   const aRef = useRef<HTMLSpanElement>(null);
   const bRef = useRef<HTMLSpanElement>(null);
 
-useEffect(() => {
+useLayoutEffect(() => {
   const c = containerRef.current;
   const a = aRef.current;
   const b = bRef.current;
