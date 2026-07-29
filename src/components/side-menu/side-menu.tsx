@@ -4,13 +4,75 @@ import Link from "next/link";
 export default function SideMenu({page, links}:{page:string, links:string[]}) {
     return (
         <menu className={styles.menu}>
-            {links.map((link) => (
-                <ol key={link} className={styles.ol}>
-                    <Link href={`/${page}/${link}`}>
-                        {link}
+
+            <ol>
+                <Link className={styles.mainlink} href={`/kiwis`}>
+                   🥝 Kiwis
+                </Link>
+            </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/kiwis/formatcarre`}>
+                        Format carré
                     </Link>
                 </ol>
-            ))}
+                <ol className={styles.sublink}>
+                    <Link href={`/kiwis/comicstrip`}>
+                        Comic strip
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/kiwis/posters`}>
+                        Posters
+                    </Link>
+                </ol>
+
+            <ol className={styles.mainlink}>
+                <Link href={`/saintmaur`}>
+                   👁️ Saint-Maur a des yeux
+                </Link>
+            </ol> 
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/carte`}>
+                        Carte
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/chapitre1`}>
+                        Chapitre 1
+                    </Link>
+                </ol>
+            
+            <ol className={styles.mainlink}>
+                <Link href={`/strudelrepl`}>
+                    🌀 Strudel REPL
+                </Link>
+            </ol>   
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track1`}>
+                        Track #1
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track2`}>
+                        Track #2
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track3`}>
+                        Track #3
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track4`}>
+                        Track #4
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track5`}>
+                        Track #5
+                    </Link>
+                </ol>
+
         </menu>
     )
 }

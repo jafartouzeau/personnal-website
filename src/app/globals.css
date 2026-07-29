@@ -12,10 +12,10 @@
   --ff : courier-prime, ui-monospace, monospace;
   --ff-logo: iosevka-charon-mono, monospace;
   
-  --background: #fff;
+  --background: #ffffff ;
   --foreground: #fff;
   --accent: #ea0062;
-  --text: #000;
+  --text: #020f15;
 
   --main-padding: 13px;
 }
@@ -64,7 +64,7 @@ main {
 
 a {
   background: var(--text-primary);
-  /*text-decoration: none;*/
+  text-decoration: none;
   color: var(--text);
 }
 

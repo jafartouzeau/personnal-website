@@ -5,6 +5,14 @@
     height: 100vh;
 }
 
+.mainlink {
+    font-weight: 600;
+}
+
+.sublink {
+    margin-left: var(--main-padding);
+}
+
 @media (max-width: 768px) {
     .menu {
         height: auto;

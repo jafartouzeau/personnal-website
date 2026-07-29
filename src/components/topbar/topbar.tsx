@@ -1,57 +1,76 @@
 'use client';
 
-import { useLayoutEffect, useRef } from 'react';
+import { useLayoutEffect, useRef, useState } from 'react';
 import styles from './topbar.module.css';
 import Link from "next/link";
+
+const LOGO_UNIT = "J∀F∀R∀";
 
 export default function TopBar() {
   const containerRef = useRef<HTMLDivElement>(null);
   const aRef = useRef<HTMLSpanElement>(null);
   const bRef = useRef<HTMLSpanElement>(null);
+  const [repeatedText, setRepeatedText] = useState(LOGO_UNIT);
 
-useLayoutEffect(() => {
-  const c = containerRef.current;
-  const a = aRef.current;
-  const b = bRef.current;
-  const speed = 0.5;
+  useLayoutEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
 
-  if (!c || !a || !b) return;
+    const measure = document.createElement('span');
+    measure.style.visibility = 'hidden';
+    measure.style.position = 'absolute';
+    measure.style.whiteSpace = 'nowrap';
+    measure.className = styles.w;
+    measure.textContent = LOGO_UNIT;
+    document.body.appendChild(measure);
+    const unitWidth = measure.offsetWidth || 1;
+    document.body.removeChild(measure);
 
-  const w = a.offsetWidth;
-  c.style.width = `${w}px`;
-  c.style.height = `${a.offsetHeight}px`;
+    const containerWidth = container.offsetWidth;
+    const repeats = Math.ceil(containerWidth / unitWidth) + 1;
+    setRepeatedText(LOGO_UNIT.repeat(repeats));
+  }, []);
 
-  let x = 0;
+  useLayoutEffect(() => {
+    const a = aRef.current;
+    const b = bRef.current;
+    const speed = 0.5;
+    if (!a || !b) return;
 
-  // Position initiale
-  a.style.left = "0px";
-  b.style.left = `${w}px`;
+    const w = a.offsetWidth;
+    if (w === 0) return;
 
-  let raf: number;
+    let x = 0;
+    a.style.left = "0px";
+    b.style.left = `${w}px`;
 
-  function tick() {
-    x = (x + speed) % w;
-    a!.style.left = `${-x}px`;
-    b!.style.left = `${w - x}px`;
+    let raf: number;
+    function tick() {
+      x = (x + speed) % w;
+      a!.style.left = `${-x}px`;
+      b!.style.left = `${w - x}px`;
+      raf = requestAnimationFrame(tick);
+    }
     raf = requestAnimationFrame(tick);
-  }
 
-  raf = requestAnimationFrame(tick);
-
-  return () => cancelAnimationFrame(raf);
-}, []);
+    return () => cancelAnimationFrame(raf);
+  }, [repeatedText]);
 
   return (
     <nav className={styles.topbar}>
-      <ol className={styles.ol}>
-        <Link href={"/"}>
-          <div ref={containerRef} id="container" className={styles.container}>
-            <span ref={aRef} className={styles.w} id="a">J∀F∀R∀</span>
-            <span ref={bRef} className={styles.w} id="b">J∀F∀R∀</span>
-          </div>
-        </Link>
-      </ol>
-      <ol className={styles.ol}>
+      <Link href={"/"} className={styles.link}>
+        <div ref={containerRef} className={styles.container}>
+          <span ref={aRef} className={styles.w}>{repeatedText}</span>
+          <span ref={bRef} className={styles.w}>{repeatedText}</span>
+        </div>
+      </Link>
+    </nav>
+  );
+}
+
+/**
+ * 
+ * <ol className={styles.ol}>
         <Link href={"/strudelrepl"}>
           Strudel REPL
         </Link>
@@ -60,7 +79,7 @@ useLayoutEffect(() => {
         <Link href={"/kiwis"}>
           Kiwis
         </Link>
-      </ol>
-    </nav>
-  );
-}
+      </ol> 
+ * 
+ * 
+ */
