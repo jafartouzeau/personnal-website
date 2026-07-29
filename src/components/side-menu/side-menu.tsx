@@ -1,9 +1,9 @@
 import styles from './side-menu.module.css';
 import Link from "next/link";
 
-export default function SideMenu({page, links}:{page:string, links:string[]}) {
+export default function SideMenu() {
     return (
-        <menu className={styles.menu}>
+        <nav className={styles.menu}>
 
             <ol>
                 <Link className={styles.mainlink} href={`/kiwis`}>
@@ -23,22 +23,6 @@ export default function SideMenu({page, links}:{page:string, links:string[]}) {
                 <ol className={styles.sublink}>
                     <Link href={`/kiwis/posters`}>
                         Posters
-                    </Link>
-                </ol>
-
-            <ol className={styles.mainlink}>
-                <Link href={`/saintmaur`}>
-                   👁️ Saint-Maur a des yeux
-                </Link>
-            </ol> 
-                <ol className={styles.sublink}>
-                    <Link href={`/smady/carte`}>
-                        Carte
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/smady/chapitre1`}>
-                        Chapitre 1
                     </Link>
                 </ol>
             
@@ -73,6 +57,22 @@ export default function SideMenu({page, links}:{page:string, links:string[]}) {
                     </Link>
                 </ol>
 
-        </menu>
+        </nav>
     )
 }
+
+/*            <ol className={styles.mainlink}>
+                <Link href={`/saintmaur`}>
+                   👁️ Saint-Maur a des yeux
+                </Link>
+            </ol> 
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/carte`}>
+                        Carte
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/chapitre1`}>
+                        Chapitre 1
+                    </Link>
+                </ol>*/

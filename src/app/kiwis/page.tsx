@@ -1,6 +1,3 @@
-import { kiwisData } from './data';
-import PageTemplate from "@/components/page-template/page-template";
-
 export default function Kiwis() {
 
   const content = 
@@ -14,5 +11,5 @@ export default function Kiwis() {
         <p>Depuis ce jour, rien ne va bien, tout va mal.</p>
     </>
   
-  return <PageTemplate content={content} sideMenuLinks={Object.keys(kiwisData)} sideMenuPage='kiwis'/>;
+  return content;
 }

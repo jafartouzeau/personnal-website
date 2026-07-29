@@ -1,4 +1,3 @@
-import PageTemplate from "@/components/page-template/page-template";
 import { kiwisData } from '../data';
 import { notFound } from "next/navigation";
 import Gallery from "@/components/gallery/gallery";
@@ -12,5 +11,5 @@ export default async function KiwiPage({ params }: { params: Promise<{ kiwislug:
   const folder = kiwisData[kiwislug];
   if (!folder) return notFound();
   const content = <Gallery artworks={folder}/>
-  return <PageTemplate content={content}  sideMenuLinks={Object.keys(kiwisData)} sideMenuPage='kiwis'/>;
+  return content;
 }

@@ -3,6 +3,7 @@
     flex-direction: column;
     width: min(100vw, 300px);
     height: 100vh;
+    padding:  var(--main-padding);
 }
 
 .mainlink {
