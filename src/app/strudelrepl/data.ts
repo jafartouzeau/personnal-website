@@ -8,7 +8,7 @@ export type StrudelMusicType = {
 }
 
 export const strudelData: Record<string, StrudelMusicType> = {
-    "veridisquo" : {
+    "track4" : {
         artist: "Daft Punk",
         type: "Remix",
         description: "",
@@ -77,7 +77,7 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .o(3)
 `
     }, 
-    "anewerror":{
+    "track5":{
       artist:"Moderat",
       type:"Remix",
       description:"",

@@ -59,15 +59,15 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
-            imageTitle: "Il pleut.",
-            imageSrc:"/static/kiwis/totoro.jpg",
-            imageAlt: "Parapluie improvisé",
-            imageRatio: 1
-        },
-        {
             imageTitle: "Trompète",
             imageSrc:"/static/kiwis/trompete.jpg",
             imageAlt: "Trompette sans odeur",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Il pleut.",
+            imageSrc:"/static/kiwis/totoro.jpg",
+            imageAlt: "Parapluie improvisé",
             imageRatio: 1
         },
         {
@@ -86,18 +86,6 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageTitle: "Une CheniiIIiiille.",
             imageSrc:"/static/kiwis/chenille.jpg",
             imageAlt: "La chenille",
-            imageRatio: 1
-        },
-        {
-            imageTitle: "Le perchoir.",
-            imageSrc:"/static/kiwis/perchoir.jpg",
-            imageAlt: "Un oiseau perché.",
-            imageRatio: 1
-        },
-       {
-            imageTitle: "Quel genre d'oiseau es-tu ?",
-            imageSrc:"/static/kiwis/quelgenredoiseau.jpg",
-            imageAlt: "Hommage à un certain Prokofiev.",
             imageRatio: 1
         },
         {
@@ -125,15 +113,21 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
+            imageTitle: "Triwi",
+            imageSrc:"/static/kiwis/triwi.jpg",
+            imageAlt: "Trois petits kiwis.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Il sait compter.",
             imageSrc:"/static/kiwis/de1a9.jpg",
             imageAlt: "Un intrus parmi les nombres.",
             imageRatio: 1
         },
         {
-            imageTitle: "Triwi",
-            imageSrc:"/static/kiwis/triwi.jpg",
-            imageAlt: "Trois petits kiwis.",
+            imageTitle: "Le perchoir.",
+            imageSrc:"/static/kiwis/perchoir.jpg",
+            imageAlt: "Un oiseau perché.",
             imageRatio: 1
         },
        {
@@ -164,6 +158,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageTitle: "Cactus",
             imageSrc:"/static/kiwis/cactus.jpg",
             imageAlt: "Ça pique.",
+            imageRatio: 1
+        },
+       {
+            imageTitle: "Quel genre d'oiseau es-tu ?",
+            imageSrc:"/static/kiwis/quelgenredoiseau.jpg",
+            imageAlt: "Hommage à un certain Prokofiev.",
             imageRatio: 1
         }
     ],

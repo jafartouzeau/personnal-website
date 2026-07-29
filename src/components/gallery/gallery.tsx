@@ -7,7 +7,8 @@ function Artwork({imageSrc, imageAlt, imageRatio}: ArtworkType) {
             style={{
                 position:"relative", 
                 aspectRatio:`${imageRatio}`, 
-                width:"100%"
+                display:"flex", 
+                flex: "1 1 300px",
             }}
         >
             <Image alt={imageAlt} src={imageSrc} fill/>
@@ -16,29 +17,8 @@ function Artwork({imageSrc, imageAlt, imageRatio}: ArtworkType) {
 
 }
 
-function Column({artworks}:{artworks: ArtworkType[]}) {
-    return (
-        <div 
-            style={{
-                display:"flex", 
-                flexDirection:"column", 
-                flex: "1 1 300px",
-                gap:"13px", 
-            }
-        }>
-            {artworks.map((artwork) => (
-                <Artwork key={artwork.imageSrc} {...artwork} />
-            ))}
-        </div>
-    )
-}
-
 export default function Gallery({artworks}:{artworks: ArtworkType[]}) {
-    const columns: ArtworkType[][] = [[], [], []];
 
-    artworks.forEach((artwork, index) => {
-        columns[index % 3].push(artwork);
-    });
     
     return (<>
         <div 
@@ -51,9 +31,9 @@ export default function Gallery({artworks}:{artworks: ArtworkType[]}) {
                 padding:"13px"
             }
         }>
-            <Column artworks={columns[0]} />
-            <Column artworks={columns[1]} />
-            <Column artworks={columns[2]} />
+            {artworks.map((artwork) => (
+                <Artwork key={artwork.imageSrc} {...artwork} />
+            ))}
         </div>
     
     

@@ -8,6 +8,7 @@
   height: var(--topbar-height);
   padding: 0px var(--main-padding);
   background-color: var(--text);
+  align-items: center;
 }
 
 .link {
