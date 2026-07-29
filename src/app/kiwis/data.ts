@@ -2,6 +2,12 @@ import type { ArtworkType } from "artwork"
 
 export const kiwisData: Record<string, ArtworkType[]> = {
     "posters": [
+        {
+            imageTitle: "Les Coquets ratites",
+            imageSrc:"/static/kiwis/LesCoquetsRatites.jpg",
+            imageAlt: "Une bande de coquets vilains.",
+            imageRatio: 1600/2560
+        },
        {
             imageTitle: "Kiwis Horror Tales",
             imageSrc:"/static/kiwis/KiwisHorrorTales.png",
@@ -22,6 +28,48 @@ export const kiwisData: Record<string, ArtworkType[]> = {
         }
     ],
     "formatcarre": [
+        {
+            imageTitle: "Apprends-moi à voler.",
+            imageSrc:"/static/kiwis/apprendsmoi.jpg",
+            imageAlt: "Petit papillon",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Ne jamais baisser les bras.",
+            imageSrc:"/static/kiwis/bras.jpg",
+            imageAlt: "Ne baisse pas les bras",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Senteur de fleurs.",
+            imageSrc:"/static/kiwis/fleurs.jpg",
+            imageAlt: "Les fleurs sentent bon",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le vilain.",
+            imageSrc:"/static/kiwis/narguer.jpg",
+            imageAlt: "Manuel qui vole",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le goût des nuages.",
+            imageSrc:"/static/kiwis/nuages.jpg",
+            imageAlt: "Quel goût ont les nuages ?",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Il pleut.",
+            imageSrc:"/static/kiwis/totoro.jpg",
+            imageAlt: "Parapluie improvisé",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Trompète",
+            imageSrc:"/static/kiwis/trompete.jpg",
+            imageAlt: "Trompette sans odeur",
+            imageRatio: 1
+        },
         {
             imageTitle: "Toujours jamais à l'heure.",
             imageSrc:"/static/kiwis/heure.jpg",
@@ -117,6 +165,26 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageSrc:"/static/kiwis/cactus.jpg",
             imageAlt: "Ça pique.",
             imageRatio: 1
+        }
+    ],
+    "comicstrip": [
+        {
+            imageTitle: "Manuel 1",
+            imageSrc:"/static/kiwis/manuel1.jpg",
+            imageAlt: "Méchant manuel.",
+            imageRatio: 968/938
+        },
+        {
+            imageTitle: "Manuel 2",
+            imageSrc:"/static/kiwis/manuel2.jpg",
+            imageAlt: "Méchant manuel.",
+            imageRatio: 968/938
+        },
+        {
+            imageTitle: "Manuel 3",
+            imageSrc:"/static/kiwis/manuel3.jpg",
+            imageAlt: "Méchant manuel.",
+            imageRatio: 968/938
         }
     ]
 }
