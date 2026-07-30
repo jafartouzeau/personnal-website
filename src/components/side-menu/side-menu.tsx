@@ -25,6 +25,22 @@ export default function SideMenu() {
                         Posters
                     </Link>
                 </ol>
+
+            <ol className={styles.mainlink}>
+                <Link href={`/smady`}>
+                   👁️ Saint-Maur a des yeux
+                </Link>
+            </ol> 
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/carte`}>
+                        Carte
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/chapitre1`}>
+                        Chapitre 1
+                    </Link>
+                </ol>
             
             <ol className={styles.mainlink}>
                 <Link href={`/strudelrepl`}>
@@ -60,19 +76,3 @@ export default function SideMenu() {
         </nav>
     )
 }
-
-/*            <ol className={styles.mainlink}>
-                <Link href={`/saintmaur`}>
-                   👁️ Saint-Maur a des yeux
-                </Link>
-            </ol> 
-                <ol className={styles.sublink}>
-                    <Link href={`/smady/carte`}>
-                        Carte
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/smady/chapitre1`}>
-                        Chapitre 1
-                    </Link>
-                </ol>*/
