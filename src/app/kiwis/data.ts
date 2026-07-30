@@ -3,6 +3,12 @@ import type { ArtworkType } from "artwork"
 export const kiwisData: Record<string, ArtworkType[]> = {
     "posters": [
         {
+            imageTitle: "Feel like you don't belong here ?",
+            imageSrc:"/static/kiwis/Bowling.jpg",
+            imageAlt: "Pas à sa place.",
+            imageRatio: 1600/2560
+        },
+        {
             imageTitle: "Les Coquets ratites",
             imageSrc:"/static/kiwis/LesCoquetsRatites.jpg",
             imageAlt: "Une bande de coquets vilains.",
@@ -28,6 +34,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
         }
     ],
     "formatcarre": [
+        {
+            imageTitle: "C'est fatigant.",
+            imageSrc:"/static/kiwis/flemme.jpg",
+            imageAlt: "C'est fatigant",
+            imageRatio: 1
+        },
         {
             imageTitle: "Apprends-moi à voler.",
             imageSrc:"/static/kiwis/apprendsmoi.jpg",
@@ -185,6 +197,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageSrc:"/static/kiwis/manuel3.jpg",
             imageAlt: "Méchant manuel.",
             imageRatio: 968/938
+        },
+        {
+            imageTitle: "C'est triste",
+            imageSrc:"/static/kiwis/triste.jpg",
+            imageAlt: "Triste triste.",
+            imageRatio: 2560/2279
         }
     ]
 }
