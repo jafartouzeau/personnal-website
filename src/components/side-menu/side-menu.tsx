@@ -41,6 +41,11 @@ export default function SideMenu() {
                         Chapitre 1
                     </Link>
                 </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/smady/chapitre2`}>
+                        Chapitre 2
+                    </Link>
+                </ol>
             
             <ol className={styles.mainlink}>
                 <Link href={`/strudelrepl`}>
