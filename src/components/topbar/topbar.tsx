@@ -8,10 +8,12 @@ const LOGO_UNIT = "J∀F∀R∀";
 
 export default function TopBar() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const aRef = useRef<HTMLSpanElement>(null);
-  const bRef = useRef<HTMLSpanElement>(null);
+  const textRef = useRef<HTMLSpanElement>(null);
+  const unitWidthRef = useRef<number>(0);
   const [repeatedText, setRepeatedText] = useState(LOGO_UNIT);
 
+  // 1. Mesure la largeur d'une unité et calcule assez de répétitions
+  //    pour couvrir 2x le container (marge pour le défilement)
   useLayoutEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -22,33 +24,32 @@ export default function TopBar() {
     measure.style.whiteSpace = 'nowrap';
     measure.className = styles.w;
     measure.textContent = LOGO_UNIT;
-    document.body.appendChild(measure);
+    container.appendChild(measure);
     const unitWidth = measure.offsetWidth || 1;
-    document.body.removeChild(measure);
+    container.removeChild(measure);
+
+    unitWidthRef.current = unitWidth;
 
     const containerWidth = container.offsetWidth;
-    const repeats = Math.ceil(containerWidth / unitWidth) + 1;
+    // assez de répétitions pour couvrir 2x la largeur du container
+    const repeats = Math.ceil((containerWidth * 2) / unitWidth) + 1;
     setRepeatedText(LOGO_UNIT.repeat(repeats));
   }, []);
 
+  // 2. Anime un seul span, en le faisant boucler sur la largeur d'UNE unité
   useLayoutEffect(() => {
-    const a = aRef.current;
-    const b = bRef.current;
+    const text = textRef.current;
     const speed = 0.5;
-    if (!a || !b) return;
+    if (!text) return;
 
-    const w = a.offsetWidth;
-    if (w === 0) return;
+    const unitWidth = unitWidthRef.current;
+    if (unitWidth === 0) return;
 
     let x = 0;
-    a.style.left = "0px";
-    b.style.left = `${w}px`;
-
     let raf: number;
     function tick() {
-      x = (x + speed) % w;
-      a!.style.left = `${-x}px`;
-      b!.style.left = `${w - x}px`;
+      x = (x + speed) % unitWidth;
+      text!.style.transform = `translateX(${-x}px)`;
       raf = requestAnimationFrame(tick);
     }
     raf = requestAnimationFrame(tick);
@@ -60,26 +61,9 @@ export default function TopBar() {
     <nav className={styles.topbar}>
       <Link href={"/"} className={styles.link}>
         <div ref={containerRef} className={styles.container}>
-          <span ref={aRef} className={styles.w}>{repeatedText}</span>
-          <span ref={bRef} className={styles.w}>{repeatedText}</span>
+          <span ref={textRef} className={styles.w}>{repeatedText}</span>
         </div>
       </Link>
     </nav>
   );
 }
-
-/**
- * 
- * <ol className={styles.ol}>
-        <Link href={"/strudelrepl"}>
-          Strudel REPL
-        </Link>
-      </ol>
-      <ol className={styles.ol}>
-        <Link href={"/kiwis"}>
-          Kiwis
-        </Link>
-      </ol> 
- * 
- * 
- */

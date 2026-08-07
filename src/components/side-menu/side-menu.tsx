@@ -7,7 +7,7 @@ export default function SideMenu() {
 
             <ol>
                 <Link className={styles.mainlink} href={`/kiwis`}>
-                   🥝 Kiwis
+                   Kiwis
                 </Link>
             </ol>
                 <ol className={styles.sublink}>
@@ -28,7 +28,7 @@ export default function SideMenu() {
 
             <ol className={styles.mainlink}>
                 <Link href={`/photos`}>
-                   📷 Photos
+                   Photos
                 </Link>
             </ol> 
                 <ol className={styles.sublink}>
@@ -44,7 +44,7 @@ export default function SideMenu() {
 
             <ol className={styles.mainlink}>
                 <Link href={`/smady`}>
-                   👁️ Saint-Maur a des yeux
+                   Saint-Maur a des yeux
                 </Link>
             </ol> 
                 <ol className={styles.sublink}>
@@ -70,7 +70,7 @@ export default function SideMenu() {
             
             <ol className={styles.mainlink}>
                 <Link href={`/strudelrepl`}>
-                    🌀 Strudel REPL
+                    Strudel REPL 🌀
                 </Link>
             </ol>   
                 <ol className={styles.sublink}>
