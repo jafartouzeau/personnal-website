@@ -27,6 +27,22 @@ export default function SideMenu() {
                 </ol>
 
             <ol className={styles.mainlink}>
+                <Link href={`/photos`}>
+                   📷 Photos
+                </Link>
+            </ol> 
+                <ol className={styles.sublink}>
+                    <Link href={`/photos/serie1`}>
+                        Série #1
+                    </Link>
+                </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/photos/serie2`}>
+                        Série #2
+                    </Link>
+                </ol>
+
+            <ol className={styles.mainlink}>
                 <Link href={`/smady`}>
                    👁️ Saint-Maur a des yeux
                 </Link>

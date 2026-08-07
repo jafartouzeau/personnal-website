@@ -1,7 +1,7 @@
 import Image from "next/image"
 import type { ArtworkType } from "artwork"
 
-function Artwork({imageSrc, imageAlt, imageRatio}: ArtworkType) {
+function Artwork({imageSrc, imageAlt, imageRatio, imageTitle}: ArtworkType) {
     return (
         <div 
             style={{

@@ -1,0 +1,33 @@
+.imageContainer {
+    position: relative;
+    flex: 1 1 0
+}
+
+.artwork {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 100%;
+}
+
+.title {
+        width: 100%;
+        margin-top: 5px;
+        text-align: center;
+    }
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%; 
+    gap: 13px;
+    padding: 13px 0
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+
+}
