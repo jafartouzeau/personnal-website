@@ -12,8 +12,7 @@ export default function TopBar() {
   const unitWidthRef = useRef<number>(0);
   const [repeatedText, setRepeatedText] = useState(LOGO_UNIT);
 
-  // 1. Mesure la largeur d'une unité et calcule assez de répétitions
-  //    pour couvrir 2x le container (marge pour le défilement)
+ 
   useLayoutEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -36,26 +35,7 @@ export default function TopBar() {
     setRepeatedText(LOGO_UNIT.repeat(repeats));
   }, []);
 
-  // 2. Anime un seul span, en le faisant boucler sur la largeur d'UNE unité
-  useLayoutEffect(() => {
-    const text = textRef.current;
-    const speed = 0.5;
-    if (!text) return;
 
-    const unitWidth = unitWidthRef.current;
-    if (unitWidth === 0) return;
-
-    let x = 0;
-    let raf: number;
-    function tick() {
-      x = (x + speed) % unitWidth;
-      text!.style.transform = `translateX(${-x}px)`;
-      raf = requestAnimationFrame(tick);
-    }
-    raf = requestAnimationFrame(tick);
-
-    return () => cancelAnimationFrame(raf);
-  }, [repeatedText]);
 
   return (
     <nav className={styles.topbar}>
