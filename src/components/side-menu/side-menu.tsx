@@ -41,6 +41,16 @@ export default function SideMenu() {
                     </Link>
                 </ol>
                 <ol className={`${styles.link} ${styles.top}`}>
+                    <Link href={`/lbm`}>
+                         🌟 La Baguette Magique
+                    </Link>
+                </ol>
+                <ol className={`${styles.link} ${styles.top}`}>
+                    <Link href={`/smady`}>
+                         🧿 Saint-Maur a des yeux
+                    </Link>
+                </ol>
+                <ol className={styles.link}>
                     <Link href={`/smady/carte`}>
                          🧿 Carte
                     </Link>
