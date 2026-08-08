@@ -6,16 +6,39 @@
     padding:  var(--main-padding);
 }
 
-.mainlink {
-    font-weight: 600;
+.top {
+    margin-top: var(--small-padding);
 }
 
-.sublink {
-    margin-left: var(--main-padding);
+.link {
+    margin-left: var(--small-padding);
 }
 
 @media (max-width: 768px) {
     .menu {
         height: auto;
     }
+}
+
+.logo {
+    font-size: 13px;
+    white-space: nowrap;
+    color: var(--text);
+    margin-bottom: var(--main-padding);
+}
+
+.reversed {
+    display: inline-block;
+    line-height: 0%;
+    vertical-align: middle;
+    transform: scale(1, -1);
+}
+
+.credits {
+    position: absolute;
+    bottom: 0;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;   
+    direction: rtl; 
+    margin-bottom: var(--main-padding);
 }

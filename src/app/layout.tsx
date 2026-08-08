@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import TopBar from "@/components/topbar/topbar";
 import SideMenu from "@/components/side-menu/side-menu";
 
 
@@ -17,7 +16,6 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <TopBar/>
         <SideMenu/>
         <main>{children}</main>
       </body>
