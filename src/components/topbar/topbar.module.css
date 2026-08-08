@@ -17,7 +17,7 @@
 .container {
   position: relative;
   width: 100%;
-  height: 2rem;
+  height: 1rem;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -26,6 +26,7 @@
 .w {
   font-family: var(--ff-logo);
   font-weight: 800;
+  font-size: 13px;
   white-space: nowrap;
-  color: #fff;
+  color: #ffffff;
 }
