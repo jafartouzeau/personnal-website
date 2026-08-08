@@ -17,7 +17,18 @@ export default function RootLayout({
     <html lang="fr">
       <body>
         <SideMenu/>
-        <main>{children}</main>
+        <main>
+          {children}
+        </main>
+        <footer style={{
+            writingMode: "vertical-rl",
+            textOrientation:"sideways", 
+            position:"fixed",
+            bottom:"0",
+            fontSize: "9px",
+            textAlign: "center",
+            margin: "0 1px 5px 0"
+        }}>©2026 Jafar Touzeau</footer>
       </body>
     </html>
   );

@@ -71,7 +71,6 @@ a {
   color: var(--text);
 }
 
-/* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   a:hover {
     color: var(--accent);

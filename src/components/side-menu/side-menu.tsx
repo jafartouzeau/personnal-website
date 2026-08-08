@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function SideMenu() {
 
     return (
-
         <nav className={styles.menu}>
             
             <Link href="/" className={styles.link}>
@@ -91,8 +90,6 @@ export default function SideMenu() {
                         🌀 Track #5
                     </Link>
                 </ol>
-
-                <p className={styles.credits}>©2026 Jafar Touzeau</p>
 
         </nav>
     )
