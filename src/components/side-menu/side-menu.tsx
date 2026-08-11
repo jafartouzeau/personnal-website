@@ -30,7 +30,7 @@ export default function SideMenu() {
                          🥝 Posters
                     </Link>
                 </ol>
-                <ol className={`${styles.link} ${styles.top}`}>
+                {/*<ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/photos/serie1`}>
                        📷 Série #1
                     </Link>
@@ -39,7 +39,7 @@ export default function SideMenu() {
                     <Link href={`/photos/serie2`}>
                         📷 Série #2
                     </Link>
-                </ol>
+                </ol>*/}
                 <ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/lbm`}>
                          🌟 La Baguette Magique
@@ -75,6 +75,7 @@ export default function SideMenu() {
                         🧿 Chapitre 4
                     </Link>
                 </ol>
+                {/*
                 <ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/strudelrepl/track1`}>
                         🌀 Track #1
@@ -99,7 +100,7 @@ export default function SideMenu() {
                     <Link href={`/strudelrepl/track5`}>
                         🌀 Track #5
                     </Link>
-                </ol>
+                </ol>*/}
 
         </nav>
     )
