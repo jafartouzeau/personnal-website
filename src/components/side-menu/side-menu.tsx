@@ -75,7 +75,7 @@ export default function SideMenu() {
                         🧿 Chapitre 4
                     </Link>
                 </ol>
-                {/*
+                
                 <ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/strudelrepl/track1`}>
                         🌀 Track #1
@@ -100,7 +100,17 @@ export default function SideMenu() {
                     <Link href={`/strudelrepl/track5`}>
                         🌀 Track #5
                     </Link>
-                </ol>*/}
+                </ol>
+                <ol className={styles.link}>
+                    <Link href={`/strudelrepl/track6`}>
+                        🌀 Track #6
+                    </Link>
+                </ol>
+                <ol className={styles.link}>
+                    <Link href={`/strudelrepl/track7`}>
+                        🌀 Track #7
+                    </Link>
+                </ol>
 
         </nav>
     )

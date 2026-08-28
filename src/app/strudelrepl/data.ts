@@ -267,5 +267,62 @@ $drum: stack(
   s("hh!16")
 )
 `
+    },
+    "track6": {
+      artist:"",
+      type:"Original",
+      description:"",
+      url:"/strudelrepl/track6",
+      title:"Track #6",
+      code:`
+/*
+  @title Track #6
+  @by FOTF
+*/
+
+setCpm(110/4)
+
+let chords1 = "<[0] [0] [0] [0]>"
+let chords2 = "<[0,2] [0,3] [0,3] [0,2]>"
+let chords3 = "<[0,2,5] [0,3,5] [0,3,4] [0,2,4]>"
+let chords4 = "<[0,2,5,7] [0,3,5,8] [0,3,4,9] [0,2,4,9]>" //11
+let chords5 = "<[0,2,5,7,14] [0,3,5,8,15] [0,3,4,9,16] [0,2,4,9,18]>" //11
+let chords6 = "<[0,2,5,7,[14, 21]] [0,3,5,8,15] [0,3,4,9,16] [0,2,4,9,[18 20]]>"
+
+let chords = chords6
+let SCALE = "e:minor"
+
+let CHORDS_GAIN = slider(0.873,0,1)
+let CHORDS_LPF = slider(1000.3,100,10000)
+let CHORDS_ROOM = slider(0.968,0,4)
+
+$chords: 
+    n(chords.sub(7))
+    .scale(SCALE)
+    .s("supersaw, saw")
+    .struct("x x [x x] x x [x x]")
+    .lpf(CHORDS_LPF)
+    .room(CHORDS_ROOM)
+    .roomsize(4)
+    .gain(CHORDS_GAIN)
+
+$kick: 
+     s("bd!4")
+     .lpf(600)  
+      `
+    },
+    "track7": {
+      artist:"FOTF",
+      type:"Original",
+      description:"",
+      url:"/strudelrepl/track7",
+      title:"Track #7",
+      code:`
+/*
+  @title Track #7
+  @by FOTF
+*/
+
+      `
     }
 }
