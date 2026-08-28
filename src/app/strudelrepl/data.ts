@@ -205,25 +205,43 @@ $: //n("<b>")
         url: "",
         title: "Track #2",
         code:
-`setCpm(120/4)
+`/*
+  @title Track #2
+  @by FOTF
+*/
 
-const currentScale = "g:minor"
+setCpm(135/4)
+
+let SCALE = "b:minor"
 
 $bass: 
-   n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@2.5>*8".sub(14))
-  .scale(currentScale)
-  .s("<supersaw [supersaw, triangle]>")
-  //.lpf(400)
-  .seg(24)//16
-  .lpf(tri.range(100,800))
-  .lpenv(tri.range(0,2))
-  .distort(2)
-  .room(.1)
-  .scope()
+n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@2.5>*8".sub(14))
+.scale(SCALE)
+.s("<supersaw [supersaw, triangle]>")
+.lpf(200)
+.seg(24)//16
+.lpf(tri.range(100,800))
+.lpenv(tri.range(0,2))
+.distort(1)
+.room(.1)
 
-$drum: stack(
-  s("sbd!4"),
-  s("[- hh:1]!4").decay(.25)
+$acid: 
+n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@1.5 0@1>*8".sub(7))
+.scale(SCALE)
+.s("<sqr,supersaw, triangle>")
+.bpf(280)
+.bpq(6)
+.bpenv(slider(4.72,0,8)) //acid
+.diode(3)
+.distort(1.5)
+.room(.4)
+.delay(.5)
+
+
+$drums: stack(
+  s("<sbd, rolandtr505_bd>*4"),
+  s("<bd:1>*4").distort(.3).room(.7).lpf(200),
+  s("cp").struct("<~ ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ ~ x ~>*16").room(.1).lpf(1000)
 )
 `
     },
@@ -309,20 +327,6 @@ $chords:
 $kick: 
      s("bd!4")
      .lpf(600)  
-      `
-    },
-    "track7": {
-      artist:"FOTF",
-      type:"Original",
-      description:"",
-      url:"/strudelrepl/track7",
-      title:"Track #7",
-      code:`
-/*
-  @title Track #7
-  @by FOTF
-*/
-
       `
     }
 }
