@@ -329,4 +329,51 @@ $kick:
      .lpf(600)  
       `
     }
+    ,
+    "track7": {
+      artist:"",
+      type:"Original",
+      description:"",
+      url:"/strudelrepl/track7",
+      title:"Track #7",
+      code:`
+/*
+  @title Track #7
+  @by FOTF
+*/
+
+setCpm(80/4)
+
+$: note("<[f#2, f#3, a3]@1.5 [a2, d#3, f#3]@0.5 [[c#3 c#3], e#3, g#3]@1.5 [<e#3 c#2>, g#3, b3]@0.5 >")
+  //.s("gm_church_organ:3")
+  //.s("gm_pad_choir:2")
+  //.s("gm_pad_choir:5")
+  //.s("gm_pad_choir:6")
+  .s("gm_pad_choir:2")
+  .adsr(".1:.1:1:1")
+  .room(2)
+  .roomsize(4)
+  .lpf(400)
+  .postgain(.3)
+
+$: note("<f#1@1.5 a1@0.5 c#1@1.5 <e#1 c#1>@0.5>")
+  .s("supersaw")
+  .lpf(100)
+  .adsr(".8:.1:1:.4")
+
+
+$: note("<c#4 a4 c#5 f#5>")
+//.s("gm_fx_sci_fi:4")
+  .s("piano")
+.patt(.2)
+.room(2)
+.jux(rev)
+.delay(.1)
+.postgain(.1)
+.off(1/4, add(note(12)))
+.vib("4:.5")
+
+_$: s("<bd:1>*4").distort(.3).room(.7).lpf(200)
+      `
+    }
 }
