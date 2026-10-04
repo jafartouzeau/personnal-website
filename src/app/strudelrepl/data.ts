@@ -377,3 +377,47 @@ _$: s("<bd:1>*4").distort(.3).room(.7).lpf(200)
       `
     }
 }
+
+
+/*
+  @title Track #8
+  @by FOTF
+*/
+
+/*
+
+setCpm(106/4)
+
+samples({
+alewya_bass: 'samples/bass/alewya_bass.mp3'
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+
+$: s("alewya_bass")
+   .slow(2)
+  .end(".99")
+  .fit()
+  .lpf(400)
+
+$drum: stack(
+  s("sbd*4").lpf(400).room(.3),
+  //s("sd:2").struct("<x ~ ~ x ~ ~ x ~ ~ ~ x ~ x ~ ~ ~ >*16").lpf(600)
+).gain(0.4)
+
+
+_$: note("<b@3.5 b@0.5 c4@3.5 c4@0.5 d4@3.5 d4@0.5 c4@3.5 a@0.5>*4")
+   .s("gm_distortion_guitar")
+   
+
+_$: note("<b c4 d4 c4>")
+  .struct("<x ~ ~ x ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ >*16")
+  .seg(16)
+  .s("gm_overdriven_guitar")
+  .adsr("0:1:1:1")
+  .off(1/16, add(note(12)))
+  .echo(2, 1/16, .2)
+  .lpf(1000)
+  .room(2)
+  .postgain(.2)
+  
+*/

@@ -35,6 +35,36 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Spirale",
+            imageSrc:"/static/kiwis/spirale.jpg",
+            imageAlt: "La tête qui tourne.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le gentil serpent.",
+            imageSrc:"/static/kiwis/serpent.jpg",
+            imageAlt: "Parfois, on ne sait pas comment réconforter.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le chemin le plus rapide n'est pas nécessairement le meilleur.",
+            imageSrc:"/static/kiwis/petitoiseau.jpg",
+            imageAlt: "Deux oiseaux.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Le Héron injectif.",
+            imageSrc:"/static/kiwis/heron.jpg",
+            imageAlt: "Injonction.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Laama",
+            imageSrc:"/static/kiwis/lama.jpg",
+            imageAlt: "De bons conseils.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "C'est fatigant.",
             imageSrc:"/static/kiwis/flemme.jpg",
             imageAlt: "C'est fatigant",
