@@ -35,6 +35,36 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Reflet",
+            imageSrc:"/static/kiwis/reflet.jpg",
+            imageAlt: "Soi-même.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "On est bien là",
+            imageSrc:"/static/kiwis/onestbienla.jpg",
+            imageAlt: "Au bord de l'eau.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Réflexion du rêve",
+            imageSrc:"/static/kiwis/reflexion.jpg",
+            imageAlt: "De l'eau magique.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Prêt des nuages",
+            imageSrc:"/static/kiwis/pretdesnuages.jpg",
+            imageAlt: "Et pourtant jamais aussi loin.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "La flaque",
+            imageSrc:"/static/kiwis/laflaque.jpg",
+            imageAlt: "Son amie la flaque.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Spirale",
             imageSrc:"/static/kiwis/spirale.jpg",
             imageAlt: "La tête qui tourne.",

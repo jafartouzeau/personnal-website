@@ -39,7 +39,7 @@ export default function SideMenu() {
                     <Link href={`/photos/serie2`}>
                         📷 Série #2
                     </Link>
-                </ol>*/}
+                </ol>
                 <ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/lbm`}>
                          🌟 La Baguette Magique
@@ -74,7 +74,7 @@ export default function SideMenu() {
                     <Link href={`/smady/chapitre4`}>
                         🧿 Chapitre 4
                     </Link>
-                </ol>
+                </ol>*/}
                 
                 <ol className={`${styles.link} ${styles.top}`}>
                     <Link href={`/strudelrepl/track1`}>
