@@ -1,0 +1,35 @@
+.container {
+  position: relative; 
+  width: clamp(64px, 20vw, 128px);
+  aspect-ratio: 1; 
+}
+
+.imageContainer {
+  position: absolute;
+  inset: 0; 
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  transition: box-shadow 0.4s ease;
+}
+
+.imageContainer:hover {
+    box-shadow: 0 0 8px 8px white;
+    transform: rotate(-4deg) scale(1.02);
+}
+
+.play {
+  animation: rotate 3s linear infinite;
+  box-shadow: 0 0 8px 8px white;
+}
+
+.image {
+  object-fit: cover; 
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
