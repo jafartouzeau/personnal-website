@@ -1,0 +1,41 @@
+.clock {
+  position: relative;
+  width: min(90%, 400px);
+  height: min(90%, 400px);
+  margin: 0;
+  transition: 0.2s ease;
+}
+
+.clock:hover {
+    transform: scale(1.05);
+}
+
+.hr {
+    transform-box: fill-box;
+    transform-origin: 33% 70%;
+    animation: rotation 60s linear infinite;
+}
+
+.sec {
+    transform-box: fill-box;
+    transform-origin: 23% -25%;
+    animation: rotation 15s linear infinite;
+}
+
+.min {
+    transform-box: fill-box;
+        transform-origin: 23% -25%;
+
+   /* transform-origin: 120% 115%;*/
+    animation: rotation 30s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

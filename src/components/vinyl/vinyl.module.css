@@ -1,6 +1,6 @@
 .container {
   position: relative; 
-  width: clamp(64px, 20vw, 128px);
+  width: min(100%, 200px);
   aspect-ratio: 1; 
 }
 
