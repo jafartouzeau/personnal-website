@@ -43,6 +43,7 @@
 
 @media (max-width: 768px) {
     .menu {
+        width: 100vw;
         height: auto;
         border: none;
     }
