@@ -12,14 +12,15 @@
   --ff : courier-prime, ui-monospace, monospace;
   --ff-logo: iosevka-charon-mono, monospace;
   
-  --fs: 13px;
+  --fs: 12px;
 
-  --background: #0d0a0a ;
+  --background: #B0CDE6;
   --accent: #ea0062af;
-  --text: #eff1f3;
+  --text: #15133C;
 
   --main-padding: 13px;
-  --small-padding: 5px;
+  --small-padding: 8px;
+  --very-small-padding: 2px;
   --topbar-height: 20px;
 }
 
@@ -69,6 +70,12 @@ a {
   background: var(--text-primary);
   text-decoration: none;
   color: var(--text);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--text);
+  margin-bottom: var(--small-padding); 
 }
 
 @media (hover: hover) and (pointer: fine) {

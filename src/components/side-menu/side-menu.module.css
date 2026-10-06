@@ -1,24 +1,36 @@
 .menu {
     display: flex;
     flex-direction: column;
-    width: min(100vw, 300px);
+    width: min(100vw, 256px);
     height: 100vh;
     padding:  var(--main-padding);
 }
 
-.top {
-    margin-top: var(--small-padding);
+.container {
+  position: relative;
+  width: 100%;
+  height: 1.5rem;
+  overflow: hidden;
 }
 
-.link {
-    margin-left: var(--small-padding);
-}
-
-.logo {
-    font-size: 13px;
+.w {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-family: var(--ff-logo);
+    font-weight: 800;
     white-space: nowrap;
     color: var(--text);
     margin-bottom: var(--main-padding);
+}
+
+.sublink {
+    margin: var(--very-small-padding) var(--small-padding) var(--very-small-padding) 0;
+}
+
+.toplink {
+    margin: var(--main-padding) 0 var(--small-padding) 0;
 }
 
 .reversed {
@@ -32,5 +44,6 @@
 @media (max-width: 768px) {
     .menu {
         height: auto;
+        border: none;
     }
 }

@@ -4,7 +4,7 @@ import SideMenu from "@/components/side-menu/side-menu";
 
 
 export const metadata: Metadata = {
-  title: "Jafar Touzeau",
+  title: "JⱯFⱯR",
   description: "Site personnel",
 };
 
