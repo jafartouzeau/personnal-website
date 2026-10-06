@@ -1,0 +1,14 @@
+.bento {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  aspect-ratio: var(--cols) / var(--rows); /* cases carrées */
+  width: 100%;
+  gap: 1rem;
+}
+
+.item {
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+}
