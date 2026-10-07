@@ -1,45 +1,11 @@
-'use client';
-
+import Link from 'next/link';
 import styles from './side-menu.module.css';
-import Link from "next/link";
-import { useLayoutEffect, useRef, useState } from 'react';
-
-const LOGO_UNIT = "J∀F∀R∀";
 
 export default function SideMenu() {
-
-    const containerRef = useRef<HTMLDivElement>(null);
-    const [repeatedText, setRepeatedText] = useState(LOGO_UNIT);
-
-    useLayoutEffect(() => {
-        const container = containerRef.current;
-        if (!container) return;
-
-        const measure = document.createElement('span');
-        measure.style.visibility = 'hidden';
-        measure.style.position = 'absolute';
-        measure.style.whiteSpace = 'nowrap';
-        measure.className = styles.w;
-        measure.textContent = LOGO_UNIT;
-        container.appendChild(measure);
-        const unitWidth = measure.offsetWidth || 1;
-        container.removeChild(measure);
-
-        const containerWidth = container.offsetWidth;
-        const repeats = Math.ceil(containerWidth / unitWidth) + 1;
-        setRepeatedText(LOGO_UNIT.repeat(repeats));
-    }, []);
 
     return (
         <nav className={styles.menu}>
             
-            <Link href={"/"}>
-                <div ref={containerRef} className={styles.container}>
-                <span className={styles.w}>{repeatedText}</span>
-                </div>
-            </Link>
-
-
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
                     Kiwis 

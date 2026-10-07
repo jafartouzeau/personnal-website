@@ -4,7 +4,7 @@ import Vinyl from "@/components/vinyl/vinyl";
 
 export default function Home() {
   return (
-    <Bento cols={4} rows={4}>
+    <Bento cols={4} rows={3}>
       <BentoItem col={1} row={2}>
         <Vinyl 
           imageFile="act_like_you_know.png" 

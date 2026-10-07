@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: antiquewhite;
+}
+
+.w {
+    font-family: var(--ff-logo);
+    font-weight: 900;
+    white-space: nowrap;
+    color: var(--text);
+}

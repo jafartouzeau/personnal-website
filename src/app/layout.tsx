@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SideMenu from "@/components/side-menu/side-menu";
+import Logo from "@/components/logo/logo";
 
 
 export const metadata: Metadata = {
@@ -16,10 +17,13 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
-        <SideMenu/>
-        <main>
-          {children}
-        </main>
+        <Logo/>
+        <div className="mainContainer">
+          <SideMenu/>
+          <main>
+            {children}
+          </main>
+        </div>
         <footer style={{
             writingMode: "vertical-rl",
             textOrientation:"sideways", 
