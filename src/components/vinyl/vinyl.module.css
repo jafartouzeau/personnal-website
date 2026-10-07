@@ -15,7 +15,6 @@
 }
 
 .imageContainer:hover {
-    box-shadow: 0 0 8px 8px white;
     transform: rotate(-4deg) scale(1.02);
 }
 

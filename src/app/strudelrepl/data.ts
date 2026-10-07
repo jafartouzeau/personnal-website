@@ -292,8 +292,8 @@ $drum: stack(
       description:"",
       url:"/strudelrepl/track6",
       title:"Track #6",
-      code:`
-/*
+      code:
+`/*
   @title Track #6
   @by FOTF
 */
@@ -336,8 +336,8 @@ $kick:
       description:"",
       url:"/strudelrepl/track7",
       title:"Track #7",
-      code:`
-/*
+      code:
+`/*
   @title Track #7
   @by FOTF
 */
@@ -375,6 +375,234 @@ $: note("<c#4 a4 c#5 f#5>")
 
 _$: s("<bd:1>*4").distort(.3).room(.7).lpf(200)
       `
+    },
+    "track8": {
+      artist:"",
+      type:"",
+      description:"",
+      url:"/strudel/track8",
+      title:"Track #8",
+      code:
+`/*
+  @title Apero Billevese
+  @by FOTF
+*/
+
+samples({
+irkall: [
+  'samples/irkall/notre_son_est_billevese.mp3',
+  'samples/irkall/billevese.mp3'
+],
+hypnos: [
+  'samples/hypnos/apero-after.mp3', 
+  'samples/hypnos/apero-cf.mp3', 
+  'samples/hypnos/apero-club-b.mp3', 
+  'samples/hypnos/apero-gr.mp3', 
+  'samples/hypnos/apero-pr.mp3', 
+  'samples/hypnos/apero-reu.mp3', 
+  'samples/hypnos/apero.mp3', 
+  'samples/hypnos/et-ca-fait.mp3', 
+  'samples/hypnos/la-couleur-de-hypnos.mp3', 
+],
+long_build_up: [
+  'samples/long_build_up/Build Up - Sound Effect (HD).mp3', 
+  'samples/long_build_up/build_up.mp3',
+  'samples/long_build_up/long_build_up.mp3',
+],
+short_build_up: 'samples/short_build_up/small_build_up_1.mp3',
+kick: [
+  'samples/kick/fat-kick-1.wav',
+  'samples/kick/fat-kick-dry.wav'
+]
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+
+setCpm(124/4)
+
+/*------------------------ DRUMS ------------------------*/
+/// 
+let kick_struct = "<[x x x x] [x x x@0.70 x@0.3 [x x]]>"
+///
+let kick = 
+    stack( 
+    s("sbd").struct(kick_struct),
+    s("kick:1!4").lpf(100).room(.2).duck("2").duckattack(.2).duckdepth(.9)
+  )
+  .gain(.6)
+///
+let kick_FOTF = 
+  stack( 
+    s("sbd!4").duck("2").duckattack(.2).duckdepth(.9),
+    s("kick:1!4").lpf(100).room(.2).duck("2").duckattack(.2).duckdepth(.9)
+  )
+  .gain(.6)
+///
+let snare_clap = 
+  stack(
+    s("[~ sd:4]!2"),
+    s("[~ clap:2]!2"),
+    //s("clap").struct(kick_struct)
+  )
+  .gain(.8)
+  .pan(rand.range(0.45,0.55))
+///
+let groovy_hihats =
+  s("[~ hh:9]!4").lpf(3000).gain(1.4)
+////
+let hihats = stack( 
+  s("hh:14!8").lpf(3000),
+  s("sr16_sh!16").lpf(3000).attack(rand.range(0, 0.25)).pan(sine.range(0.3,0.7).slow(2))
+)
+///
+let drums = 
+  stack(
+    kick,
+    snare_clap,
+    groovy_hihats
+  )
+///
+let full_drums = 
+  stack(
+    drums,
+    hihats
+  )
+  
+/*------------------------ BASS ------------------------*/
+///
+const bass_settings = 
+  register('bass_settings', (pat) => pat
+  .sound("supersaw")
+  .lpf(1300)
+  .distort(2)
+)
+///
+let short_bass = 
+  note("<c@6 ~ d c@6 ~ d>*8".sub(12))
+  .bass_settings()
+
+///
+let main_bass =
+  note("<c@6 ~ d ~ eb@7 ab@6 ~ g ~ f@7>*8".sub(12))
+  .bass_settings()
+///
+let full_bass =
+  stack(
+    note("<c@6 ~ d ~ eb@7 ab@6 ~ g ~ f@7>*8".sub(12)),
+    note("<c@6 ~ d ~ eb@7 ab@6 ~ g ~ f@7>*8"),
+  )
+  .bass_settings()
+///
+let shortest_bass = 
+  note("<c@0.75 d@0.25>*4".sub(12))
+  .bass_settings()
+  
+/*------------------------ SAMPLES ------------------------*/
+///
+let sample_irkall = 
+  stack(
+    s("irkall:1").struct("<x ~ ~ ~>*2"),
+    s("irkall:2").struct("<~ x ~ ~>*2"),
+  )
+  .room(.9)
+  .gain(1.4)
+  .lpf(3000)
+///
+const sample_settings_hypnos = 
+  register('sample_settings_hypnos', (pat) => pat
+    .room(.4)
+    .gain(2)
+  )
+///
+let sample_hypnos_full = 
+  stack(
+    s("hypnos:0").struct("<x ~ ~ ~ ~ ~ ~ ~>*2"),
+    s("hypnos:1").struct("<~ x ~ ~ ~ ~ ~ ~>*2"),
+    s("hypnos:2").struct("<~ ~ x ~ ~ ~ ~ ~>*2"),
+    s("hypnos:3").struct("<~ ~ ~ x ~ ~ ~ ~>*2"),
+    s("hypnos:4").struct("<~ ~ ~ ~ x ~ ~ ~>*2"),
+    s("hypnos:5").struct("<~ ~ ~ ~ ~ x ~ ~>*2")
+  )
+  .sample_settings_hypnos()
+///
+let sample_hypnos_et_ca_fait = 
+  s("hypnos:7").struct("<~ ~ ~ ~ ~ ~ ~ [~@0.4 x@1.6]>*2")
+  .sample_settings_hypnos()
+///
+let sample_hypnos_apero = 
+  s("hypnos:6").struct("<x ~ x ~ x x x x>*2")
+  .sample_settings_hypnos()
+
+/*------------------------ ARPEG ------------------------*/
+let arpeggio =
+  stack(  
+    n("<0 1 2 1>*16").decay(.2).lpf(sine.range(5000, 1000).slow(6)).pan(sine.range(0.2,0.8).slow(4)),
+    n("<-7>*6").lpf(1200).gain(.3)
+  )
+  .scale("c:minor")
+  .s("folkharp")
+  .o(2)
+
+/*------------------------ EFFECTS ------------------------*/ 
+///
+let breath_long_build_up = 
+  s("long_build_up:2").struct("<x ~ ~ ~ ~ ~ ~ ~>").lpf(1400).gain(1.2)
+///
+let short_build_up = 
+  s("short_build_up:0")
+  .struct("<~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~@1.25 x@0.75>*2")
+///
+let build_up = 
+  s("long_build_up:0")
+  .struct("<x ~ ~ ~ ~ ~ ~ ~>*2")
+
+/*------------------------ MAIN ------------------------*/
+$:arrange(
+  [8, arpeggio],
+  [8, stack(kick, 
+            arpeggio, 
+            breath_long_build_up)],
+  [8, stack(kick, 
+            short_bass, 
+            arpeggio, 
+            short_build_up)],
+  [8, stack(drums, 
+             short_bass, 
+             arpeggio, 
+             short_build_up)],
+  [8, stack(full_drums, 
+             short_bass, 
+             arpeggio, 
+             short_build_up)],
+  [8, stack(kick_FOTF, 
+            main_bass, 
+            sample_irkall, 
+            short_build_up)],
+  [4, stack(full_drums, 
+            full_bass, 
+            sample_irkall)],
+  [4, stack(full_drums, 
+            full_bass, 
+            sample_irkall, 
+            sample_hypnos_et_ca_fait)],
+  [8, stack(kick_FOTF, 
+            short_bass, 
+            sample_hypnos_full, 
+            sample_hypnos_et_ca_fait)],
+  [4, stack(kick.gain("<1 1 1 1 1 1 1 0>*2"), 
+            build_up, 
+            shortest_bass.gain("<1 1 1 1 1 1 1 0>*2"), 
+            sample_hypnos_apero, 
+            sample_hypnos_et_ca_fait.room(1))],
+  [16, stack(full_drums, 
+             full_bass.lpf(1800), 
+             sample_hypnos_full, 
+             sample_irkall, 
+             sample_hypnos_et_ca_fait, 
+             arpeggio)],
+)
+._scope()
+`
+
     }
 }
 

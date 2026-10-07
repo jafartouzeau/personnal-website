@@ -148,6 +148,11 @@ export default function SideMenu() {
                         🌀 Track #7
                     </Link>
                 </ol>
+                <ol className={styles.sublink}>
+                    <Link href={`/strudelrepl/track8`}>
+                        🌀 Track #8
+                    </Link>
+                </ol>
         </nav>
     )
 }

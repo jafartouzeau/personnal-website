@@ -12,11 +12,11 @@
   --ff : courier-prime, ui-monospace, monospace;
   --ff-logo: iosevka-charon-mono, monospace;
   
-  --fs: 12px;
+  --fs: 13px;
 
-  --background: #B0CDE6;
+  --background: #BBD5DA;/*#ED96D7;*/
   --accent: #ea0062af;
-  --text: #15133C;
+  --text: #001F3D;
 
   --main-padding: 13px;
   --small-padding: 8px;
