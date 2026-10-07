@@ -40,27 +40,28 @@ export default function SideMenu() {
             </Link>
 
 
-                <ol className={`${styles.toplink}`}>
+                <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
-                    Kiwis
+                    Kiwis 
                     </Link>
-                </ol>
-                <hr></hr>
-                <ol className={styles.sublink}>
-                    <Link href={`/kiwis/formatcarre`}>
-                        🥝 Format carré
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/kiwis/comicstrip`}>
-                        🥝 Comic strip
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/kiwis/posters`}>
-                        🥝 Posters
-                    </Link>
-                </ol>
+                    <li className={styles.sublink}>
+                        <Link href={`/kiwis/formatcarre`}>
+                            Format carré
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/kiwis/comicstrip`}>
+                            Comic strip
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/kiwis/posters`}>
+                            Posters
+                        </Link>
+                    </li>
+                </ul>
+
+
                 {/*<ol className={`${styles.sublink}`}>
                     <Link href={`/photos/serie1`}>
                        📷 Série #1
@@ -107,52 +108,53 @@ export default function SideMenu() {
                     </Link>
                 </ol>*/}
                 
-                <ol className={`${styles.toplink}`}>
+                <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl/`}>
-                        Strudel REPL
+                        Strudel REPL 🌀 
                     </Link>
-                </ol>
-                <hr></hr>
-                <ol className={`${styles.sublink}`}>
-                    <Link href={`/strudelrepl/track1`}>
-                        🌀 Track #1
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track2`}>
-                        🌀 Track #2
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track3`}>
-                        🌀 Track #3
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track4`}>
-                        🌀 Track #4
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track5`}>
-                        🌀 Track #5
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track6`}>
-                        🌀 Track #6
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track7`}>
-                        🌀 Track #7
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/strudelrepl/track8`}>
-                        🌀 Track #8
-                    </Link>
-                </ol>
+                    <li className={`${styles.sublink}`}>
+                        <Link href={`/strudelrepl/track1`}>
+                            Track #1
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track2`}>
+                            Track #2
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track3`}>
+                            Track #3
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track4`}>
+                            Track #4
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track5`}>
+                            Track #5
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track6`}>
+                            Track #6
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track7`}>
+                            Track #7
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track8`}>
+                            Track #8
+                        </Link>
+                    </li>
+                </ul>
+                
+
         </nav>
     )
 }

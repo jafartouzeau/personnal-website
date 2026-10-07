@@ -27,19 +27,12 @@
 
 .sublink {
     margin: var(--very-small-padding) var(--small-padding) var(--very-small-padding) 0;
+    margin-left: 1rem;
 }
 
 .toplink {
     margin: var(--main-padding) 0 var(--small-padding) 0;
 }
-
-.reversed {
-    display: inline-block;
-    line-height: 0%;
-    vertical-align: middle;
-    transform: scale(1, -1);
-}
-
 
 @media (max-width: 768px) {
     .menu {

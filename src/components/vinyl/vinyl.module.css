@@ -20,7 +20,7 @@
 
 .play {
   animation: rotate 3s linear infinite;
-  box-shadow: 0 0 8px 8px white;
+  box-shadow: 0 0 8px 4px rgba(72, 76, 76, 0.412);
 }
 
 .image {

@@ -4,19 +4,24 @@
 }
 
 @font-face {
+    font-family: space-mono;
+    src: url("/static/fonts/Space_Mono/SpaceMono-Regular.ttf");
+}
+
+@font-face {
     font-family: iosevka-charon-mono;
     src: url("/static/fonts/Iosevka_Charon_Mono/IosevkaCharonMono-Medium.ttf");
 }
 
 :root {
-  --ff : courier-prime, ui-monospace, monospace;
+  --ff : space-mono,ui-monospace, monospace;
   --ff-logo: iosevka-charon-mono, monospace;
   
   --fs: 13px;
 
-  --background: #BBD5DA;/*#ED96D7;*/
+  --background: #fff;/*#ED96D7;*/
   --accent: #ea0062af;
-  --text: #001F3D;
+  --text: #010509;
 
   --main-padding: 13px;
   --small-padding: 8px;
