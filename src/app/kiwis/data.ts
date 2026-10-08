@@ -53,12 +53,6 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
-            imageTitle: "Prêt des nuages",
-            imageSrc:"/static/kiwis/pretdesnuages.jpg",
-            imageAlt: "Et pourtant jamais aussi loin.",
-            imageRatio: 1
-        },
-        {
             imageTitle: "La flaque",
             imageSrc:"/static/kiwis/laflaque.jpg",
             imageAlt: "Son amie la flaque.",
