@@ -603,17 +603,50 @@ $:arrange(
 ._scope()
 `
 
-    }
+    }, "track9":{
+        artist: "",
+        type: "Original",
+        description: "",
+        url: "",
+        title: "Track #9",
+        code:
+`
+/*
+  @title Track #128
+  @by FOTF
+*/
+
+setCpm(128/4)
+
+$: stack(
+  //s("<sbd, rolandtr505_bd>*4").lpf(1000).room(.3).duck("2").duckattack(.4).duckdepth(.8).postgain(0.4),
+  s("[- rolandtr909_oh]!4").room(.2).lpf(2000).postgain(.3),
+  s("hh:6!16").lpf(3000).postgain(.6)
+  )
+
+
+$: n("<-12@4 ~@2 -2 0 ~ 1 ~ -2 0 ~ 1 <~ -6>>*16".sub(7))
+   .scale("c:major")
+   .s("gm_electric_bass_pick:2, gm_electric_bass_finger:3") //add square
+   .lpf(slider(2612.6,400,5000))
+   .legato(slider(1.227,0,3))
+   .lpenv(slider(0.9,0,2)) // <1 sounds good
+   .postgain(.15)
+   .delay(.125)
+   .distort(2)
+   .seg(128)
+   .o(2)
+   .scope()
+`     
+      }
 }
 
-
 /*
-  @title Track #8
+  @title Track #9
   @by FOTF
 */
 
 /*
-
 setCpm(106/4)
 
 samples({
@@ -626,26 +659,24 @@ $: s("alewya_bass")
   .end(".99")
   .fit()
   .lpf(400)
+  .o(2)
 
 $drum: stack(
-  s("sbd*4").lpf(400).room(.3),
-  //s("sd:2").struct("<x ~ ~ x ~ ~ x ~ ~ ~ x ~ x ~ ~ ~ >*16").lpf(600)
-).gain(0.4)
-
-
-_$: note("<b@3.5 b@0.5 c4@3.5 c4@0.5 d4@3.5 d4@0.5 c4@3.5 a@0.5>*4")
-   .s("gm_distortion_guitar")
-   
-
-_$: note("<b c4 d4 c4>")
-  .struct("<x ~ ~ x ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ >*16")
-  .seg(16)
-  .s("gm_overdriven_guitar")
-  .adsr("0:1:1:1")
-  .off(1/16, add(note(12)))
-  .echo(2, 1/16, .2)
-  .lpf(1000)
-  .room(2)
-  .postgain(.2)
-  
+  s("sbd*4").lpf(200).room(.3).duck("2").duckattack(.3).duckdepth(.8),
+  //s("sd:2").struct("<x ~ ~ x ~ ~ x ~ ~ ~ x ~ x ~ ~ ~ >*16").room(.1).lpf(600),
+  //s("rolandtr808_sh:4!16").lpf(6000).attack(rand.range(0.02, 0.1)),
+).gain(0.2)
 */
+
+/*
+  @title Track #128
+  @by FOTF
+*/
+
+/*
+let august_10_bassline = 
+  `-2@2 -2@2 ~@2 -2 0 ~ 1 ~ -2 0 ~ 1 -2
+    2@2  2@2 ~@2  2 4 ~ 5 ~  2 4 ~ 5  2
+    5@2  5@2 ~@2  5 7 ~ 8 ~  5 8 7 5  4
+    2@2  2@2 ~@2  4 5 ~ 4 ~  2 4 2 1  0`
+   */

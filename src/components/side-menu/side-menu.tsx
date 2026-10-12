@@ -118,6 +118,11 @@ export default function SideMenu() {
                             Track #8
                         </Link>
                     </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track9`}>
+                            Track #9
+                        </Link>
+                    </li>
                 </ul>
                 
 
