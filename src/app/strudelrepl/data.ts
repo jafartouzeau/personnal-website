@@ -206,7 +206,7 @@ $: //n("<b>")
         title: "Track #2",
         code:
 `/*
-  @title Track #2
+  @title Track #1
   @by FOTF
 */
 
@@ -252,7 +252,12 @@ $drums: stack(
         url: "",
         title: "Track #3",
         code:
-`setCpm(122/4)
+`/*
+  @title Track #2
+  @by FOTF
+*/
+
+setCpm(122/4)
 
 samples({
 bemylady: ['samples/bemylady-sample1.mp3', 'samples/bemylady-sample2.mp3'],
@@ -294,7 +299,7 @@ $drum: stack(
       title:"Track #6",
       code:
 `/*
-  @title Track #6
+  @title Track #3
   @by FOTF
 */
 
@@ -338,7 +343,7 @@ $kick:
       title:"Track #7",
       code:
 `/*
-  @title Track #7
+  @title Track #4
   @by FOTF
 */
 
@@ -612,7 +617,7 @@ $:arrange(
         code:
 `
 /*
-  @title Track #128
+  @title Track #6
   @by FOTF
 */
 

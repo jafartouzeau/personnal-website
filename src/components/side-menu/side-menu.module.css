@@ -1,7 +1,7 @@
 .menu {
     display: flex;
     flex-direction: column;
-    width: min(100vw, 256px);
+    width: min(100vw, 512px);
     height: 100%;
     padding:  var(--main-padding);
 }

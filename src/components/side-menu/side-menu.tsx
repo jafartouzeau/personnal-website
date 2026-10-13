@@ -78,49 +78,49 @@ export default function SideMenu() {
                     <Link href={`/strudelrepl/`}>
                         Strudel REPL 🌀 
                     </Link>
-                    <li className={`${styles.sublink}`}>
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track4`}>
+                            Daft Punk - Veridis Quo
+                        </Link>
+                    </li>
+                    {/*<li className={`${styles.sublink}`}>
                         <Link href={`/strudelrepl/track1`}>
-                            Track #1
+                            Indochine - La vie est belle
+                        </Link>
+                    </li>*/}
+                    <li className={styles.sublink}>
+                        <Link href={`/strudelrepl/track5`}>
+                            Moderat - A new error
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track2`}>
-                            Track #2
+                            FOTF - Track #1 (Acid)
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track3`}>
-                            Track #3
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track4`}>
-                            Track #4
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track5`}>
-                            Track #5
+                            FOTF - Track #3 (Samples)
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track6`}>
-                            Track #6
+                            FOTF - Track #3 (Chords)
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track7`}>
-                            Track #7
+                            FOTF - Track #4 (Popper)
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track8`}>
-                            Track #8
+                            FOTF - Track #5 (Apero billevesé)
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/strudelrepl/track9`}>
-                            Track #9
+                            FOTF - Track #6
                         </Link>
                     </li>
                 </ul>
