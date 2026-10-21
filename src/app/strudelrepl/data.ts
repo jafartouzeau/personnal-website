@@ -685,3 +685,18 @@ let august_10_bassline =
     5@2  5@2 ~@2  5 7 ~ 8 ~  5 8 7 5  4
     2@2  2@2 ~@2  4 5 ~ 4 ~  2 4 2 1  0`
    */
+
+    /*
+$: n("<-21, -14, -7, 0>")
+    .scale(SCALE)   
+    .s("supersaw, square")
+    .lpf(50)
+    .detune(rand)
+    .distort(.25)
+    .seg(16)
+    .delay(.125)
+    .lpenv(slider(4,0, 8))
+    .pan(sine.range(0.2, 0.8).slow(4))
+    .postgain(.8)
+    .o(3)
+*/
