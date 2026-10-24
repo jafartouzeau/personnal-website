@@ -1,5 +1,7 @@
 import BassTab from "@/components/basstab/basstab"
 
+
+
 export default function Bass() {
     return (<>
     <BassTab abc={"X:1\nK:D\nDD AA|BBA2|\n"} />

@@ -73,6 +73,17 @@ export default function SideMenu() {
                         🧿 Chapitre 4
                     </Link>
                 </ol>*/}
+
+                <ul className={`${styles.toplink}`}>
+                    <Link href={`/bass/`}>
+                        Bass Tabs 
+                    </Link>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#`}>
+                            Daft Punk - Veridis Quo
+                        </Link>
+                    </li>
+                </ul>
                 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl/`}>
