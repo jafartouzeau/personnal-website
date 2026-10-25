@@ -5,7 +5,7 @@ import abcjs from "abcjs";
 
 const EXEMPLE = "X:1\nK:D\nDD AA|BBA2|\n";
 
-export default function BassTab({ abc = EXEMPLE, options = {} }) {
+export default function BassTab({ abc = EXEMPLE, options = {}, id="" }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -14,5 +14,5 @@ export default function BassTab({ abc = EXEMPLE, options = {} }) {
     abcjs.renderAbc(ref.current, abc, { responsive: "resize", ...options });
   }, [abc, options]);
 
-  return <div ref={ref} style={{ width: "100%" }} />;
+  return <div id={id}  ref={ref} style={{ width: "100%" }} />;
 }

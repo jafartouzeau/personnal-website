@@ -75,12 +75,87 @@ export default function SideMenu() {
                 </ol>*/}
 
                 <ul className={`${styles.toplink}`}>
-                    <Link href={`/bass/`}>
-                        Bass Tabs 
+                    <Link href={`/bass`}>
+                        Bass TABS 
                     </Link>
                     <li className={styles.sublink}>
-                        <Link href={`/bass#`}>
-                            Daft Punk - Veridis Quo
+                        <Link href={`/bass#dontlookanyfurther`}>
+                            Dennis Edwards - Don't Look Any Further
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#first`}>
+                            Tame Impala - The Less I Know The Better
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#second`}>
+                            Angine de Poitrine - Fabienk
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#third`}>
+                            Jiro Inagaki & Soul Media - Breeze
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fourth`}>
+                            Thomas Bangalter - Club Soda
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            The Sugar Hill Gang - Rapper's Delight
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            The Jackson Five - I want you back
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Solomun - Something we all adore
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Dr Dre - Nothin' but a "G" Thang
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            BCUC - Yinde
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Electric Light Orchestra - Last train to London
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            BowAsWell - What's Left
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Alan Braxe & Fred Falke - Intro
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Miley Cyrus  - Flowers
+                        </Link>
+                    </li>
+                    <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            Alewya - Cairo FM
+                        </Link>
+                    </li>
+                     <li className={styles.sublink}>
+                        <Link href={`/bass#fith`}>
+                            The Spy From Cairo - Nafas 
                         </Link>
                     </li>
                 </ul>

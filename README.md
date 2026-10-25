@@ -1,1 +1,12 @@
-Site web personnel.
+Because the web can also be owned by people. 
+
+TODO :
+- [ ] Toggle menu for phone
+- [ ] Use a clean DB file for kiwis (remove unnecessary types)
+- [ ] Use a clean DB file for bass tabs
+- [ ] Sort bass tabs by bpm in the menu
+- [ ] Create a single page for bass tabs (use anchors)
+- [ ] Use a clean DB file for strudel
+- [ ] Sort studel titles by alphabetical order
+- [ ] Use the DB files to automatically update the menu, title + link
+- [ ] Dark / light mode
