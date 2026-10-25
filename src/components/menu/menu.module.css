@@ -1,0 +1,134 @@
+.logoContainer {
+  width: 100%;
+  height: auto;
+  /*overflow: hidden;*/
+  margin:  var(--main-padding) 0;
+}
+
+.logo {
+    font-family: var(--ff-logo);
+    font-size: 16px;
+    font-weight: 900;
+    white-space: nowrap;
+    color: #fff;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/* ===== Desktop : sidebar fixe ===== */
+.menu {
+    display: flex;
+    flex-direction: column;
+    position: sticky;     
+    top: 0;
+    align-self: flex-start;
+    width: min(100vw, 512px);
+    height: 100vh;
+    overflow-y: auto;
+    padding: var(--main-padding);
+}
+
+.menu.active .toplink {
+    display: block;
+}
+
+.fakeNavbar {
+    display: none;
+}
+
+.navHeader {
+    display: flex;
+    align-items: center;
+}
+
+.menuToggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.2s ease-out all;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    margin: 3px 0;
+    background-color: var(--white, #fff);
+}
+
+.menuToggle.active {
+    transform: rotate(90deg);
+}
+
+.menuToggle.active .bar {
+    background-color: var(--accent);
+}
+
+.sublink {
+    margin: var(--very-small-padding) var(--small-padding) var(--very-small-padding) 0;
+    margin-left: 1rem;
+    list-style: disc;
+}
+
+.toplink {
+    margin: var(--main-padding) 0 var(--small-padding) 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ===== Mobile : barre du haut + toggle ===== */
+@media (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: auto;
+        max-height: 100vh;
+        overflow-y: auto;
+        padding: 5px 0;
+        background-color: var(--background);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        font-family: var(--ff), ubuntu, sans-serif;
+        transition: top 0.4s;
+    }
+
+    .fakeNavbar {
+        display: block;
+        height: 48px; /* hauteur de la barre fermée, à ajuster */
+        background-color: var(--background);
+    }
+
+    .navHeader {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 20px;
+    }
+
+    .menuToggle {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    /* Listes masquées par défaut */
+    .toplink {
+        display: none;
+        padding-left: 20px;
+    }
+
+    /* Affichées quand le toggle est actif.
+       Note : .active est mis sur le <ul> ref'd, voir le TSX ci-dessous */
+    .menu.open .toplink {
+        display: block;
+    }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Menu from "@/components/menu/menu";
+import Footer from "@/components/footer/footer";
 
 
 export const metadata: Metadata = {
@@ -22,15 +23,7 @@ export default function RootLayout({
             {children}
           </main>
         </div>
-        <footer style={{
-            writingMode: "vertical-rl",
-            textOrientation:"sideways", 
-            position:"fixed",
-            bottom:"0",
-            fontSize: "9px",
-            textAlign: "center",
-            margin: "0 1px 5px 0"
-        }}>©2026 Jafar Touzeau</footer>
+        <Footer/>
       </body>
     </html>
   );
