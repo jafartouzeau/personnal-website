@@ -4,6 +4,7 @@ import Link from 'next/link';
 import styles from './menu.module.css';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { tabs } from '@/app/bass/data';
 
 export default function Menu() {
     
@@ -12,11 +13,23 @@ export default function Menu() {
     const navbarRef = useRef<HTMLElement>(null);
     const toggleRef = useRef<HTMLDivElement>(null);
 
+     useEffect(() => {
+            const closeMenu = () => {
+                navbarRef.current?.classList.remove(styles.active);
+                toggleRef.current?.classList.remove(styles.active);
+            };
+
+            window.addEventListener("hashchange", closeMenu);
+            return () => window.removeEventListener("hashchange", closeMenu);
+        }, []);
+
     // Referme le menu quand on change de page
     useEffect(() => {
         navbarRef.current?.classList.remove(styles.active);
         toggleRef.current?.classList.remove(styles.active);
-        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        if (!window.location.hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        }
     }, [pathname]);
 
     useEffect(() => {
@@ -59,7 +72,15 @@ export default function Menu() {
     return (
                            
         <>
-           <nav id="navbar" className={styles.menu} ref={navbarRef}>
+           <nav id="navbar"
+                className={styles.menu}
+                ref={navbarRef}
+                onClick={(e) => {
+                    if ((e.target as HTMLElement).closest("a")) {
+                        navbarRef.current?.classList.remove(styles.active);
+                        toggleRef.current?.classList.remove(styles.active);
+                    }
+                }}>
                 <div className={styles.navHeader}>
                      <Link href={"/"}>
                         <div className={styles.logoContainer}>
@@ -152,86 +173,13 @@ export default function Menu() {
                     <Link href={`/bass`}>
                         Bass TABS 
                     </Link>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#dontlookanyfurther`}>
-                            Dennis Edwards - Don't Look Any Further
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#first`}>
-                            Tame Impala - The Less I Know The Better
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#second`}>
-                            Angine de Poitrine - Fabienk
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#third`}>
-                            Jiro Inagaki & Soul Media - Breeze
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fourth`}>
-                            Thomas Bangalter - Club Soda
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            The Sugar Hill Gang - Rapper's Delight
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            The Jackson Five - I want you back
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Solomun - Something we all adore
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Dr Dre - Nothin' but a "G" Thang
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            BCUC - Yinde
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Electric Light Orchestra - Last train to London
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            BowAsWell - What's Left
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Alan Braxe & Fred Falke - Intro
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Miley Cyrus  - Flowers
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            Alewya - Cairo FM
-                        </Link>
-                    </li>
-                     <li className={styles.sublink}>
-                        <Link href={`/bass#fith`}>
-                            The Spy From Cairo - Nafas 
-                        </Link>
-                    </li>
+                    {tabs.map((tab, index) => {
+                        return  <li className={styles.sublink} key={index}>
+                                    <Link href={`/bass#${tab.id}`}>
+                                        {tab.artist} - {tab.title}
+                                    </Link>
+                                </li>
+                    })}
                 </ul>
                 
                 <ul className={`${styles.toplink}`}>

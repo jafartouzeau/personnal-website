@@ -1,10 +1,11 @@
 - [x] Toggle menu for phone
-- [ ] Create a real footer component
+- [x] Create a real footer component
 - [ ] Use a clean DB file for kiwis (remove unnecessary types)
-- [ ] Use a clean DB file for bass tabs
+- [x] Use a clean DB file for bass tabs
 - [ ] Sort bass tabs by bpm in the menu
-- [ ] Create a single page for bass tabs (use anchors)
+- [x] Create a single page for bass tabs (use anchors)
 - [ ] Use a clean DB file for strudel
 - [ ] Sort studel titles by alphabetical order
 - [ ] Use the DB files to automatically update the menu, title + link
 - [ ] Dark / light mode
+- [ ] Add Bass Tabs

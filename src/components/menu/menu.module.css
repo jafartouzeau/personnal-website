@@ -29,11 +29,11 @@
 .menu {
     display: flex;
     flex-direction: column;
-    position: sticky;     
+    position: fixed;     
     top: 0;
     align-self: flex-start;
     width: min(100vw, 512px);
-    height: 100vh;
+    height: auto;
     overflow-y: auto;
     padding: var(--main-padding);
 }
@@ -43,7 +43,11 @@
 }
 
 .fakeNavbar {
-    display: none;
+    flex-shrink: 0;
+    width: min(100vw, 512px);
+    height: 100vh;
+    background: none;
+    box-shadow: none;
 }
 
 .navHeader {
@@ -105,8 +109,9 @@
 
     .fakeNavbar {
         display: block;
-        height: 48px; /* hauteur de la barre fermée, à ajuster */
-        background-color: var(--background);
+        width: 100%;
+        height: 48px;
+        background-color: var(--black);
     }
 
     .navHeader {
