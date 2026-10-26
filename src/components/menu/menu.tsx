@@ -123,6 +123,37 @@ export default function Menu() {
                     </li>
                 </ul>
 
+                <ul className={`${styles.toplink}`}>
+                    <Link href={`/bass`}>
+                        Bass TABS 
+                    </Link>
+                    {[...tabs].sort((a, b) =>
+                                a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
+                            )
+                            .map((tab) => (
+                                <li className={styles.sublink} key={tab.id}>
+                                    <Link href={`/bass#${tab.id}`}>
+                                        {tab.artist} - {tab.title} ({tab.bpm}bpm)
+                                    </Link>
+                                </li>
+                            ))}
+                </ul>
+
+                <ul className={`${styles.toplink}`}>
+                    <Link href={`/strudelrepl/`}>
+                        Strudel REPL 🌀 
+                    </Link>
+                    {Object.entries(strudelData).map(([url, strudel]) => (
+                        <li className={styles.sublink} key={url}>
+                                    <Link href={`/strudelrepl/${url}`}>
+                                        {strudel.artist} - {strudel.title}
+                                    </Link>
+                                </li>
+                    ))
+                    }
+
+                </ul>
+
 
                 {/*<ol className={`${styles.sublink}`}>
                     <Link href={`/photos/serie1`}>
@@ -169,34 +200,6 @@ export default function Menu() {
                         🧿 Chapitre 4
                     </Link>
                 </ol>*/}
-
-                <ul className={`${styles.toplink}`}>
-                    <Link href={`/bass`}>
-                        Bass TABS 
-                    </Link>
-                    {tabs.map((tab, index) => {
-                        return  <li className={styles.sublink} key={index}>
-                                    <Link href={`/bass#${tab.id}`}>
-                                        {tab.artist} - {tab.title}
-                                    </Link>
-                                </li>
-                    })}
-                </ul>
-
-                <ul className={`${styles.toplink}`}>
-                    <Link href={`/strudelrepl/`}>
-                        Strudel REPL 🌀 
-                    </Link>
-                    {Object.entries(strudelData).map(([url, strudel]) => (
-                        <li className={styles.sublink} key={url}>
-                                    <Link href={`/strudelrepl/${url}`}>
-                                        {strudel.artist} - {strudel.title}
-                                    </Link>
-                                </li>
-                    ))
-                    }
-
-                </ul>
 
         </nav>
         <div className={styles.fakeNavbar}></div>

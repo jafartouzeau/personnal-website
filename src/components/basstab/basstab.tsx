@@ -5,7 +5,7 @@ import abcjs from "abcjs"; //https://docs.abcjs.net/visual/tablature
 
 const EXEMPLE = "X:1\nK:D\nDD AA|BBA2|\n";
 
-export default function BassTab({ abc = EXEMPLE, options = {}, id="", title="", artist="" }) {
+export default function BassTab({ abc = EXEMPLE, options = {}, id="", title="", artist="", bpm=0 }) {
   const ref = useRef(null);
 
   useEffect(() => {
@@ -15,7 +15,7 @@ export default function BassTab({ abc = EXEMPLE, options = {}, id="", title="", 
   }, [abc, options]);
 
   return <div id={id}>
-  <p>{artist} - {title}</p>
+  <p>{artist} - {title} - {bpm}bpm</p>
   <div ref={ref} style={{ width: "100%" }} />
   </div>;
 }
