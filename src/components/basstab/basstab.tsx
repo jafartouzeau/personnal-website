@@ -11,7 +11,7 @@ export default function BassTab({ abc = EXEMPLE, options = {}, id="", title="", 
   useEffect(() => {
     if (!ref.current) return;
     // renderAbc accepte un élément DOM (ou un id) et une chaîne ABC
-    abcjs.renderAbc(ref.current, abc, { responsive: "resize", tablature: [{instrument: 'violin'}], ...options });
+    abcjs.renderAbc(ref.current, abc, { responsive: "resize", tablature: [], ...options });
   }, [abc, options]);
 
   return <div id={id}>

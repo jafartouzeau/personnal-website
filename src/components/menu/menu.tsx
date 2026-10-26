@@ -132,7 +132,8 @@ export default function Menu() {
                             )
                             .map((tab) => (
                                 <li className={styles.sublink} key={tab.id}>
-                                    <Link href={`/bass#${tab.id}`}>
+                                    {/*<Link href={`/bass#${tab.id}`}>*/}
+                                    <Link href=''>
                                         {tab.artist} - {tab.title} ({tab.bpm}bpm)
                                     </Link>
                                 </li>

@@ -11,14 +11,14 @@ export const tabs :TabData[] = [
         id: "whatsleft",
         title: "What's left",
         artist: "BowAsWell",
-        music: "X:1\nK:D\nDD AA|BBA2|\n",
+        music: "X:1\nL: 1/16\nK:Am\n|:A2AA zGA2:|\n",
         bpm:108
     }, 
     {
         id: "dontlookanyfurther",
         artist:"Dennis Edwards",
         title: "Don't Look Any Further",
-        music:"X:1\nK:D\nDD AA|BBA2|\n",
+        music:"X:1\nL: 1/16\nK:Am clef=bass\n|:A,2 z A2 GA2 z2 A2C2A2 | D2 z D2 CD2 z5 D^D | E2 z E2 DE2 z2 C2 BACB | A2 z A2 GA2 z2 z5 EA:|\n",
         bpm:95
     }, 
     {
