@@ -124,7 +124,23 @@ export default function Menu() {
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
-                    <Link href={`/bass`}>
+                    <Link href={`/strudelrepl`}>
+                        Strudel REPL 🌀 
+                    </Link>
+                    {Object.entries(strudelData).map(([url, strudel]) => (
+                        <li className={styles.sublink} key={url}>
+                                    <Link href={`/strudelrepl/${url}`}>
+                                        {strudel.artist} - {strudel.title}
+                                    </Link>
+                                </li>
+                    ))
+                    }
+
+                </ul>
+
+                <ul className={`${styles.toplink}`}>
+                    {/*<Link href={`/bass`}>*/}
+                    <Link href={""}>
                         Bass TABS 
                     </Link>
                     {[...tabs].sort((a, b) =>
@@ -138,21 +154,6 @@ export default function Menu() {
                                     </Link>
                                 </li>
                             ))}
-                </ul>
-
-                <ul className={`${styles.toplink}`}>
-                    <Link href={`/strudelrepl/`}>
-                        Strudel REPL 🌀 
-                    </Link>
-                    {Object.entries(strudelData).map(([url, strudel]) => (
-                        <li className={styles.sublink} key={url}>
-                                    <Link href={`/strudelrepl/${url}`}>
-                                        {strudel.artist} - {strudel.title}
-                                    </Link>
-                                </li>
-                    ))
-                    }
-
                 </ul>
 
 

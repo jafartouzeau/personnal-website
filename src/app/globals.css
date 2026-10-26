@@ -26,7 +26,7 @@
   --main-padding: 13px;
   --small-padding: 8px;
   --very-small-padding: 2px;
-  --topbar-height: 20px;
+  --topbar-height: 24px;
 }
 
 ::selection {
@@ -70,7 +70,7 @@ body {
 
 main {
   width: 100%;
-  height: 100%;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   padding: var(--main-padding);

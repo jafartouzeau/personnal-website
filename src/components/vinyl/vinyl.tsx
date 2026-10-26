@@ -17,7 +17,7 @@ export default function Vinyl({
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    const fullAudioFilePath = `static/vinyls/music/${audioFile}`
+    const fullAudioFilePath = `/static/vinyls/music/${audioFile}`
     const audio = new Audio(fullAudioFilePath);
     audioRef.current = audio;
 
@@ -46,19 +46,24 @@ export default function Vinyl({
   };
 
   return (
-        <div className={styles.container}>
+    <div className={styles.container}>
         <div
             className={`${styles.imageContainer} ${isPlaying ? styles.play : ""}`}
             onClick={toggle}
         >
             <Image
-            className={styles.image}
-            src={`static/vinyls/image/${imageFile}`}
-            alt="Vinyl"
-            fill
-            title={title}
+                className={styles.image}
+                src={`/static/vinyls/image/${imageFile}`}
+                alt="Vinyl"
+                fill
+                title={title}
             />
         </div>
-        </div>
-  );
+
+        <p className={`${styles.label} ${isPlaying ? styles.visible : ""}`}>
+            {title}
+        </p>
+    </div>
+);
+
 }

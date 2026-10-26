@@ -1,0 +1,15 @@
+.grid {
+    display: grid;
+    /*plus on baisse le 100px plus il y a de colonnes*/
+    grid-template-columns: repeat(5, 1fr);
+        gap: var(--main-padding, 1rem);
+    width: 100%;
+    place-items: center;   
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
