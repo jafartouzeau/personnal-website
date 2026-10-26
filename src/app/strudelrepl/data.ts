@@ -1,18 +1,13 @@
 export type StrudelMusicType = {    
-    artist: string;
-    type: string; //remix or original
-    description: string;
-    url: string,
+    artist: string,
     title: string,
-    code: string;
+    code: string,
+    description?: string
 }
 
 export const strudelData: Record<string, StrudelMusicType> = {
-    "track4" : {
+    "veridisquo" : {
         artist: "Daft Punk",
-        type: "Remix",
-        description: "",
-        url: "/strudelrepl/veridisquo",
         title: "Veridis Quo",
         code: 
 `setCpm(105/4)
@@ -77,11 +72,8 @@ $pads: n("<[-4,3,5]@0.875 [-1,3,6] [0,2,4] [[-2 -3],0,2] [-4,3,5]@0.125>".add(7)
 .o(3)
 `
     }, 
-    "track5":{
+    "anewerror":{
       artist:"Moderat",
-      type:"Remix",
-      description:"",
-      url:"",
       title:"A new error",
       code: 
 `setCpm(112/4)
@@ -144,11 +136,8 @@ _$: s("circuitsdrumtracks_sd")
 `
     },
     "track1":{
-        artist: "",
-        type: "Original",
-        description: "",
-        url: "/strudelrepl/track1",
-        title: "Track #1",
+        artist: "FOTF",
+        title: "Track #1 (La vie est belle)",
         code:
 `setCpm(115/4)
 
@@ -199,14 +188,12 @@ $: //n("<b>")
 `
     },
     "track2":{
-        artist: "",
-        type: "Original",
+        artist: "FOTF",
         description: "https://www.youtube.com/watch?v=2-EzQylIMvk&list=RD2-EzQylIMvk&start_radio=1",
-        url: "",
-        title: "Track #2",
+        title: "Track #2 (Acid)",
         code:
 `/*
-  @title Track #1
+  @title Track #2
   @by FOTF
 */
 
@@ -225,7 +212,7 @@ n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@2.5>*8".sub(14))
 .distort(1)
 .room(.1)
 
-$acid: 
+_$acid: 
 n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@1.5 0@1>*8".sub(7))
 .scale(SCALE)
 .s("<sqr,supersaw, triangle>")
@@ -241,16 +228,13 @@ n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@1.5 0@1>*8".sub(7))
 $drums: stack(
   s("<sbd, rolandtr505_bd>*4"),
   s("<bd:1>*4").distort(.3).room(.7).lpf(200),
-  s("cp").struct("<~ ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ ~ x ~>*16").room(.1).lpf(1000)
+  //s("cp").struct("<~ ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ ~ x ~>*16").room(.1).lpf(1000)
 )
 `
     },
 "track3":{
-        artist: "",
-        type: "Original",
-        description: "",
-        url: "",
-        title: "Track #3",
+        artist: "FOTF",
+        title: "Track #3 (Sampling test)",
         code:
 `/*
   @title Track #2
@@ -291,15 +275,12 @@ $drum: stack(
 )
 `
     },
-    "track6": {
-      artist:"",
-      type:"Original",
-      description:"",
-      url:"/strudelrepl/track6",
-      title:"Track #6",
+    "track4": {
+      artist:"FOTF",
+      title:"Track #4 (Chords)",
       code:
 `/*
-  @title Track #3
+  @title Track #4
   @by FOTF
 */
 
@@ -335,15 +316,12 @@ $kick:
       `
     }
     ,
-    "track7": {
-      artist:"",
-      type:"Original",
-      description:"",
-      url:"/strudelrepl/track7",
-      title:"Track #7",
+    "track5": {
+      artist:"FOTF",
+      title:"Track #5 (Popper)",
       code:
 `/*
-  @title Track #4
+  @title Track #5
   @by FOTF
 */
 
@@ -381,12 +359,9 @@ $: note("<c#4 a4 c#5 f#5>")
 _$: s("<bd:1>*4").distort(.3).room(.7).lpf(200)
       `
     },
-    "track8": {
-      artist:"",
-      type:"",
-      description:"",
-      url:"/strudel/track8",
-      title:"Track #8",
+    "track6": {
+      artist:"FOTF",
+      title:"Track #6 (Apero billevesé)",
       code:
 `/*
   @title Apero Billevese
@@ -608,16 +583,12 @@ $:arrange(
 ._scope()
 `
 
-    }, "track9":{
-        artist: "",
-        type: "Original",
-        description: "",
-        url: "",
-        title: "Track #9",
+    }, "track7":{
+        artist: "FOTF",
+        title: "Track #7 (Segments)",
         code:
-`
-/*
-  @title Track #6
+`/*
+  @title Track #7
   @by FOTF
 */
 

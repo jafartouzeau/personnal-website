@@ -4,7 +4,7 @@
 - [x] Use a clean DB file for bass tabs
 - [ ] Sort bass tabs by bpm in the menu
 - [x] Create a single page for bass tabs (use anchors)
-- [ ] Use a clean DB file for strudel
+- [x] Use a clean DB file for strudel
 - [ ] Sort studel titles by alphabetical order
 - [ ] Use the DB files to automatically update the menu, title + link
 - [ ] Dark / light mode

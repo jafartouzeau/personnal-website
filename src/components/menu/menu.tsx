@@ -5,6 +5,7 @@ import styles from './menu.module.css';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { tabs } from '@/app/bass/data';
+import { strudelData } from '@/app/strudelrepl/data';
 
 export default function Menu() {
     
@@ -181,58 +182,21 @@ export default function Menu() {
                                 </li>
                     })}
                 </ul>
-                
+
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl/`}>
                         Strudel REPL 🌀 
                     </Link>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track4`}>
-                            Daft Punk - Veridis Quo
-                        </Link>
-                    </li>
-                    {/*<li className={`${styles.sublink}`}>
-                        <Link href={`/strudelrepl/track1`}>
-                            Indochine - La vie est belle
-                        </Link>
-                    </li>*/}
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track5`}>
-                            Moderat - A new error
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track2`}>
-                            FOTF - Track #1 (Acid)
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track3`}>
-                            FOTF - Track #3 (Samples)
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track6`}>
-                            FOTF - Track #3 (Chords)
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track7`}>
-                            FOTF - Track #4 (Popper)
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track8`}>
-                            FOTF - Track #5 (Apero billevesé)
-                        </Link>
-                    </li>
-                    <li className={styles.sublink}>
-                        <Link href={`/strudelrepl/track9`}>
-                            FOTF - Track #6
-                        </Link>
-                    </li>
+                    {Object.entries(strudelData).map(([url, strudel]) => (
+                        <li className={styles.sublink} key={url}>
+                                    <Link href={`/strudelrepl/${url}`}>
+                                        {strudel.artist} - {strudel.title}
+                                    </Link>
+                                </li>
+                    ))
+                    }
+
                 </ul>
-                
 
         </nav>
         <div className={styles.fakeNavbar}></div>
