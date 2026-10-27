@@ -105,6 +105,7 @@
         z-index: 1000;
         font-family: var(--ff), ubuntu, sans-serif;
         transition: top 0.4s;
+        background-color: var(--background); 
     }
 
     .menu.active {
