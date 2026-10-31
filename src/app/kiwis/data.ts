@@ -2,29 +2,31 @@ import type { ArtworkType } from "artwork"
 
 export const kiwisData: Record<string, ArtworkType[]> = {
     "posters": [
-        {
-            imageTitle: "Feel like you don't belong here ?",
-            imageSrc:"/static/kiwis/Bowling.jpg",
-            imageAlt: "Pas à sa place.",
-            imageRatio: 1600/2560
+               {
+            imageTitle: "Kiwis Horror Tales",
+            imageSrc:"/static/kiwis/KiwisHorrorTales.png",
+            imageAlt: "Des contes qui ne verront jamais le jour.",
+            imageRatio: 1752/2800
         },
+
         {
             imageTitle: "Les Coquets ratites",
             imageSrc:"/static/kiwis/LesCoquetsRatites.jpg",
             imageAlt: "Une bande de coquets vilains.",
             imageRatio: 1600/2560
         },
-       {
-            imageTitle: "Kiwis Horror Tales",
-            imageSrc:"/static/kiwis/KiwisHorrorTales.png",
-            imageAlt: "Des contes qui ne verront jamais le jour.",
-            imageRatio: 1752/2800
-        },
+        
        {
             imageTitle: "Relativity",
             imageSrc:"/static/kiwis/Relativity.png",
             imageAlt: "Inspiré d'un certain Escher.",
             imageRatio: 1752/2800
+        },
+                {
+            imageTitle: "Feel like you don't belong here ?",
+            imageSrc:"/static/kiwis/Bowling.jpg",
+            imageAlt: "Pas à sa place.",
+            imageRatio: 1600/2560
         },
        {
             imageTitle: "Glace",
@@ -238,7 +240,16 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageTitle: "Manuel",
             imageSrc:["/static/kiwis/manuel1.jpg", "/static/kiwis/manuel2.jpg", "/static/kiwis/manuel3.jpg"],
             imageAlt: "Méchant manuel.",
-            imageRatio: 968/938
+            imageRatio: 1
+        },
+        {
+            imageTitle: "La Fleur qui Vole",
+            imageSrc:["/static/kiwis/fleur1.jpg", "/static/kiwis/fleur2.jpg", "/static/kiwis/fleur3.jpg",
+                "/static/kiwis/fleur4.jpg", "/static/kiwis/fleur5.jpg", "/static/kiwis/fleur6.jpg",
+                "/static/kiwis/fleur7.jpg", "/static/kiwis/fleur8.jpg", "/static/kiwis/fleur9.jpg"
+            ],
+            imageAlt: "Le pauvre.",
+            imageRatio: 1
         }
     ]
 }
