@@ -2,7 +2,7 @@
     display: grid;
     /*plus on baisse le 100px plus il y a de colonnes*/
     grid-template-columns: repeat(5, 1fr);
-        gap: var(--main-padding, 1rem);
+        gap: var(--main-padding, 1rem) var(--main-padding, 1rem);
     width: 100%;
     place-items: center;   
 }
