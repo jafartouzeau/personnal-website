@@ -235,28 +235,10 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "comicstrip": [
         {
-            imageTitle: "Manuel 1",
-            imageSrc:"/static/kiwis/manuel1.jpg",
+            imageTitle: "Manuel",
+            imageSrc:["/static/kiwis/manuel1.jpg", "/static/kiwis/manuel2.jpg", "/static/kiwis/manuel3.jpg"],
             imageAlt: "Méchant manuel.",
             imageRatio: 968/938
-        },
-        {
-            imageTitle: "Manuel 2",
-            imageSrc:"/static/kiwis/manuel2.jpg",
-            imageAlt: "Méchant manuel.",
-            imageRatio: 968/938
-        },
-        {
-            imageTitle: "Manuel 3",
-            imageSrc:"/static/kiwis/manuel3.jpg",
-            imageAlt: "Méchant manuel.",
-            imageRatio: 968/938
-        },
-        {
-            imageTitle: "C'est triste",
-            imageSrc:"/static/kiwis/triste.jpg",
-            imageAlt: "Triste triste.",
-            imageRatio: 2560/2279
         }
     ]
 }

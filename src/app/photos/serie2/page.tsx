@@ -31,7 +31,7 @@ const evry: ArtworkType[] = [{
 }
 ]
 
-
+{/*
 function Artwork({imageSrc, imageAlt, imageRatio, imageTitle}: ArtworkType) {
     return (
             <div className={styles.artwork}>
@@ -59,14 +59,14 @@ function FiveImagesGallery({artworks}:{artworks: ArtworkType[]}) {
     
     </>)
 }
-
+*/}
 export default function Serie2() {
     return (<>
         <p>En juillet 2024, la ville d’Évry a lancé un projet de transformation du quartier Parc aux Lièvres. Ce projet, dont la fin est prévue pour l’année 2028, a débuté par une phase de démolition de l’ensemble immobilier de la dalle.</p>
         <p>D’avril à juin 2025, j’ai régulièrement pris des photos du chantier pendant mes allers-retours entre mon appartement et mon campus.</p>
         <p>Un engin doté d’un long bras mécanique, surmonté d’une pince (visible sur la photo du 13 juin), a grignoté le béton petit à petit, jusqu’à ce qu’il ne reste plus rien. </p>
         
-        <FiveImagesGallery artworks={evry}/>
+        {/*<FiveImagesGallery artworks={evry}/>*/}
         
         
         </>
