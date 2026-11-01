@@ -197,7 +197,7 @@ $: //n("<b>")
   @by FOTF
 */
 
-setCpm(135/4)
+setCpm(128/4)
 
 let SCALE = "b:minor"
 
@@ -226,7 +226,7 @@ n("<5@4 4@4 6@0.5 7@0.5 0@1.5 0@1.5 0@1.5 0@1.5 0@1>*8".sub(7))
 
 
 $drums: stack(
-  s("<sbd, rolandtr505_bd>*4"),
+  //s("<sbd, rolandtr505_bd>*4"),
   s("<bd:1>*4").distort(.3).room(.7).lpf(200),
   //s("cp").struct("<~ ~ ~ x ~ ~ x ~ ~ ~ ~ x ~ ~ x ~>*16").room(.1).lpf(1000)
 )
@@ -595,10 +595,10 @@ $:arrange(
 setCpm(128/4)
 
 $: stack(
-  //s("<sbd, rolandtr505_bd>*4").lpf(1000).room(.3).duck("2").duckattack(.4).duckdepth(.8).postgain(0.4),
+  s("<sbd, rolandtr505_bd>*4").lpf(1000).room(.3).duck("2").duckattack(.4).duckdepth(.8).postgain(0.4),
   s("[- rolandtr909_oh]!4").room(.2).lpf(2000).postgain(.3),
   s("hh:6!16").lpf(3000).postgain(.6)
-  )
+  ).gain(.2)
 
 
 $: n("<-12@4 ~@2 -2 0 ~ 1 ~ -2 0 ~ 1 <~ -6>>*16".sub(7))
@@ -609,10 +609,23 @@ $: n("<-12@4 ~@2 -2 0 ~ 1 ~ -2 0 ~ 1 <~ -6>>*16".sub(7))
    .lpenv(slider(0.9,0,2)) // <1 sounds good
    .postgain(.15)
    .delay(.125)
-   .distort(2)
+   .distort(1)
    .seg(128)
    .o(2)
    .scope()
+
+$: n("<<0 [-7,0]> -2 -4 -3>".sub(7))
+   .scale("db:minor")
+   .struct("<x@4 ~@2 x x ~ x ~ x x ~ x ~>*16")
+   .s("supersaw") 
+   .lpf(slider(200,200,800))//800
+   //.seg(16)
+   .legato(1.25)
+   .lpenv(2) 
+   .distort(.2)
+   .gain(slider(0,0,1))
+   .room(.4)
+   .o(2)
 `     
       }
 }
@@ -670,4 +683,87 @@ $: n("<-21, -14, -7, 0>")
     .pan(sine.range(0.2, 0.8).slow(4))
     .postgain(.8)
     .o(3)
+*/
+
+
+/*
+
+setCpm(128/4)
+
+samples({
+rudeboy: 'samples/rude-boy-vocals.mp3',
+phantom: ['samples/phantom1.mp3', 'samples/phantom2.mp3'],
+}, 'github:jafartouzeau/strudel-personnal-library')
+
+let SLOW = 1
+
+_$: stack(
+  s("rudeboy")
+   .begin("0.06")
+   .end("0.32") //26
+   .slow(SLOW)
+   .fit()
+   .struct("<x ~ ~ ~>/2"),
+
+  s("rudeboy")
+   .begin("0.32")
+   .end("0.58") //26
+   .slow(SLOW)
+   .fit()
+   .struct("<~ x ~ ~>/2"),
+
+  s("rudeboy")
+   .begin("0.59")
+   .end("0.85") //26
+   .slow(SLOW)
+   .fit()
+   .struct("<~ ~ x ~>/2"),
+
+  s("rudeboy")
+   .begin("0.86")
+   .end("0.99") //13
+   .fit()
+   .struct("<~ ~ ~ x@0.5 ~@0.5>/2"),
+
+  s("rudeboy")
+   .begin("0.72")
+   .end("0.85")//13
+   .fit()
+   .struct("<~ ~ ~ ~@0.5 x@0.5>/2")
+)
+
+$: stack(
+  s("<sbd, rolandtr505_bd>*4").duck("1").duckattack(.4).duckdepth(.1),
+  s("[- rolandtr909_oh]!4"),
+  s("hh!16")
+)
+
+$: s("phantom:0")
+   .fit()
+   //.struct("<x x x ~>")
+   .lpf(2500)
+   .hpf(500)
+   .room(.1)
+
+_$: s("phantom:1")
+   .begin("0.1")
+   .end("0.67")
+   .fast(1.36)
+   .fit()
+   .lpf(2000)
+   .hpf(1000)
+   .struct("<~ ~ ~ x>")
+  
+
+
+_$: n("<[0, 5]@6.5 [-1, 4]@1.5>*4".sub(7))
+  .scale("g:major")
+  .lpenv(1)
+  .attack(.1)
+  .s(" gm_pad_warm")
+  .lpf(2000)
+  .o(1)
+
+
+
 */

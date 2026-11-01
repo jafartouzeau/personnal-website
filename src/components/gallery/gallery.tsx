@@ -24,20 +24,18 @@ function Arrow({
       style={{
         position: "absolute",
         top: "50%",
-        [direction]: "0.75rem",
+        [direction]: ".2rem",
         transform: "translateY(-50%)",
         zIndex: 2,
-        width: "2.75rem",
-        height: "2.75rem",
+        width: "2rem",
+        height: "2rem",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
         border: "none",
         borderRadius: "50%",
-        color: "#fff",
-        backgroundColor: "rgba(0, 0, 0, 0.45)",
-        backdropFilter: "blur(4px)",
-        WebkitBackdropFilter: "blur(4px)",
+        color: "rgba(0,0,0,0.2)",
+        background: "none",
         cursor: "pointer",
       }}
     >
@@ -174,8 +172,7 @@ function Artwork({ imageSrc, imageAlt, imageRatio, imageTitle }: ArtworkType) {
               padding: "0.15rem 0.55rem",
               borderRadius: "999px",
               fontSize: "0.8rem",
-              color: "#fff",
-              backgroundColor: "rgba(0, 0, 0, 0.55)",
+              color: "black",
             }}
           >
             {count} images
@@ -251,24 +248,23 @@ function Artwork({ imageSrc, imageAlt, imageRatio, imageTitle }: ArtworkType) {
             {hasMany && canGoPrev && <Arrow direction="left" onClick={goPrev} />}
             {hasMany && canGoNext && <Arrow direction="right" onClick={goNext} />}
 
-            {hasMany && (
+            {/*{hasMany && (
               <span
                 style={{
                   position: "absolute",
-                  left: "50%",
-                  bottom: "0.75rem",
+                  right: "0px",
+                  bottom: "0px",
                   transform: "translateX(-50%)",
-                  padding: "0.15rem 0.65rem",
+                  padding: "0.15rem",
                   borderRadius: "999px",
-                  fontSize: "0.85rem",
-                  color: "#fff",
-                  backgroundColor: "rgba(0, 0, 0, 0.5)",
+                  fontSize: "10px",
+                  color: "black",
                   pointerEvents: "none",
                 }}
               >
                 {index + 1} / {count}
               </span>
-            )}
+            )}*/}
           </div>
         </div>
       )}
