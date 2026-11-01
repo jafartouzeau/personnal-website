@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import type { ArtworkType } from "artwork";
 
-const SWIPE_THRESHOLD = 50; // px nécessaires pour changer d'image
+const SWIPE_THRESHOLD = 20; // px nécessaires pour changer d'image
 
 function Arrow({
   direction,

@@ -250,6 +250,15 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             ],
             imageAlt: "Le pauvre.",
             imageRatio: 1
+        },
+        {
+            imageTitle: "Le trou",
+            imageSrc:["/static/kiwis/trou1.jpg", "/static/kiwis/trou2.jpg", "/static/kiwis/trou3.jpg",
+                "/static/kiwis/trou4.jpg", "/static/kiwis/trou5.jpg", "/static/kiwis/trou6.jpg",
+                "/static/kiwis/trou7.jpg", "/static/kiwis/trou8.jpg", "/static/kiwis/trou9.jpg"
+            ],
+            imageAlt: "Le Trou.",
+            imageRatio: 1
         }
     ]
 }
