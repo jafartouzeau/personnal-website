@@ -21,9 +21,9 @@ export default function StrudelRepl({code}:{code:string}) {
         setTimeout(() => {
           const iframe = repl.querySelector('iframe');
           if (iframe) {
-            iframe.style.width = 'min(800px, 100%)';
+            iframe.style.width = '100%';
             iframe.removeAttribute('width');
-            iframe.style.height = 'min(100vh, 600px)';
+            iframe.style.height = '90vh';
             iframe.removeAttribute('height');
           }
         }, 200);

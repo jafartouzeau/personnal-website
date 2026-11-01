@@ -118,6 +118,13 @@ export const tabs :TabData[] = [
         title:"Nafas",
         music:"X:1\nK:D\nDD AA|BBA2|\n",
         bpm: 140
-    } 
+    },
+    {
+        id:"morespellonyou",
+        artist: "Eddie Johns",
+        title:"More Spell On You",
+        music:"X:1\nK:D\nDD AA|BBA2|\n",
+        bpm: 132
+    }
                         
 ]

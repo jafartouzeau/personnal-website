@@ -658,7 +658,7 @@ $drum: stack(
 */
 
 /*
-  @title Track #128
+  @title Track #10
   @by FOTF
 */
 
@@ -686,9 +686,7 @@ $: n("<-21, -14, -7, 0>")
 */
 
 
-/*
-
-setCpm(128/4)
+/*setCpm(128/4)
 
 samples({
 rudeboy: 'samples/rude-boy-vocals.mp3',
