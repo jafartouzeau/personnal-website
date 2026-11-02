@@ -37,6 +37,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Arroser sa flaque",
+            imageSrc:"/static/kiwis/arroser.jpg",
+            imageAlt: "Arroser sa flaque, c'est important.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Reflet",
             imageSrc:"/static/kiwis/reflet.jpg",
             imageAlt: "Soi-même.",
@@ -266,6 +272,15 @@ export const kiwisData: Record<string, ArtworkType[]> = {
                 "/static/kiwis/ican4.jpg", "/static/kiwis/ican5.jpg", "/static/kiwis/ican6.jpg"            ],
             imageAlt: "I can.",
             imageRatio: 1
-        }
+        },
+        {
+            imageTitle: "Le goût des nuages",
+            imageSrc:["/static/kiwis/goutnuage1.jpg", "/static/kiwis/goutnuage2.jpg", "/static/kiwis/goutnuage3.jpg",
+                "/static/kiwis/goutnuage4.jpg", "/static/kiwis/goutnuage5.jpg", "/static/kiwis/goutnuage6.jpg",
+                "/static/kiwis/goutnuage7.jpg", "/static/kiwis/goutnuage8.jpg", "/static/kiwis/goutnuage9.jpg"
+            ],
+            imageAlt: "Le goût des nuages.",
+            imageRatio: 1
+        },
     ]
 }
