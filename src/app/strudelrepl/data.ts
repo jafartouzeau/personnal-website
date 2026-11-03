@@ -627,6 +627,53 @@ $: n("<<0 [-7,0]> -2 -4 -3>".sub(7))
    .room(.4)
    .o(2)
 `     
+      }, "track8":{
+        artist: "FOTF",
+        title: "Track #8 (Nice sample)",
+        code:
+`/*
+  @title Track #8
+  @by FOTF
+*/
+
+setCpm(132/4)
+
+samples({
+  kick: ['samples/kick/fat-kick-1.wav', 'samples/kick/fat-kick.wav', 'samples/kick/fat-kick-dry.wav', 'samples/kick/fat-kick_G#_major.wav'],
+vocals: 'samples/chester_bennington_warming_up.mp3',
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+$: stack(
+  s("kick:0!4").room(.1).duck("2").duckattack(.4).duckdepth(.8).postgain(0.4),
+  s("[- rolandtr909_oh]!4").room(.2).lpf(2000).postgain(.3),
+  s("hh:6!16").lpf(3000).postgain(.6)
+  ).gain(.2)
+
+let FAST_FACTOR = slider(1.72,0,4); //1.72
+
+$:stack(
+  s("vocals")
+   .begin("0.008")
+   .end("0.0735")
+   //.end(".155")
+   //.slow(1.1)
+   .fast(FAST_FACTOR)
+   .fit()
+   .struct("<~ ~ x ~   ~ ~ ~ ~   ~ ~ ~ ~>*8"),
+
+  s("vocals")
+   .begin("0.0735")
+   .end(".155")
+   .fast(FAST_FACTOR)
+   .fit()
+   .struct("<~ ~ ~ ~   ~ ~ ~ ~   ~ ~ x ~>*8")
+   )
+  .lpf(1000)
+   .hpf(700)
+   .gain(.3)
+   .room(.6)
+   .o(2)
+`     
       }
 }
 
@@ -762,6 +809,61 @@ _$: n("<[0, 5]@6.5 [-1, 4]@1.5>*4".sub(7))
   .lpf(2000)
   .o(1)
 
+
+
+*/
+
+/*
+
+/*
+  @title Track #X
+  @by FOTF
+*/
+
+/*
+setCpm(180/4)
+
+samples({
+  kick: ['samples/kick/fat-kick-1.wav', 'samples/kick/fat-kick.wav', 'samples/kick/fat-kick-dry.wav', 'samples/kick/fat-kick_G#_major.wav'],
+vocals: 'samples/chester_bennington_warming_up.mp3',
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+$: stack(
+  s("<kick:0>*3").lpf(200).room(0.2),
+  //s("<- sbd>*8").lpf(200).room(0.2),
+).gain(.2)
+
+_$bass: n("<- 5>*8".sub(14))
+   .scale("c3:minor")
+   .s("supersaw")
+   .legato(.6)
+   .lpf(100)
+   .distort(1)
+   .room(.1)
+
+$:s("vocals")
+   .begin("0.008")
+   //.end("0.0735")
+   //.fast()
+   .end(".155")
+   .fit()
+   //.struct("<~ x ~ ~ ~ ~ ~ ~>*8")
+   .lpf(1000)
+   .hpf(700)
+   .gain(.3)
+   .room(.1)
+
+_$:s("vocals")
+   .begin("0.0735")
+   .end(".155")
+   .fit()
+   .fast(2)
+   .fit()
+   .struct("<~ ~ ~ ~ ~ ~ x ~>*8")
+   .lpf(1000)
+   .hpf(700)
+   .gain(.3)
+   .room(.1)
 
 
 */
