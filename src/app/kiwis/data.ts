@@ -243,12 +243,24 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "comicstrip": [
         {
-            imageTitle: "Manuel",
-            imageSrc:["/static/kiwis/manuel1.jpg", "/static/kiwis/manuel2.jpg", "/static/kiwis/manuel3.jpg"],
-            imageAlt: "Méchant manuel.",
+            imageTitle: "Le trou",
+            imageSrc:["/static/kiwis/trou1.jpg", "/static/kiwis/trou2.jpg", "/static/kiwis/trou3.jpg",
+                "/static/kiwis/trou4.jpg", "/static/kiwis/trou5.jpg", "/static/kiwis/trou6.jpg",
+                "/static/kiwis/trou7.jpg", "/static/kiwis/trou8.jpg", "/static/kiwis/trou9.jpg"
+            ],
+            imageAlt: "Le Trou.",
             imageRatio: 1
         },
         {
+            imageTitle: "Le goût des nuages",
+            imageSrc:["/static/kiwis/goutnuage1.jpg", "/static/kiwis/goutnuage2.jpg", "/static/kiwis/goutnuage3.jpg",
+                "/static/kiwis/goutnuage4.jpg", "/static/kiwis/goutnuage5.jpg", "/static/kiwis/goutnuage6.jpg",
+                "/static/kiwis/goutnuage7.jpg", "/static/kiwis/goutnuage8.jpg", "/static/kiwis/goutnuage9.jpg"
+            ],
+            imageAlt: "Le goût des nuages.",
+            imageRatio: 1
+        },
+                {
             imageTitle: "La Fleur qui Vole",
             imageSrc:["/static/kiwis/fleur1.jpg", "/static/kiwis/fleur2.jpg", "/static/kiwis/fleur3.jpg",
                 "/static/kiwis/fleur4.jpg", "/static/kiwis/fleur5.jpg", "/static/kiwis/fleur6.jpg",
@@ -258,12 +270,9 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
-            imageTitle: "Le trou",
-            imageSrc:["/static/kiwis/trou1.jpg", "/static/kiwis/trou2.jpg", "/static/kiwis/trou3.jpg",
-                "/static/kiwis/trou4.jpg", "/static/kiwis/trou5.jpg", "/static/kiwis/trou6.jpg",
-                "/static/kiwis/trou7.jpg", "/static/kiwis/trou8.jpg", "/static/kiwis/trou9.jpg"
-            ],
-            imageAlt: "Le Trou.",
+            imageTitle: "La girafe",
+            imageSrc:["/static/kiwis/girafe1.jpg", "/static/kiwis/girafe2.jpg"],
+            imageAlt: "La girafe.",
             imageRatio: 1
         },
         {
@@ -274,12 +283,9 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
-            imageTitle: "Le goût des nuages",
-            imageSrc:["/static/kiwis/goutnuage1.jpg", "/static/kiwis/goutnuage2.jpg", "/static/kiwis/goutnuage3.jpg",
-                "/static/kiwis/goutnuage4.jpg", "/static/kiwis/goutnuage5.jpg", "/static/kiwis/goutnuage6.jpg",
-                "/static/kiwis/goutnuage7.jpg", "/static/kiwis/goutnuage8.jpg", "/static/kiwis/goutnuage9.jpg"
-            ],
-            imageAlt: "Le goût des nuages.",
+            imageTitle: "Manuel",
+            imageSrc:["/static/kiwis/manuel1.jpg", "/static/kiwis/manuel2.jpg", "/static/kiwis/manuel3.jpg"],
+            imageAlt: "Méchant manuel.",
             imageRatio: 1
         },
     ]
