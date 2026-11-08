@@ -36,6 +36,11 @@ export default function HomePage() {
             audioFile="ma_mere_l_oye.mp3"
             title="Ma mère l'Oye - Maurice Ravel"
         />
+        <Vinyl
+            imageFile="symphony_8.png"
+            audioFile="frantz_schubert_symphony_8.mp3"
+            title="Symphonie No.8 - Frantz Schubert"
+        />
     </div>
 </>
   );

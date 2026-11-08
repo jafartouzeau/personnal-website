@@ -104,7 +104,7 @@ export default function Menu() {
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
-                    Kiwis 
+                    🥝 Kiwis 
                     </Link>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/formatcarre`}>
@@ -124,8 +124,15 @@ export default function Menu() {
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
+                    {/*<Link href={`/bass`}>*/}
+                    <Link href={"/smady/carte"}>
+                        🧿 Saint-Maur a des yeux (Coming soon)
+                    </Link>
+                </ul>
+
+                <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl`}>
-                        Strudel REPL 🌀 
+                        🌀 Strudel REPL Lab 
                     </Link>
                     {Object.entries(strudelData).map(([url, strudel]) => (
                         <li className={styles.sublink} key={url}>
@@ -141,7 +148,7 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={""}>
-                        Bass TABS 
+                        🎶 Bass TABS (Coming soon)
                     </Link>
                     {[...tabs].sort((a, b) =>
                                 a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
@@ -157,15 +164,7 @@ export default function Menu() {
                 </ul>
 
 
-                {/*<ol className={`${styles.sublink}`}>
-                    <Link href={`/photos/serie1`}>
-                       📷 Série #1
-                    </Link>
-                </ol>
-                <ol className={styles.sublink}>
-                    <Link href={`/photos/serie2`}>
-                        📷 Série #2
-                    </Link>
+                {/*
                 </ol>
                 <ol className={`${styles.toplink}`}>
                     <Link href={`/lbm`}>
