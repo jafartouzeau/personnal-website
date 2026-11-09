@@ -1,0 +1,120 @@
+.root {
+  position: relative;
+  min-height: 100vh;
+  width: 88%;
+  max-width: 512px;
+  overflow: hidden;
+  color: #fff;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 40px 48px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background-color 0.8s ease;
+
+}
+
+.cover {
+  position: relative;
+  width: min(80vw, 256px);
+  aspect-ratio: 1;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg); /* la progression démarre en haut */
+}
+
+.ringTrack,
+.ringProgress {
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.ringTrack {
+  stroke: rgba(128, 128, 128, 0.25);
+}
+
+.ringProgress {
+  stroke: currentColor;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.25s linear;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 6%;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: spin 6s linear infinite;
+  animation-play-state: paused;
+}
+
+.spin {
+  animation-play-state: running;
+}
+
+.image {
+  object-fit: cover;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.info {
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.artist {
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.controls button {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: transparent;
+  color: inherit;
+}
+
+.controls button:hover {
+  opacity: 0.7;
+}
+
+.sideButton {
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.mainButton {
+  width: 64px;
+  height: 64px;
+  font-size: 1.4rem;
+  border: 2px solid currentColor !important;
+}

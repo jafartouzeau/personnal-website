@@ -1,47 +1,11 @@
-import Vinyl from "@/components/vinyl/vinyl";
-import styles from "./homepage.module.css"
+import Playlist from "@/components/playlist/playlist";
+import {tracks} from './musicData'
 
 export default function HomePage() {
   return (
-    <>
-    <p style={{width:"100%", padding:"32px", textAlign:"center"}}>Une sélection aux petits oignons</p>
-    <div className={styles.grid}>
-        <Vinyl
-            imageFile="act_like_you_know.png"
-            audioFile="act_like_you_know.mp3"
-            title="Act Like You Know - Fat Larry's Band"
-        />
-        <Vinyl
-            imageFile="alive.png"
-            audioFile="alive.mp3"
-            title="Alive 2007 - Daft Punk"
-        />
-        <Vinyl
-            imageFile="daphnis_and_chloe.png"
-            audioFile="daphnis_and_chloe.mp3"
-            title="Daphnis et Chloé - Maurice Ravel"
-        />
-        <Vinyl
-            imageFile="piano_concerto_2.jpg"
-            audioFile="piano_concerto_2.mp3"
-            title="Piano Concerto II - Sergueï Rachmaninov"
-        />
-        <Vinyl
-            imageFile="romeo_and_juliet.jpg"
-            audioFile="romeo_and_juliet.mp3"
-            title="Roméo et Juliette - Sergueï Prokofiev"
-        />
-        <Vinyl
-            imageFile="ma_mere_l_oye.jpg"
-            audioFile="ma_mere_l_oye.mp3"
-            title="Ma mère l'Oye - Maurice Ravel"
-        />
-        <Vinyl
-            imageFile="symphony_8.png"
-            audioFile="frantz_schubert_symphony_8.mp3"
-            title="Symphonie No.8 - Frantz Schubert"
-        />
-    </div>
-</>
+    <div style={{width:"100%", display:"flex", flexDirection:"column", alignItems:"center"}}>
+    <p style={{padding:"32px", textAlign:"center"}}>Une sélection aux petits oignons</p>
+    <Playlist tracks={tracks}/>
+</div>
   );
 }
