@@ -260,6 +260,13 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageAlt: "Le goût des nuages.",
             imageRatio: 1
         },
+        {
+            imageTitle: "Sauter",
+            imageSrc:["/static/kiwis/sauter1.jpg", "/static/kiwis/sauter2.jpg", "/static/kiwis/sauter3.jpg"
+            ],
+            imageAlt: "Sauter ou pas.",
+            imageRatio: 1
+        },
                 {
             imageTitle: "La Fleur qui Vole",
             imageSrc:["/static/kiwis/fleur1.jpg", "/static/kiwis/fleur2.jpg", "/static/kiwis/fleur3.jpg",

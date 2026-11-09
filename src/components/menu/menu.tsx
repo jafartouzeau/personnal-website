@@ -104,7 +104,7 @@ export default function Menu() {
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
-                    🥝 Kiwis 
+                    Kiwis 🥝 
                     </Link>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/formatcarre`}>
@@ -126,13 +126,13 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={"/smady/carte"}>
-                        🧿 Saint-Maur a des yeux (Coming soon)
+                        Saint-Maur a des yeux 🧿 (COMING SOON)
                     </Link>
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl`}>
-                        🌀 Strudel REPL Lab 
+                        Strudel REPL Lab 🌀 
                     </Link>
                     {Object.entries(strudelData).map(([url, strudel]) => (
                         <li className={styles.sublink} key={url}>
@@ -148,7 +148,7 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={""}>
-                        🎶 Bass TABS (Coming soon)
+                        Bass TABS 🎶 (COMING SOON)
                     </Link>
                     {[...tabs].sort((a, b) =>
                                 a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
