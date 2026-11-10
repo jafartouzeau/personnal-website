@@ -4,7 +4,6 @@ import Link from 'next/link';
 import styles from './menu.module.css';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { tabs } from '@/app/bass/data';
 import { strudelData } from '@/app/strudelrepl/data';
 
 export default function Menu() {
@@ -126,13 +125,13 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={"/smady/carte"}>
-                        🧿 Saint-Maur a des yeux [COMING SOON]
+                        Saint-Maur a des yeux [COMING SOON]
                     </Link>
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl`}>
-                        🌀 Strudel REPL Lab  
+                        Strudel REPL Lab  
                     </Link>
                     {Object.entries(strudelData).map(([url, strudel]) => (
                         <li className={styles.sublink} key={url}>
