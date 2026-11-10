@@ -31,8 +31,7 @@ export default function Playlist({ tracks }: { tracks: Track[] }) {
     if (isPlaying) {
       audio.play().catch(() => setIsPlaying(false));
     }
-    // volontairement uniquement sur index
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [index]);
 
   if (!track) return null;
@@ -74,7 +73,7 @@ export default function Playlist({ tracks }: { tracks: Track[] }) {
   return (
       <div className={styles.root}>
 
-        <div className={styles.player}> {/*style={{ backgroundColor: track.couleur }} */}
+        <div className={styles.player}> 
         <audio
             ref={audioRef}
             src={`/static/vinyls/music/${track.mp3}`}
@@ -96,14 +95,16 @@ export default function Playlist({ tracks }: { tracks: Track[] }) {
             />
             </svg>
 
-            <div className={`${styles.imageWrapper} ${isPlaying ? styles.spin : ""}`}>
-            <Image
-                src={`/static/vinyls/image/${track.image}`}
-                alt={track.title}
-                fill
-                sizes="256px"
-                className={styles.image}
-            />
+            <div className={`${styles.imageWrapper}`}> {/*${isPlaying ? styles.spin : ""}}*/}
+              {/**Ratio : vinyl 752 image 321 */}
+              <Image
+                  src={`/static/vinyls/image/${track.image}`}
+                  alt={track.title}
+                  fill
+                  sizes="256px"
+                  className={styles.image}
+
+              />
             </div>
         </div>
 
