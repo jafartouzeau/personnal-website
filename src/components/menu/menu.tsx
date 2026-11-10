@@ -104,7 +104,7 @@ export default function Menu() {
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
-                    Kiwis 🥝 
+                    Kiwis 
                     </Link>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/formatcarre`}>
@@ -126,13 +126,13 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={"/smady/carte"}>
-                        Saint-Maur a des yeux 🧿 (COMING SOON)
+                        🧿 Saint-Maur a des yeux [COMING SOON]
                     </Link>
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl`}>
-                        Strudel REPL Lab 🌀 
+                        🌀 Strudel REPL Lab  
                     </Link>
                     {Object.entries(strudelData).map(([url, strudel]) => (
                         <li className={styles.sublink} key={url}>
@@ -148,19 +148,21 @@ export default function Menu() {
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
                     <Link href={""}>
-                        Bass TABS 🎶 (COMING SOON)
+                        Bass TABS [COMING SOON]
                     </Link>
+                    {/*
                     {[...tabs].sort((a, b) =>
                                 a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
                             )
                             .map((tab) => (
                                 <li className={styles.sublink} key={tab.id}>
-                                    {/*<Link href={`/bass#${tab.id}`}>*/}
+                                    {/*<Link href={`/bass#${tab.id}`}>
                                     <Link href=''>
                                         {tab.artist} - {tab.title} ({tab.bpm}bpm)
                                     </Link>
                                 </li>
                             ))}
+                    */}
                 </ul>
 
 

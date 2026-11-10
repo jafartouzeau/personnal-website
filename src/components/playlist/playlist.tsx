@@ -74,7 +74,7 @@ export default function Playlist({ tracks }: { tracks: Track[] }) {
   return (
       <div className={styles.root}>
 
-        <div className={styles.player} style={{ backgroundColor: track.couleur }}>
+        <div className={styles.player}> {/*style={{ backgroundColor: track.couleur }} */}
         <audio
             ref={audioRef}
             src={`/static/vinyls/music/${track.mp3}`}

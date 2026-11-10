@@ -49,7 +49,7 @@ export const tracks : Track[] = [
         image:"symphony_8.png",
         mp3:"frantz_schubert_symphony_8.mp3",
         title:"Symphonie No.8",
-        artist: "Frantz Schubert",
+        artist: "Franz Schubert",
                                 couleur: "#171e1d"
 
     }
