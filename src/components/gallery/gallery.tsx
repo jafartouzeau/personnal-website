@@ -175,7 +175,7 @@ function Artwork({ imageSrc, imageAlt, imageRatio, imageTitle }: ArtworkType) {
               color: "black",
             }}
           >
-            {count} images
+            1/{count}
           </span>
         )}
       </div>

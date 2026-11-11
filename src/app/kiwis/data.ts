@@ -243,12 +243,11 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "comicstrip": [
         {
-            imageTitle: "Le trou",
-            imageSrc:["/static/kiwis/trou1.jpg", "/static/kiwis/trou2.jpg", "/static/kiwis/trou3.jpg",
-                "/static/kiwis/trou4.jpg", "/static/kiwis/trou5.jpg", "/static/kiwis/trou6.jpg",
-                "/static/kiwis/trou7.jpg", "/static/kiwis/trou8.jpg", "/static/kiwis/trou9.jpg"
+            imageTitle: "La disparition",
+            imageSrc:["/static/kiwis/disparition1.jpg", "/static/kiwis/disparition2.jpg", "/static/kiwis/disparition3.jpg",
+                "/static/kiwis/disparition4.jpg"
             ],
-            imageAlt: "Le Trou.",
+            imageAlt: "La disparition.",
             imageRatio: 1
         },
         {
@@ -261,25 +260,34 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         },
         {
+            imageTitle: "Le trou",
+            imageSrc:["/static/kiwis/trou1.jpg", "/static/kiwis/trou2.jpg", "/static/kiwis/trou3.jpg",
+                "/static/kiwis/trou4.jpg", "/static/kiwis/trou5.jpg", "/static/kiwis/trou6.jpg",
+                "/static/kiwis/trou7.jpg", "/static/kiwis/trou8.jpg", "/static/kiwis/trou9.jpg"
+            ],
+            imageAlt: "Le Trou.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Sauter",
             imageSrc:["/static/kiwis/sauter1.jpg", "/static/kiwis/sauter2.jpg", "/static/kiwis/sauter3.jpg"
             ],
             imageAlt: "Sauter ou pas.",
             imageRatio: 1
         },
-                {
+        {
+            imageTitle: "La girafe",
+            imageSrc:["/static/kiwis/girafe1.jpg", "/static/kiwis/girafe2.jpg"],
+            imageAlt: "La girafe.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "La Fleur qui Vole",
             imageSrc:["/static/kiwis/fleur1.jpg", "/static/kiwis/fleur2.jpg", "/static/kiwis/fleur3.jpg",
                 "/static/kiwis/fleur4.jpg", "/static/kiwis/fleur5.jpg", "/static/kiwis/fleur6.jpg",
                 "/static/kiwis/fleur7.jpg", "/static/kiwis/fleur8.jpg", "/static/kiwis/fleur9.jpg"
             ],
             imageAlt: "Le pauvre.",
-            imageRatio: 1
-        },
-        {
-            imageTitle: "La girafe",
-            imageSrc:["/static/kiwis/girafe1.jpg", "/static/kiwis/girafe2.jpg"],
-            imageAlt: "La girafe.",
             imageRatio: 1
         },
         {
