@@ -37,6 +37,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Proche des nuages",
+            imageSrc:"/static/kiwis/proximite.jpg",
+            imageAlt: "Si proche et pourtant si loin.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Arroser sa flaque",
             imageSrc:"/static/kiwis/arroser.jpg",
             imageAlt: "Arroser sa flaque, c'est important.",
