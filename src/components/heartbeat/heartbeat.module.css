@@ -1,0 +1,111 @@
+.root {
+  --hb-bg: #000;
+  --hb-line: #cfcfcf;
+  --hb-row-h: 40px;
+  --hb-gap: 8px;
+  --hb-project-gap: 40px;
+
+  width: 100%;            /* toujours la largeur du conteneur */
+  box-sizing: border-box;
+  background: var(--hb-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--hb-project-gap);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: var(--hb-gap);
+  margin-bottom: 32px;
+}
+
+.row {
+  position: relative;
+  width: 100%;
+  height: var(--hb-row-h);
+}
+
+/* La ligne continue, bord à bord */
+.line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+.line polyline {
+  fill: none;
+  stroke: var(--hb-line);
+  stroke-width: 1.5;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+
+/* Une colonne par jour, pleine hauteur = zone de survol facile.
+   Les colonnes des extrémités font une demi-largeur : le premier
+   et le dernier point sont pile sur les bords. */
+.days {
+  position: absolute;
+  inset: 0;
+  display: flex;
+}
+.day {
+  position: relative;
+  flex: 1;
+  height: 100%;
+}
+.day:first-child,
+.day:last-child {
+  flex: 0.5;
+}
+
+/* Point sur la ligne */
+.day::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: var(--y);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+}
+.day:first-child::before { left: 0; }
+.day:last-child::before  { left: 100%; }
+
+/* Date */
+.day::after {
+  content: attr(data-date);
+  position: absolute;
+  left: 50%;
+  top: var(--y);
+  transform: translate(-50%, calc(-100% - 10px));
+  white-space: nowrap;
+  font-size: 11px;
+  letter-spacing: 0.02em;
+  color: #fff;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.day:hover::before,
+.day:hover::after {
+  opacity: 1;
+}
+
+/* Évite que la date sorte du conteneur aux extrémités */
+.day:nth-child(-n + 6)::after {
+  left: 0;
+  transform: translate(0, calc(-100% - 10px));
+}
+.day:nth-last-child(-n + 6)::after {
+  left: auto;
+  right: 0;
+  transform: translate(0, calc(-100% - 10px));
+}
