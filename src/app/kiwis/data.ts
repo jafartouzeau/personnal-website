@@ -37,6 +37,18 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "L'une des vôtres",
+            imageSrc:"/static/kiwis/devenirfleur2.jpg",
+            imageAlt: "Kiwi fleur.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Prendre racine",
+            imageSrc:"/static/kiwis/devenirfleur1.jpg",
+            imageAlt: "Prendre racine.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Potins",
             imageSrc:"/static/kiwis/potins.jpg",
             imageAlt: "Tea time avec les fleurs.",
