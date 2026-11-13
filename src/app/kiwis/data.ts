@@ -37,6 +37,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Potins",
+            imageSrc:"/static/kiwis/potins.jpg",
+            imageAlt: "Tea time avec les fleurs.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Proche des nuages",
             imageSrc:"/static/kiwis/proximite.jpg",
             imageAlt: "Si proche et pourtant si loin.",
