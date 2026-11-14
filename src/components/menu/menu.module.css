@@ -9,7 +9,7 @@
     z-index:2000;
     font-family: var(--ff-logo);
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 1000;
     white-space: nowrap;
     color: #fff;
     -webkit-animation: glow 1s ease-in-out infinite alternate;
@@ -80,9 +80,7 @@
 }
 
 .sublink {
-    margin: var(--very-small-padding) var(--small-padding) var(--very-small-padding) 0;
-    margin-left: 1rem;
-    list-style: disc;
+    list-style-type: none;
 }
 
 .toplink {
@@ -133,7 +131,7 @@
     /* Listes masquées par défaut */
     .toplink {
         display: none;
-        padding-left: 20px;
+        padding: 0 20px;
     }
 
     /* Affichées quand le toggle est actif.

@@ -20,7 +20,7 @@
   --fs: 13px;
 
   --background: black;
-  --accent: #ad2300;
+  --accent: #ff4da6;
   --text: antiquewhite;
 
   --main-padding: 13px;
@@ -30,9 +30,10 @@
 }
 
 ::selection {
-  background: var(--accent);
-  color: #fff;
+  background: white;
+  color: black;
   text-shadow: none;
+  font-weight: 800;
 }
 
 * {
@@ -85,7 +86,11 @@ a {
 }
 
 a:not(nav a) {
-  color: var(--accent);
+  /*color: var(--accent);*/
+    background: white;
+  color: black;
+  text-shadow: none;
+  font-weight: 800;
 }
 
 hr {

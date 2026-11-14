@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import styles from './menu.module.css';
+import Image from 'next/image';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { strudelData } from '@/app/strudelrepl/data';
@@ -84,7 +85,8 @@ export default function Menu() {
                 <div className={styles.navHeader}>
                      <Link href={"/"}>
                         <div className={styles.logoContainer}>
-                            <span className={styles.logo}>J∀F∀R</span>{/*∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀</span>*/}
+                            {/*<span className={styles.logo}>J∀F∀R</span>{/*∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀</span>*/}
+                            <span className={styles.logo}>ποίησις</span>
                         </div>
                     </Link>
                     <div
@@ -105,14 +107,15 @@ export default function Menu() {
                     <Link href={`/kiwis`}>
                     Kiwis 
                     </Link>
+                    <hr></hr>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/formatcarre`}>
-                            Format carré
+                            Single shots
                         </Link>
                     </li>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/comicstrip`}>
-                            Comic strip
+                            Strips
                         </Link>
                     </li>
                     <li className={styles.sublink}>
@@ -123,16 +126,10 @@ export default function Menu() {
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
-                    {/*<Link href={`/bass`}>*/}
-                    <Link href={"/smady/carte"}>
-                        Saint-Maur a des yeux [COMING SOON]
-                    </Link>
-                </ul>
-
-                <ul className={`${styles.toplink}`}>
                     <Link href={`/strudelrepl`}>
-                        Strudel REPL Lab  
+                        Strudel REPL Lab
                     </Link>
+                    <hr></hr>
                     {Object.entries(strudelData).map(([url, strudel]) => (
                         <li className={styles.sublink} key={url}>
                                     <Link href={`/strudelrepl/${url}`}>
@@ -146,9 +143,20 @@ export default function Menu() {
 
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
-                    <Link href={""}>
-                        Bass TABS [COMING SOON]
+                    <Link href={"/smady/carte"}>
+                        [COMING SOON] Saint-Maur a des yeux 
                     </Link>
+                                        <hr></hr>
+
+                </ul>
+
+                <ul className={`${styles.toplink}`}>
+                    {/*<Link href={`/bass`}>*/}
+                    <Link href={""}>
+                        [COMING SOON] Bass TABS 
+                    </Link>
+                                        <hr></hr>
+
                     {/*
                     {[...tabs].sort((a, b) =>
                                 a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
