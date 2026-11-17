@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { strudelData } from '@/app/strudelrepl/data';
+import ThemeToggle from '../themetoggle/themetoggle';
 
 export default function Menu() {
     
@@ -83,12 +84,18 @@ export default function Menu() {
                     }
                 }}>
                 <div className={styles.navHeader}>
+
                      <Link href={"/"}>
                         <div className={styles.logoContainer}>
                             {/*<span className={styles.logo}>J∀F∀R</span>{/*∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀</span>*/}
                             <span className={styles.logo}>ποίησις</span>
                         </div>
                     </Link>
+
+                    <div className={styles.themeToggleContainer}>
+                        <ThemeToggle />
+                    </div>
+
                     <div
                         ref={toggleRef}
                         className={styles.menuToggle}

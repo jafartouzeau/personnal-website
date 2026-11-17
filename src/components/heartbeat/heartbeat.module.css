@@ -1,6 +1,6 @@
 .root {
-  --hb-bg: #000;
-  --hb-line: #cfcfcf;
+  --hb-bg: var(--background);
+  --hb-line: var(--text);
   --hb-row-h: 40px;
   --hb-gap: 8px;
   --hb-project-gap: 40px;
@@ -70,7 +70,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--text);
   transform: translate(-50%, -50%);
   opacity: 0;
   pointer-events: none;
@@ -88,7 +88,7 @@
   white-space: nowrap;
   font-size: 11px;
   letter-spacing: 0.02em;
-  color: #fff;
+  color: var(--text);
   opacity: 0;
   pointer-events: none;
   z-index: 1;

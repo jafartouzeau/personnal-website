@@ -19,9 +19,9 @@
   
   --fs: 13px;
 
-  --background: black;
   --accent: #ff4da6;
-  --text: antiquewhite;
+  --background: white;
+  --text: black;
 
   --main-padding: 13px;
   --small-padding: 8px;
@@ -29,9 +29,14 @@
   --topbar-height: 24px;
 }
 
+.dark {
+  --background: black;
+  --text: antiquewhite;
+}
+
 ::selection {
-  background: white;
-  color: black;
+  background: var(--text);
+  color: var(--background);
   text-shadow: none;
   font-weight: 800;
 }

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
-    },
+  },
   "prebuild": "node scripts/generate-heartbeat.mjs",
   "dependencies": {
     "@strudel/embed": "^1.1.2",

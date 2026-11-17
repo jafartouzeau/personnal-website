@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Menu from "@/components/menu/menu";
 import Footer from "@/components/footer/footer";
-
+import { DarkModeProvider } from '@/components/darkmodeprovider/darkmodeprovider'
 
 export const metadata: Metadata = {
   title: "JⱯFⱯR",
@@ -16,15 +16,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body>
-        <div className="mainContainer">
-          <Menu/>
-          <main>
-            {children}
-          </main>
-        </div>
-        <Footer/>
-      </body>
+      <DarkModeProvider>
+        <body>
+          <div className="mainContainer">
+            <Menu/>
+            <main>
+              {children}
+            </main>
+          </div>
+          <Footer/>
+        </body>
+      </DarkModeProvider>
     </html>
   );
 }
