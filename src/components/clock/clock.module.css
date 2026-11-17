@@ -30,6 +30,18 @@
     animation: rotation 30s linear infinite;
 }
 
+.hr path,
+.min path,
+.sec path,
+.frame path {
+  stroke: var(--text) !important;
+}
+
+.hr circle {
+  stroke: var(--text) !important;
+  fill: var(--text) !important;
+}
+
 @keyframes rotation {
   from {
     transform: rotate(0deg);

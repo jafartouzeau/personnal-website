@@ -36,6 +36,7 @@
     width: min(100vw, 512px);
     height: auto;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: var(--main-padding);
 }
 

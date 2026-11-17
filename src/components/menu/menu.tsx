@@ -2,11 +2,11 @@
 
 import Link from 'next/link';
 import styles from './menu.module.css';
-import Image from 'next/image';
 import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { strudelData } from '@/app/strudelrepl/data';
 import ThemeToggle from '../themetoggle/themetoggle';
+
 
 export default function Menu() {
     
@@ -109,7 +109,7 @@ export default function Menu() {
                         <div className={styles.bar}></div>
                     </div>
                 </div>
-
+                
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
                     Kiwis 
@@ -179,6 +179,14 @@ export default function Menu() {
                     */}
                 </ul>
 
+                 <ul className={`${styles.toplink}`}>
+                    <Link href={"/heartbeat"}>
+                        Heartbeat
+                    </Link>
+                                        <hr></hr>
+
+                </ul>
+
 
                 {/*
                 </ol>
@@ -217,6 +225,7 @@ export default function Menu() {
                         🧿 Chapitre 4
                     </Link>
                 </ol>*/}
+
 
         </nav>
         <div className={styles.fakeNavbar}></div>

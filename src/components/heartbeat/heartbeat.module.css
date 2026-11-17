@@ -38,7 +38,7 @@
 .line polyline {
   fill: none;
   stroke: var(--hb-line);
-  stroke-width: 1.5;
+  stroke-width: 1;
   stroke-linejoin: round;
   vector-effect: non-scaling-stroke;
 }
