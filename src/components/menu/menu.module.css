@@ -98,6 +98,11 @@
 
 /* ===== Mobile : barre du haut + toggle ===== */
 @media (max-width: 768px) {
+
+    .playlist {
+        display: none;
+    }
+
     .themeToggleContainer {
         padding-right: 16px;
     }

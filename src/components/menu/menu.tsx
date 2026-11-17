@@ -6,6 +6,8 @@ import { useRef, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { strudelData } from '@/app/strudelrepl/data';
 import ThemeToggle from '../themetoggle/themetoggle';
+import Playlist from '../playlist/playlist';
+import {tracks} from '@/app/musicData'
 
 
 export default function Menu() {
@@ -186,6 +188,11 @@ export default function Menu() {
                                         <hr></hr>
 
                 </ul>
+
+
+                <div className={styles.playlist}>
+                    <Playlist tracks={tracks}/>
+                </div>
 
 
                 {/*
