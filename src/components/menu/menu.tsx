@@ -10,12 +10,29 @@ import Playlist from '../playlist/playlist';
 import {tracks} from '@/app/musicData'
 
 
+const squareButton = (active: boolean): React.CSSProperties => ({
+    display: 'grid',
+    placeItems: 'center',
+    minWidth: 32,
+    height: 32,
+    padding: '0 var(--small-padding)',
+    fontFamily: 'var(--ff)',
+    fontSize: 'var(--fs)',
+    cursor: 'pointer',
+    border: '1px solid var(--text)',
+    background: active ? 'var(--text)' : 'var(--background)',
+    color: active ? 'var(--background)' : 'var(--text)',
+})
+
 export default function Menu() {
     
     const pathname = usePathname();
 
     const navbarRef = useRef<HTMLElement>(null);
     const toggleRef = useRef<HTMLDivElement>(null);
+
+    const keys = Object.keys(tracks)
+    const [selected, setSelected] = useState<string>(keys[0])
 
      useEffect(() => {
             const closeMenu = () => {
@@ -111,6 +128,32 @@ export default function Menu() {
                         <div className={styles.bar}></div>
                     </div>
                 </div>
+
+
+
+                <div className={styles.playlist}>
+
+                    <ul className={styles.toplink}>
+                        Radio
+                        <hr />
+                    </ul>
+
+                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--small-padding)' }}>
+                        {keys.map((key) => (
+                        <button
+                            key={key}
+                            type="button"
+                            aria-pressed={key === selected}
+                            onClick={() => setSelected(key)}
+                            style={squareButton(key === selected)}
+                        >
+                            {key}
+                        </button>
+                        ))}
+                    </div>
+
+                    <Playlist tracks={tracks[selected]} />
+                </div>
                 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/kiwis`}>
@@ -188,11 +231,6 @@ export default function Menu() {
                                         <hr></hr>
 
                 </ul>
-
-
-                <div className={styles.playlist}>
-                    <Playlist tracks={tracks}/>
-                </div>
 
 
                 {/*

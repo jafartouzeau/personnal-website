@@ -1,18 +1,8 @@
 import {Track} from '@/components/playlist/playlist'
 
-export const tracks : Track[] = [
-    {
-        image:"act_like_you_know.png",
-        mp3:"act_like_you_know.mp3",
-        title:"Act Like You Know",
-        artist:"Fat Larry's Band"
-    },
-    {
-        image:"alive.png",
-        mp3:"alive.mp3",
-        title:"Alive 2007",
-        artist: "Daft Punk"
-    },
+export const tracks : Record<string, Track[]> = {
+
+    "01" : [
     {
         image:"daphnis_and_chloe.png",
         mp3:"daphnis_and_chloe.mp3",
@@ -42,6 +32,22 @@ export const tracks : Track[] = [
         mp3:"frantz_schubert_symphony_8.mp3",
         title:"Symphonie No.8",
         artist: "Franz Schubert"
-    }
+    }],
+    "02" : [
 
+    {
+        image:"act_like_you_know.png",
+        mp3:"act_like_you_know.mp3",
+        title:"Act Like You Know",
+        artist:"Fat Larry's Band"
+    }],
+
+    "03" : [
+    {
+        image:"alive.png",
+        mp3:"alive.mp3",
+        title:"Alive 2007",
+        artist: "Daft Punk"
+    }
 ]
+}

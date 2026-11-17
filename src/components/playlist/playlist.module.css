@@ -87,7 +87,7 @@
 .controls {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
 }
 
 .controls button {
@@ -105,15 +105,15 @@
 }
 
 .sideButton {
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
+  width: 32px;
+  height: 32px;
+  font-size: 1.6rem;
   line-height: 1;
 }
 
 .mainButton {
-  width: 64px;
-  height: 64px;
-  font-size: 1.4rem;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
   border: 2px solid currentColor !important;
 }
