@@ -58,19 +58,56 @@
     align-items: center;
 }
 
-.menuToggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    transition: 0.2s ease-out all;
+.fish {
+     width: 32px;
+    height: 32px;
+    background-color: var(--text);
+    transition: transform 0.2s ease-out;
+    -webkit-mask: url(/icon.svg) center / contain no-repeat;
+    mask: url(/icon.svg) center / contain no-repeat;
+
 }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    margin: 3px 0;
-    background-color: var(--text);
+.fish:hover {
+    background-color: var(--accent) !important;
 }
+
+.radioButton {
+    display: grid;
+    place-items: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 var(--small-padding);
+    font-family: var(--ff);
+    font-size: var(--fs);
+    border: 1px solid var(--text);
+    cursor: pointer;
+    color: var(--text);
+    background: var(--background);
+}
+
+.radioButtonSelected {
+    background: var(--text);
+    color: var(--background);
+}
+
+.menuToggle {
+    display: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-out;
+    color: var(--text);
+}
+
+.menuToggle:hover {
+    color: var(--accent);
+}
+
+.menuToggle.active { transform: rotate(90deg); }
+
 
 .themeToggleContainer {
     width: 100%;
@@ -80,10 +117,6 @@
 
 .menuToggle.active {
     transform: rotate(90deg);
-}
-
-.menuToggle.active .bar {
-    background-color: var(--accent);
 }
 
 .sublink {

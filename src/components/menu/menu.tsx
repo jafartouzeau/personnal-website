@@ -7,22 +7,8 @@ import { usePathname } from "next/navigation";
 import { strudelData } from '@/app/strudelrepl/data';
 import ThemeToggle from '../themetoggle/themetoggle';
 import Playlist from '../playlist/playlist';
-import {tracks} from '@/app/musicData'
-
-
-const squareButton = (active: boolean): React.CSSProperties => ({
-    display: 'grid',
-    placeItems: 'center',
-    minWidth: 32,
-    height: 32,
-    padding: '0 var(--small-padding)',
-    fontFamily: 'var(--ff)',
-    fontSize: 'var(--fs)',
-    cursor: 'pointer',
-    border: '1px solid var(--text)',
-    background: active ? 'var(--text)' : 'var(--background)',
-    color: active ? 'var(--background)' : 'var(--text)',
-})
+import {tracks} from '@/app/musicData';
+import BurgerIcon from '../burgertoggle/burgertoggle';
 
 export default function Menu() {
     
@@ -105,10 +91,15 @@ export default function Menu() {
                 <div className={styles.navHeader}>
 
                      <Link href={"/"}>
-                        <div className={styles.logoContainer}>
-                            {/*<span className={styles.logo}>J∀F∀R</span>{/*∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀</span>*/}
+                        {/*<div className={styles.logoContainer}>
+                            <span className={styles.logo}>J∀F∀R</span>{/*∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀J∀F∀R∀</span>
                             <span className={styles.logo}>ποίησις</span>
-                        </div>
+                        </div>*/}
+                         <div
+                            role="img"
+                            aria-label="Logo"
+                            className={styles.fish}
+                        />
                     </Link>
 
                     <div className={styles.themeToggleContainer}>
@@ -123,9 +114,8 @@ export default function Menu() {
                             toggleRef.current?.classList.toggle(styles.active);
                         }}
                     >
-                        <div className={styles.bar}></div>
-                        <div className={styles.bar}></div>
-                        <div className={styles.bar}></div>
+                            <BurgerIcon />                    
+                            
                     </div>
                 </div>
 
@@ -141,12 +131,11 @@ export default function Menu() {
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--small-padding)' }}>
                         {keys.map((key) => (
                         <button
-                            key={key}
+                             className={`${styles.radioButton} ${key === selected ? styles.radioButtonSelected : ''}`}                            key={key}
                             type="button"
                             aria-pressed={key === selected}
                             onClick={() => setSelected(key)}
-                            style={squareButton(key === selected)}
-                        >
+                            >
                             {key}
                         </button>
                         ))}

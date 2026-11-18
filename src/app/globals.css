@@ -34,12 +34,17 @@
   --text: antiquewhite;
 }
 
+.dark .homeImage {
+  filter: invert(1);
+}
+
+/*
 .img-light { display: block; }
 .img-dark  { display: none; }
 
-
 .dark .img-light { display: none; }
 .dark .img-dark  { display: block; }
+*/
 
 ::selection {
   background: var(--text);

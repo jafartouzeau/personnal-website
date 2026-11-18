@@ -6,7 +6,7 @@ export default function HomePage() {
         {/*<p style={{padding:"32px", textAlign:"center"}}>Website heartbeat</p>*/}
         <div 
           style={{ position: "relative", flex: 1, minHeight: 0, width: "100%" }}
-          className="img-light">
+          className="homeImage">
           <Image
             src="/static/IMG_0618 1.jpg"
             alt="Oiseaux volants"
