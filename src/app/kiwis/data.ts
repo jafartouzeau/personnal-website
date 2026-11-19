@@ -37,6 +37,30 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Into the woods",
+            imageSrc:"/static/kiwis/woods.jpg",
+            imageAlt: "Dans les boids.",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Pluie",
+            imageSrc:"/static/kiwis/pluie.jpg",
+            imageAlt: "La pluie qui pleut.",
+            imageRatio: 1
+        },
+                {
+            imageTitle: "Ta nature",
+            imageSrc:"/static/kiwis/nature.jpg",
+            imageAlt: "Te battre contre toi.",
+            imageRatio: 1
+        },
+                        {
+            imageTitle: "Perspective",
+            imageSrc:"/static/kiwis/perspective.jpg",
+            imageAlt: "Changer sa perspective.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "L'une des vôtres",
             imageSrc:"/static/kiwis/devenirfleur2.jpg",
             imageAlt: "Kiwi fleur.",

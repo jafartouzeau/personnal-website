@@ -874,3 +874,48 @@ _$:s("vocals")
 
 
 */
+
+
+/*
+
+$: n(`<
+    0 0 [0 -3] -1@0.5 0 0 0@0.5 [2 0?] 3 
+    0 0 [0 -1] -3@0.5 -4 -4 -4@0.5 [-3 -4] [-1 -3]  
+   >*8`.sub(7))
+  .scale("d:minor")
+  .s("gm_fretless_bass, gm_electric_bass_finger:1")
+  .lpf(200)
+  .legato(.7)
+  .lpenv(1)
+  .room(.2)
+
+*/
+
+/*
+
+setCpm(120/4)
+
+samples({
+  elude_piano: 'samples/elude_piano.mp3',
+  elude_bass: 'samples/elude_bass.mp3',
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+$: s("kick:0!4").duck("2").duckattack(.4).duckdepth(.6).postgain(0.5)
+
+$: s("elude_piano")
+   .begin("0.01")
+   .end("0.99")
+   .loopAt(4)
+   .fit()
+   .gain(.3)
+   .room(.6)
+   .o(2)
+
+$: s("elude_bass")
+   .begin("0.01")
+   .end("0.99")
+   .loopAt(4)
+   .fit()
+   .lpf(200)
+   .gain(.8)
+   */

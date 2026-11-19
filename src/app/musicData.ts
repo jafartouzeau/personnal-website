@@ -40,7 +40,21 @@ export const tracks : Record<string, Track[]> = {
         mp3:"act_like_you_know.mp3",
         title:"Act Like You Know",
         artist:"Fat Larry's Band"
-    }],
+    },
+    {
+        image:"and_the_beat_goes_on.png",
+        mp3:"and_the_beat_goes_on.mp3",
+        title:"And The Beat Goes On",
+        artist:"The Whispers"
+    },
+    {
+        image:"dazz_disco.png",
+        mp3:"dazz_disco.mp3",
+        title:"Dazz",
+        artist:"Brick"
+    }
+
+],
 
     "03" : [
     {
