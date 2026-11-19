@@ -131,7 +131,14 @@ export const tabs :TabData[] = [
         artist: "Khruangbin",
         title:"August 10",
         music:"X:1\nK:D\nDD AA|BBA2|\n",
-        bpm: 0
+        bpm: 82
+    },
+        {
+        id:"lafemmedargent",
+        artist: "AIR",
+        title:"La femme d'argent",
+        music:"X:1\nK:D\nDD AA|BBA2|\n",
+        bpm: 80
     }
                         
 ]

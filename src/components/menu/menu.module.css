@@ -30,11 +30,11 @@
 .menu {
     display: flex;
     flex-direction: column;
-    position: fheight cssixed;     
+    position: sticky;    
     top: 0;
     align-self: flex-start;
     width: min(100vw, 512px);
-    height: auto;
+    height: 100dvh;
     overflow-y: auto;
     overflow-x: hidden;
     padding: var(--main-padding);
@@ -127,6 +127,66 @@
     margin: var(--main-padding) 0 var(--small-padding) 0;
     padding: 0;
     list-style: none;
+}
+
+.tabLink {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Fenêtre visible : coupe le texte et applique le fondu */
+.tabTitle {
+    flex: 1 1 0;
+    min-width: 0;            /* indispensable pour que flex autorise le rétrécissement */
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+}
+
+/* Texte complet, qui peut défiler */
+.tabTitleInner {
+    display: inline-block;
+    min-width: 100%;         /* un texte court ne bouge pas */
+    position: relative;
+    left: 0;
+    transform: translateX(0);
+    transition: left 2.5s linear, transform 2.5s linear;
+}
+
+/* BPM : toujours visible, à droite */
+.tabBpm {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Au survol : on enlève le fondu et on fait défiler jusqu'à la fin */
+.sublink:hover .tabTitle,
+.tabLink:focus-visible .tabTitle {
+    -webkit-mask-image: none;
+    mask-image: none;
+}
+
+/*
+.sublink:hover .tabTitleInner,
+.tabLink:focus-visible .tabTitleInner {
+    left: 100%;                   /* % de la largeur de la fenêtre 
+    transform: translateX(-100%); /* % de la largeur du texte 
+}
+*/
+
+@media (hover: none) {
+    .tabTitle {
+        white-space: normal;
+        overflow: visible;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
+    .tabTitleInner { display: inline; }
+    .tabLink { align-items: flex-start; }
 }
 
 /* ===== Mobile : barre du haut + toggle ===== */

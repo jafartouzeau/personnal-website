@@ -1,6 +1,6 @@
 .root {
   position: relative;
-  min-height: 100%;
+  height: auto;
   width: 100%;
   max-width: 512px;
   overflow: hidden;

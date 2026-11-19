@@ -9,6 +9,7 @@ import ThemeToggle from '../themetoggle/themetoggle';
 import Playlist from '../playlist/playlist';
 import {tracks} from '@/app/musicData';
 import BurgerIcon from '../burgertoggle/burgertoggle';
+import { tabs } from '@/app/bass/data';
 
 export default function Menu() {
     
@@ -118,6 +119,7 @@ export default function Menu() {
                             
                     </div>
                 </div>
+                
 
 
 
@@ -151,7 +153,7 @@ export default function Menu() {
                     <hr></hr>
                     <li className={styles.sublink}>
                         <Link href={`/kiwis/formatcarre`}>
-                            Single shots
+                             Carré
                         </Link>
                     </li>
                     <li className={styles.sublink}>
@@ -182,10 +184,9 @@ export default function Menu() {
 
                 </ul>
 
-                <ul className={`${styles.toplink}`}>
-                    {/*<Link href={`/bass`}>*/}
-                    <Link href={"/smady/carte"}>
-                        [COMING SOON] Saint-Maur a des yeux 
+                                 <ul className={`${styles.toplink}`}>
+                    <Link href={"/heartbeat"}>
+                        Heartbeat
                     </Link>
                                         <hr></hr>
 
@@ -193,29 +194,34 @@ export default function Menu() {
 
                 <ul className={`${styles.toplink}`}>
                     {/*<Link href={`/bass`}>*/}
-                    <Link href={""}>
-                        [COMING SOON] Bass TABS 
-                    </Link>
+                    <Link href={""}>[COMING SOON] Bass TABS </Link>
                                         <hr></hr>
 
-                    {/*
+                    
                     {[...tabs].sort((a, b) =>
                                 a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
                             )
                             .map((tab) => (
                                 <li className={styles.sublink} key={tab.id}>
-                                    {/*<Link href={`/bass#${tab.id}`}>
-                                    <Link href=''>
-                                        {tab.artist} - {tab.title} ({tab.bpm}bpm)
+                                    {/*<Link href={`/bass#${tab.id}`}>*/}
+                                    <Link href="" className={styles.tabLink}>
+                                        <span className={styles.tabTitle}>
+                                        <span className={styles.tabTitleInner}>
+                                            {tab.artist} - {tab.title}
+                                        </span>
+                                        </span>
+                                        {tab.bpm !== 0 && <span className={styles.tabBpm}>{tab.bpm}</span>}
                                     </Link>
                                 </li>
                             ))}
-                    */}
+                    
                 </ul>
 
-                 <ul className={`${styles.toplink}`}>
-                    <Link href={"/heartbeat"}>
-                        Heartbeat
+
+                                <ul className={`${styles.toplink}`}>
+                    {/*<Link href={`/bass`}>*/}
+                    <Link href={"/smady/carte"}>
+                        [COMING SOON] Saint-Maur a des yeux 
                     </Link>
                                         <hr></hr>
 
