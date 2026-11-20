@@ -295,11 +295,17 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         }
     ],
-    "comicstrip": [
+    "comicstrip": [{
+            imageTitle: "La migration",
+            imageSrc:["/static/kiwis/migration1.jpg", "/static/kiwis/migration2.jpg"
+            ],
+            imageAlt: "La migration.",
+            imageRatio: 1
+        },
         {
             imageTitle: "La disparition",
             imageSrc:["/static/kiwis/disparition1.jpg", "/static/kiwis/disparition2.jpg", "/static/kiwis/disparition3.jpg",
-                "/static/kiwis/disparition4.jpg"
+                "/static/kiwis/disparition4.jpg","/static/kiwis/disparition5.jpg"
             ],
             imageAlt: "La disparition.",
             imageRatio: 1
