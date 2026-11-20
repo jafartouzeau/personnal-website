@@ -295,7 +295,17 @@ export const kiwisData: Record<string, ArtworkType[]> = {
             imageRatio: 1
         }
     ],
-    "comicstrip": [{
+    "comicstrip": [
+                {
+            imageTitle: "C'est du pipeau",
+            imageSrc:["/static/kiwis/pipeau1.jpg", "/static/kiwis/pipeau2.jpg", "/static/kiwis/pipeau3.jpg",
+                "/static/kiwis/pipeau4.jpg", "/static/kiwis/pipeau5.jpg", "/static/kiwis/pipeau6.jpg",
+                "/static/kiwis/pipeau7.jpg", "/static/kiwis/pipeau8.jpg", "/static/kiwis/pipeau9.jpg"
+            ],
+            imageAlt: "C'est du pipeau.",
+            imageRatio: 1
+        },
+        {
             imageTitle: "La migration",
             imageSrc:["/static/kiwis/migration1.jpg", "/static/kiwis/migration2.jpg"
             ],
