@@ -193,8 +193,7 @@ export default function Menu() {
                 </ul>
 
                 <ul className={`${styles.toplink}`}>
-                    {/*<Link href={`/bass`}>*/}
-                    <Link href={""}>[COMING SOON] Bass TABS </Link>
+                    <Link href={`/bass`}>Bass TABS </Link>
                                         <hr></hr>
 
                     
@@ -203,8 +202,7 @@ export default function Menu() {
                             )
                             .map((tab) => (
                                 <li className={styles.sublink} key={tab.id}>
-                                    {/*<Link href={`/bass#${tab.id}`}>*/}
-                                    <Link href="" className={styles.tabLink}>
+                                    <Link href={`/bass#${tab.id}`} className={styles.tabLink}>
                                         <span className={styles.tabTitle}>
                                         <span className={styles.tabTitleInner}>
                                             {tab.artist} - {tab.title}

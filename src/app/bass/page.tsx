@@ -5,6 +5,6 @@ export default function Bass() {
     return <>{[...tabs].sort((a, b) =>
     a.bpm - b.bpm || a.artist.localeCompare(b.artist, "fr")
 ).map((tab, index) => {
-        return <BassTab key={index} id={tab.id} title={tab.title} artist={tab.artist} abc={tab.music} bpm={tab.bpm} />
+        return <BassTab key={index} id={tab.id} title={tab.title} artist={tab.artist} tab={tab.music} bpm={tab.bpm} />
     })}</>
 }

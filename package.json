@@ -10,6 +10,7 @@
   },
   "prebuild": "node scripts/generate-heartbeat.mjs",
   "dependencies": {
+    "@coderline/alphatab": "^1.9.0",
     "@strudel/embed": "^1.1.2",
     "abcjs": "^6.7.2",
     "next": "16.2.9",
