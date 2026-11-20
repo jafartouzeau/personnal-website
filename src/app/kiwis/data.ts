@@ -37,6 +37,12 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Remarque",
+            imageSrc:"/static/kiwis/remarque.jpg",
+            imageAlt: "Remarque",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Heart",
             imageSrc:"/static/kiwis/heart.jpg",
             imageAlt: "My heart.",
