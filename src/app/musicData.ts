@@ -28,11 +28,23 @@ export const tracks : Record<string, Track[]> = {
         artist: "Maurice Ravel"
     },
     {
+        image:"scheherazade.png",
+        mp3:"scheherazade.mp3",
+        title:"Schéhérazade",
+        artist: "Nikolaï Rimski-Korsakov"
+    },
+        {
+        image:"concerto_g.png",
+        mp3:"concerto_g.mp3",
+        title:"Concerto pour la main gauche",
+        artist: "Maurice Ravel"
+    },
+    /*{
         image:"symphony_8.png",
         mp3:"frantz_schubert_symphony_8.mp3",
         title:"Symphonie No.8",
         artist: "Franz Schubert"
-    }],
+    }*/],
     "02" : [
 
     {
