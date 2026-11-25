@@ -11,7 +11,10 @@ export const tabs :TabData[] = [
         id: "whatsleft",
         title: "What's left",
         artist: "BowAsWell",
-        music: ``,
+        music: `
+       :16 5.4 :8 5.4 :16 5.4 :16 r :8 5.2 3.2 2.2 {d} x.3 {gr ob} 5.3 3.3 |
+       :8 5.3 :16 5.3 5.3 :16 r :8 2.2 3.3 0.3 {d} x.4 {gr ob} 3.4 4.4 |        
+        `,
         bpm:108
     }, 
     {
@@ -114,7 +117,17 @@ export const tabs :TabData[] = [
         id: "cairofm",
         artist:"Alewya",
         title:"Cairo FM",
-        music: ``,
+        music: `
+        :8 4.4 {tu 3} r {tu 3} 6.2 {tu 3} :16 r 6.3 4.2 {h} 6.2 
+        :8 4.4 {tu 3} r {tu 3} 6.2 {tu 3} :16 r 6.3 4.2 {h} 6.2 |
+        :8 2.4 {tu 3} r {tu 3} 4.2 {tu 3} :16 r 4.3 2.2 {h} 4.2 
+        :8 2.4 {tu 3} r {tu 3} 4.2 {tu 3} :16 r 4.3 2.2 {h} 4.2 |     
+        :8 5.4 {tu 3} r {tu 3} 7.2 {tu 3} :16 r 7.3 4.2 {h} 7.2 
+        :8 5.4 {tu 3} r {tu 3} 7.2 {tu 3} :16 r 7.3 4.2 {h} 7.2 |
+        :8 4.4 {tu 3} r {tu 3} 6.2 {tu 3} :16 r 6.3 4.2 {h} 6.2 
+        :8 4.4 {tu 3} r {tu 3} 6.2 {tu 3} :16 r 6.3 4.2 {h} 6.2 |
+        
+        `,
         bpm: 111
     },
     {

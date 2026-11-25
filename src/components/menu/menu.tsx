@@ -182,15 +182,7 @@ export default function Menu() {
                     ))
                     }
 
-                </ul>
 
-                                 <ul className={`${styles.toplink}`}>
-                    <Link href={"/heartbeat"}>
-                        Heartbeat
-                    </Link>
-                                        <hr></hr>
-
-                </ul>
 
                 <ul className={`${styles.toplink}`}>
                     <Link href={`/bass`}>Bass TABS </Link>
@@ -213,6 +205,16 @@ export default function Menu() {
                                 </li>
                             ))}
                     
+                </ul>
+
+                                </ul>
+
+                                 <ul className={`${styles.toplink}`}>
+                    <Link href={"/heartbeat"}>
+                        Heartbeat
+                    </Link>
+                                        <hr></hr>
+
                 </ul>
 
 

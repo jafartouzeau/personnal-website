@@ -137,7 +137,7 @@ _$: s("circuitsdrumtracks_sd")
     },
     "track1":{
         artist: "FOTF",
-        title: "Track #1 (La vie est belle)",
+        title: "Track #01 (La vie est belle)",
         code:
 `setCpm(115/4)
 
@@ -190,7 +190,7 @@ $: //n("<b>")
     "track2":{
         artist: "FOTF",
         description: "https://www.youtube.com/watch?v=2-EzQylIMvk&list=RD2-EzQylIMvk&start_radio=1",
-        title: "Track #2 (Acid)",
+        title: "Track #02 (Acid)",
         code:
 `/*
   @title Track #2
@@ -234,7 +234,7 @@ $drums: stack(
     },
 "track3":{
         artist: "FOTF",
-        title: "Track #3 (Sampling test)",
+        title: "Track #03 (Sampling test)",
         code:
 `/*
   @title Track #2
@@ -277,7 +277,7 @@ $drum: stack(
     },
     "track4": {
       artist:"FOTF",
-      title:"Track #4 (Chords)",
+      title:"Track #04 (Chords)",
       code:
 `/*
   @title Track #4
@@ -318,7 +318,7 @@ $kick:
     ,
     "track5": {
       artist:"FOTF",
-      title:"Track #5 (Popper)",
+      title:"Track #05 (Popper)",
       code:
 `/*
   @title Track #5
@@ -361,7 +361,7 @@ _$: s("<bd:1>*4").distort(.3).room(.7).lpf(200)
     },
     "track6": {
       artist:"FOTF",
-      title:"Track #6 (Apero billevesé)",
+      title:"Track #06 (Apero billevesé)",
       code:
 `/*
   @title Apero Billevese
@@ -585,7 +585,7 @@ $:arrange(
 
     }, "track7":{
         artist: "FOTF",
-        title: "Track #7 (Segments)",
+        title: "Track #07 (Segments)",
         code:
 `/*
   @title Track #7
@@ -629,7 +629,7 @@ $: n("<<0 [-7,0]> -2 -4 -3>".sub(7))
 `     
       }, "track8":{
         artist: "FOTF",
-        title: "Track #8 (Nice sample)",
+        title: "Track #08 (Nice sample)",
         code:
 `/*
   @title Track #8
@@ -681,15 +681,16 @@ $:stack(
    .room(.6)
    .o(2)
 `     
-      }
-}
-
-/*
+      },
+      "track9":{
+        artist: "FOTF",
+        title: "Track #09 (Bass sample)",
+        code:
+`/*
   @title Track #9
   @by FOTF
 */
 
-/*
 setCpm(106/4)
 
 samples({
@@ -704,12 +705,92 @@ $: s("alewya_bass")
   .lpf(400)
   .o(2)
 
-$drum: stack(
-  s("sbd*4").lpf(200).room(.3).duck("2").duckattack(.3).duckdepth(.8),
-  //s("sd:2").struct("<x ~ ~ x ~ ~ x ~ ~ ~ x ~ x ~ ~ ~ >*16").room(.1).lpf(600),
-  //s("rolandtr808_sh:4!16").lpf(6000).attack(rand.range(0.02, 0.1)),
-).gain(0.2)
+$: s("sbd*4").lpf(200).room(.3).duck("2").duckattack(.3).duckdepth(.8)
+`}, "track10":{
+        artist: "FOTF",
+        title: "Track #10 (Phantom sample)",
+        code:
+`/*
+  @title Track #1O
+  @by FOTF
 */
+
+setCpm(128/4)
+
+samples({
+phantom: ['samples/phantom1.mp3', 'samples/phantom2.mp3'],
+}, 'github:jafartouzeau/strudel-personnal-library')
+
+_$: stack(
+  s("<sbd, rolandtr505_bd>*4").lpf(200).duck("1").duckattack(.4).duckdepth(.4),
+  /*s("[- rolandtr909_oh]!4"),
+  s("hh!16")*/
+)
+
+$: s("phantom:0")
+   .fit()
+   //.struct("<x x x ~>")
+   .lpf(2500)
+   .hpf(500)
+   .room(.1)
+  
+
+$: n("<[0, 5]@6.5 [-1, 4]@1.5>*4".sub(7))
+  .scale("g:major")
+  .lpenv(1)
+  .s(" gm_pad_warm")
+  .lpf(2000)
+  .o(1)
+
+_$: s("phantom:1")
+   .begin("0.2")
+   .end("0.66")
+   .fast(2)
+   .fit()
+   .lpf(2000)
+   .hpf(1000)
+   .struct("<~ ~ ~ x>")
+`
+}, "track11":{
+        artist: "FOTF",
+        title: "Track #11 (Elude sample)",
+        code:
+`/*
+  @title Track #11
+  @by FOTF
+*/
+
+setCpm(120/4)
+
+samples({
+  elude_piano: 'samples/elude_piano.mp3',
+  elude_bass: 'samples/elude_bass.mp3',
+}, 'github:jafartouzeau/strudel-personnal-library');
+
+$: s("kick:0!4").duck("2").duckattack(.4).duckdepth(.6).postgain(0.5)
+
+$: s("elude_piano")
+   .begin("0.01")
+   .end("0.99")
+   .loopAt(4)
+   .fit()
+   .gain(.3)
+   .room(.6)
+   .o(2)
+
+_$: s("elude_bass")
+   .begin("0.01")
+   .end("0.99")
+   .loopAt(4)
+   .fit()
+   .lpf(200)
+   .gain(.8)
+
+`
+}
+
+}
+
 
 /*
   @title Track #10
@@ -783,97 +864,9 @@ _$: stack(
    .fit()
    .struct("<~ ~ ~ ~@0.5 x@0.5>/2")
 )
-
-$: stack(
-  s("<sbd, rolandtr505_bd>*4").duck("1").duckattack(.4).duckdepth(.1),
-  s("[- rolandtr909_oh]!4"),
-  s("hh!16")
-)
-
-$: s("phantom:0")
-   .fit()
-   //.struct("<x x x ~>")
-   .lpf(2500)
-   .hpf(500)
-   .room(.1)
-
-_$: s("phantom:1")
-   .begin("0.1")
-   .end("0.67")
-   .fast(1.36)
-   .fit()
-   .lpf(2000)
-   .hpf(1000)
-   .struct("<~ ~ ~ x>")
-  
-
-
-_$: n("<[0, 5]@6.5 [-1, 4]@1.5>*4".sub(7))
-  .scale("g:major")
-  .lpenv(1)
-  .attack(.1)
-  .s(" gm_pad_warm")
-  .lpf(2000)
-  .o(1)
-
-
-
 */
 
-/*
 
-/*
-  @title Track #X
-  @by FOTF
-*/
-
-/*
-setCpm(180/4)
-
-samples({
-  kick: ['samples/kick/fat-kick-1.wav', 'samples/kick/fat-kick.wav', 'samples/kick/fat-kick-dry.wav', 'samples/kick/fat-kick_G#_major.wav'],
-vocals: 'samples/chester_bennington_warming_up.mp3',
-}, 'github:jafartouzeau/strudel-personnal-library');
-
-$: stack(
-  s("<kick:0>*3").lpf(200).room(0.2),
-  //s("<- sbd>*8").lpf(200).room(0.2),
-).gain(.2)
-
-_$bass: n("<- 5>*8".sub(14))
-   .scale("c3:minor")
-   .s("supersaw")
-   .legato(.6)
-   .lpf(100)
-   .distort(1)
-   .room(.1)
-
-$:s("vocals")
-   .begin("0.008")
-   //.end("0.0735")
-   //.fast()
-   .end(".155")
-   .fit()
-   //.struct("<~ x ~ ~ ~ ~ ~ ~>*8")
-   .lpf(1000)
-   .hpf(700)
-   .gain(.3)
-   .room(.1)
-
-_$:s("vocals")
-   .begin("0.0735")
-   .end(".155")
-   .fit()
-   .fast(2)
-   .fit()
-   .struct("<~ ~ ~ ~ ~ ~ x ~>*8")
-   .lpf(1000)
-   .hpf(700)
-   .gain(.3)
-   .room(.1)
-
-
-*/
 
 
 /*
@@ -890,32 +883,3 @@ $: n(`<
   .room(.2)
 
 */
-
-/*
-
-setCpm(120/4)
-
-samples({
-  elude_piano: 'samples/elude_piano.mp3',
-  elude_bass: 'samples/elude_bass.mp3',
-}, 'github:jafartouzeau/strudel-personnal-library');
-
-$: s("kick:0!4").duck("2").duckattack(.4).duckdepth(.6).postgain(0.5)
-
-$: s("elude_piano")
-   .begin("0.01")
-   .end("0.99")
-   .loopAt(4)
-   .fit()
-   .gain(.3)
-   .room(.6)
-   .o(2)
-
-$: s("elude_bass")
-   .begin("0.01")
-   .end("0.99")
-   .loopAt(4)
-   .fit()
-   .lpf(200)
-   .gain(.8)
-   */
