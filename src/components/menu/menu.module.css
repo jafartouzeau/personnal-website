@@ -170,13 +170,13 @@
     mask-image: none;
 }
 
-/*
+
 .sublink:hover .tabTitleInner,
 .tabLink:focus-visible .tabTitleInner {
-    left: 100%;                   /* % de la largeur de la fenêtre 
-    transform: translateX(-100%); /* % de la largeur du texte 
+    left: 100%;                   /* % de la largeur de la fenêtre */
+    transform: translateX(-100%); /* % de la largeur du texte */
 }
-*/
+
 
 @media (hover: none) {
     .tabTitle {
