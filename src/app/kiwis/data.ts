@@ -37,6 +37,18 @@ export const kiwisData: Record<string, ArtworkType[]> = {
     ],
     "formatcarre": [
         {
+            imageTitle: "Troublant",
+            imageSrc:"/static/kiwis/troublant.jpg",
+            imageAlt: "Troublant",
+            imageRatio: 1
+        },
+        {
+            imageTitle: "Secouer",
+            imageSrc:"/static/kiwis/secouer.jpg",
+            imageAlt: "Secouer un livre",
+            imageRatio: 1
+        },
+        {
             imageTitle: "Remarque",
             imageSrc:"/static/kiwis/remarque.jpg",
             imageAlt: "Remarque",
@@ -302,6 +314,13 @@ export const kiwisData: Record<string, ArtworkType[]> = {
         }
     ],
     "comicstrip": [
+        {
+            imageTitle: "Le perdant de l'évolution",
+            imageSrc:["/static/kiwis/perdant1.jpg", "/static/kiwis/perdant2.jpg", "/static/kiwis/perdant3.jpg"
+            ],
+            imageAlt: "Perdant des perdants.",
+            imageRatio: 1
+        },
                 {
             imageTitle: "C'est du pipeau",
             imageSrc:["/static/kiwis/pipeau1.jpg", "/static/kiwis/pipeau2.jpg", "/static/kiwis/pipeau3.jpg",
